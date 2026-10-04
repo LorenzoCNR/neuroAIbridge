@@ -1,0 +1,14 @@
+from neurobridge.utils.paths import setup_paths
+
+project_root, pipeline_path, out_dir, in_dir = setup_paths(
+    data_dir="data",
+    sub_data="monkey1",
+    out_dir="outputs",
+    pipe_path="train",
+    change_dir=True
+)
+
+print("Project root:", project_root)
+print("Pipeline path:", pipeline_path)
+print("Input dir:", in_dir)
+print("Output dir:", out_dir)

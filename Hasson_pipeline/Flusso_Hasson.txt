@@ -1,0 +1,43 @@
+- Indichiamo le strutture per i due soggetti come da principio file
+for i=1:numel(data_trials_ok)
+    S_Struct(i).Spikes      = data_trials_ok(i).S_GS_data;
+    S_Struct(i).Manifold    = data_trials_ok(i).S_dpca;
+    S_Struct(i).trialTypeDir= data_trials_ok(i).trialTypeDir;
+    S_Struct(i).trialTypeCond= data_trials_ok(i).trialTypeCond;
+end
+
+for i=1:numel(data_trials_ok)
+    K_Struct(i).Spikes      = data_trials_ok(i).K_GS_data;
+    K_Struct(i).Manifold    = data_trials_ok(i).K_dpca;
+    K_Struct(i).trialTypeDir= data_trials_ok(i).trialTypeDir;
+    K_Struct(i).trialTypeCond= data_trials_ok(i).trialTypeCond;
+end
+
+Quidni le manifold sono le 8*34 PC, i dati neurali (Spikes) sono in dimensione n_ch(per scimmia)*34
+Quindi il time (per trial è 34)
+
+Fissiamo tutte le condizioni e i parametri del caso come da script:
+- t_start e t_end
+-blocchi sottoblocchi stride vari 
+- condizione e direzione
+
+
+Fissati i parametri (Quindi non grid search) abbiamo diverse possibilità ma di base a noi interessano "manifold" e "hat-hat".
+File di riferimento "compute_LL_matrix" (e decoders nella mmodalità hat-hat)
+Nel caso di Manifold non passi per alcun decoder ma correli direttamente le manifold dei soggetti
+ case "manifold"
+        % filter data according to direction and condition
+        LL_matrix=f_corr(lag_manif_X, lag_manif_Y)
+
+Nel caso "hat-hat", usi il decoder che scegli (ridge o knn)
+    case "hat-hat" 
+       Y_hat_X = decoders(lag_manif_X, lag_n_X, config);
+       Y_hat_Y = decoders(lag_manif_Y, lag_n_Y, config); 
+       LL_matrix =f_corr(Y_hat_X, Y_hat_Y);
+
+    Qui fa regressione (o knn) per ogni neurone e per ogni lag. Una nota sugli oggetti in gioco; le y sono i punti che otteniamo con la (sotto)funzione convert_to_lag_struct che prende in oggetto i dati selezionati (per direzione condizione, sostanzialmente i trial di interesse) e ne ricava i dati nella forma di interesse--> in lag appunto. 
+    I dati neurali saranno per ogni neurone e per ogni lag gli spike originari di quel neurone mediati per le dimensione dei blocchi e sottoblocchi. Mi spiego...il caso degnere è media su tutto il trial, quindi per ogni neurone mi trovo in ogni blocco un vettore (y) di dimensione numero di trial. Se faccio medie a blocchi, riesco ad avere più punti (che ne so 2 3 per trial e ad avere anche un multiplo del numero di trial). Per quanto riguarda le X su cui faccio regressione (spazio di proiezione), la dimensione colonna è pari al numero di componenti, le righe sono il numero di osservazioni (pari alla dimennsione del vettore y...se riesco a ricavarmi 16 obs ad esempio, un numero di matrici (numero di lag) di dimensione 16*n_pc)...sostanzialmente, abbiamo per ogni neurone e per ogni lag sempre le stesse X. Queste pertanto cambiano quando cambia il lag ma, dato il lag, sono sempre le stesse. Quidni 202 regressioni per scimmia k su X_lag....e così uguale con X che variano al cambiare del lag. (Per S sono 184 regressioni per lag)
+    Questa quidni la parte decoder. I decoder ci restituiscono dei valori fittati, che poi vado a correlare o con il dato originale corr(y_k_obs, y_k_hat) o incrociando corr(y_s_obs, y_k_hat). LA correlazione avviene dopo aver "compresso" (mediato) l'info neurale...partiamo con dati (celle) che contengono vettori di osservazioni (con n almeno pari al numero di  trial ma come detto in precdenza possono aumentare giocando con i blocchi e i sttoblocchi); quidni le dimensioni in gioco sono 
+    n_onbs*n_neuroni*n_lags.
+    Medio sui neuroni e mi ritrovo quindi con oggetti di dimensione n_obs*n_lags che correlo sulla dimensione lag  (colonna).
+    Di fatto è la correlazione tra segnale medio sui neuroni di K al lag i con il segnale medio di S al lag j (con j e i ...1,2...n_lags). Chiamiamola somiglianza fra i profili temporali.

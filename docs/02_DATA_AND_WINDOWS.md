@@ -21,7 +21,8 @@ length `W` collects:
 W consecutive time bins x N neurons.
 ```
 
-For `W=10` and `N=100`, one model observation has shape `(10,100)`. The window
+For the current run, `W=21`; one model observation has shape `(21,N)`, with
+`N=160` for subject A and `N=120` for subject B. The window
 does not create ten independent embeddings: PCA and the neural encoders reduce
 the complete window to one embedding vector associated with its target time.
 
@@ -32,8 +33,8 @@ diagnostics rather than justified only by architectural convenience.
 
 ## Centered Padding And Trial Boundaries
 
-The controlled experiments use centered windows, `window_size=10`, and
-`stride=1`. Padding preserves all 100 target time bins in every trial.
+The current experiment uses centered windows, `window_size=21`, and
+`stride=1`. Padding preserves all 200 target time bins in every trial.
 
 Two rules are essential:
 
@@ -41,7 +42,8 @@ Two rules are essential:
 2. padding uses edge information within the same trial rather than data from
    the preceding or following trial.
 
-Consequently, 160 trials of 100 bins produce 16,000 window-level observations.
+Consequently, 200 trials of 200 bins produce 40,000 window-level observations
+per subject (before excluding B's ten lag-padding centers from fitting).
 
 ## Metadata Returned With Each Window
 
@@ -66,12 +68,13 @@ inside each minibatch.
 The split is performed on complete trials before model fitting:
 
 ```text
-160 total trials
-128 training trials
- 32 held-out test trials
+200 total trials
+140 training trials
+ 40 held-out test trials
+ 20 validation trials
 ```
 
-No window from a held-out trial is used to fit PCA or CNN1D. This avoids the
+No window from a held-out trial is used to fit PCA, CNN1D, or Transformer. This avoids the
 strong leakage that would occur if overlapping windows from the same trial
 were divided randomly between training and test sets.
 
@@ -123,21 +126,21 @@ their final embedding vectors are compared pairwise within a minibatch.
 
 ## Observation Counts In A Minibatch
 
-With `batch_size=256`, the CNN receives:
+With the current `batch_size=1024`, the CNN receives:
 
 ```text
-x: (256,10,100)
+x: (1024,21,N)
 ```
 
 and emits, for a three-dimensional experiment:
 
 ```text
-z: (256,3).
+z: (1024,3).
 ```
 
-The loss then forms a `(256,256)` metadata target and a `(256,256)` embedding
-similarity matrix. The number 10 belongs to the internal temporal context of
-one observation; the number 256 is how many such observations are compared in
+The loss then forms a `(1024,1024)` metadata target and a `(1024,1024)`
+embedding similarity matrix. The number 21 belongs to the temporal context of
+one observation; the number 1024 is how many such observations are compared in
 one optimization step.
 
 ## Limitations
@@ -148,3 +151,16 @@ one optimization step.
 - Dense pairwise objectives scale quadratically with batch size.
 - Trial-level splitting prevents direct leakage but does not replace
   multi-seed or cross-session validation.
+
+## Real-monkey input branch
+
+The real-data preparation is implemented separately in
+`src/neurobridge/experiments/real_monkey.py`. The local Area-2 recording has
+193 trials, 600 bins per trial, 65 neural channels, and eight direction
+classes. The loader documents 1 ms bins and 40 ms smoothing. NeuroBridge
+creates a stratified trial-level split of 134/20/39 train/validation/test
+trials, then constructs centered, trial-safe windows of shape `(21, 65)` with
+stride 1. No window crosses a trial boundary.
+
+These observed-data windows do not carry a simulated `Z`; they support
+downstream behavioural decoding and temporal/robustness diagnostics instead.

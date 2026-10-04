@@ -1,0 +1,39 @@
+iNSTALLARE VISUAL STUDIO 
+
+conda create -n cebra python==3.12
+conda activate cebra
+conda install -c conda-forge pytables==3.8.0
+pip install cebra
+conda install -c nvidia cuda-toolkit=12.8
+
+
+#pip install numpy==1.25
+#conda install anaconda::scipy 
+#pip3 install torch torchvision torchaudio
+#ypip install pandas
+
+
+conda install anaconda::joblib
+conda install anaconda::matplotlib
+conda install anaconda::statsmodels
+conda install anaconda::seaborn
+conda install conda-forge::opentsne
+conda install conda-forge::umap-learn
+
+conda install anaconda::scikit-learn
+pip install pyyaml
+pip install h5py
+conda install conda-forge::pickle5 (okkio)
+conda install conda-forge::time
+conda install -c conda-forge tensorboard
+pip install torchviz
+
+conda install anaconda::multiprocess 
+pip install --upgrade jupyter ipywidgets
+
+
+##### se gpu non riparte
+
+https://github.com/tensorflow/tensorflow/issues/5777
+
+

@@ -1,4 +1,5 @@
 from .temporal_cnn import (
+    CEBRAOffset10Encoder,
     TemporalCNNEncoder,
     TemporalLSTMEncoder,
     TemporalMLPEncoder,
@@ -6,6 +7,7 @@ from .temporal_cnn import (
 )
 
 __all__ = [
+    "CEBRAOffset10Encoder",
     "TemporalCNNEncoder",
     "TemporalLSTMEncoder",
     "TemporalMLPEncoder",

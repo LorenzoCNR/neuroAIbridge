@@ -214,9 +214,7 @@ def build_similarity_matrix(
 
     The returned square matrix has one row and column per mini-batch sample.
     Time distance and categorical label distance are normalized, weighted,
-    and converted to similarity through an exponential kernel. The label term
-    is gated by movement progress so directions are not separated at their
-    common origin.
+    and converted to similarity through an exponential kernel.
     """
     temporal_distance = normalize_batch_distance(
         batch_temporal_distance(batch["time_id"])
@@ -225,15 +223,6 @@ def build_similarity_matrix(
         batch,
         {"key": "label", "geometry": "categorical"},
     )
-
-    # Direction should not separate trajectories before movement has emerged.
-    # The geometric mean makes the condition term vanish if either sample is
-    # at the common origin and approach full strength later in the trial.
-    progress = batch["progress"].float().clamp(0.0, 1.0)
-    progress_gate = torch.sqrt(
-        progress[:, None] * progress[None, :]
-    )
-    condition_distance = condition_distance * progress_gate
 
     weight_sum = config.time_weight + config.label_weight
     total_distance = (

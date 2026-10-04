@@ -32,13 +32,13 @@ Canonical repository documents
 The complete scientific documents are also readable directly on GitHub,
 without building or entering this website:
 
-* `Documentation index <https://github.com/LorenzoCNR/AI_for_all/blob/main/docs/README.md>`_
-* `Generative model <https://github.com/LorenzoCNR/AI_for_all/blob/main/docs/01_GENERATIVE_MODEL.md>`_
-* `Data and temporal windows <https://github.com/LorenzoCNR/AI_for_all/blob/main/docs/02_DATA_AND_WINDOWS.md>`_
-* `Learning objectives <https://github.com/LorenzoCNR/AI_for_all/blob/main/docs/03_LEARNING_OBJECTIVES.md>`_
-* `Encoders <https://github.com/LorenzoCNR/AI_for_all/blob/main/docs/04_ENCODERS.md>`_
-* `Evaluation and multiple subjects <https://github.com/LorenzoCNR/AI_for_all/blob/main/docs/05_EVALUATION_AND_MULTISUBJECT.md>`_
-* `Experiments and limitations <https://github.com/LorenzoCNR/AI_for_all/blob/main/docs/06_EXPERIMENTS_AND_LIMITATIONS.md>`_
+* `Documentation index <https://github.com/LorenzoCNR/neuroAIbridge/blob/main/docs/README.md>`_
+* `Generative model <https://github.com/LorenzoCNR/neuroAIbridge/blob/main/docs/01_GENERATIVE_MODEL.md>`_
+* `Data and temporal windows <https://github.com/LorenzoCNR/neuroAIbridge/blob/main/docs/02_DATA_AND_WINDOWS.md>`_
+* `Learning objectives <https://github.com/LorenzoCNR/neuroAIbridge/blob/main/docs/03_LEARNING_OBJECTIVES.md>`_
+* `Encoders <https://github.com/LorenzoCNR/neuroAIbridge/blob/main/docs/04_ENCODERS.md>`_
+* `Evaluation and multiple subjects <https://github.com/LorenzoCNR/neuroAIbridge/blob/main/docs/05_EVALUATION_AND_MULTISUBJECT.md>`_
+* `Experiments and limitations <https://github.com/LorenzoCNR/neuroAIbridge/blob/main/docs/06_EXPERIMENTS_AND_LIMITATIONS.md>`_
 
 .. toctree::
    :maxdepth: 2

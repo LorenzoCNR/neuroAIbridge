@@ -9,6 +9,14 @@ Experiments
    :undoc-members:
    :show-inheritance:
 
+.. automodule:: neurobridge.experiments.staged_shared_latent
+   :members:
+   :undoc-members:
+
+.. automodule:: neurobridge.experiments.real_monkey
+   :members:
+   :undoc-members:
+
 Simulation
 ----------
 

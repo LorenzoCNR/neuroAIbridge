@@ -35,7 +35,8 @@ lambda  : (R, T, N)  firing rate in spikes/second
 X       : (R, T, N)  observed spike counts
 ```
 
-For the controlled notebooks, `R=160`, `T=100`, and `N=100`.
+For the current shared-latent center-out run, `R=200`, `T=200`, and the
+subject-specific neuron counts are `N_A=160` and `N_B=120`.
 
 ### How To Read The Equations
 
@@ -227,8 +228,9 @@ with
 \mathrm{softplus}(u)=\log(1+\exp u).
 ```
 
-`softplus` guarantees positive rates while remaining smooth. The default
-`rate_scale=10.0` gives `lambda` units of spikes/second. This operation is
+`softplus` guarantees positive rates while remaining smooth. In the current
+shared-latent run, `rate_scale=1.0` and `lambda` is expressed in spikes/second.
+This operation is
 element-wise: every drive value $u_{r,t,j}$ becomes one nonnegative firing
 rate $\lambda_{r,t,j}$.
 
@@ -258,8 +260,8 @@ For example, a rate of 20 spikes/second and a bin width of 0.02 seconds give an
 expected count of $20\times0.02=0.4$ spikes in that bin. The realized count
 can be 0, 1, 2, and so on.
 
-The controlled suite uses `dt=0.02` seconds, so one trial contains 100 bins
-covering two seconds. `X` contains integer counts per bin, not exact spike
+The current shared-latent run uses `dt=0.02` seconds, so one trial contains 200 bins
+covering four seconds. `X` contains integer counts per bin, not exact spike
 times.
 
 Optional mechanisms are implemented:
@@ -272,9 +274,12 @@ Optional mechanisms are implemented:
   suppressed for a normally distributed number of bins.
 
 These mechanisms are phenomenological. They make observations statistically
-richer but do not make the simulator biophysical. Importantly, the four
-controlled notebooks leave them disabled and therefore use pure Poisson
-emission unless the call parameters are changed.
+richer but do not make the simulator biophysical. In the current
+shared-latent run, `overdispersion=4.0`, `refractory_mean_bins=1`, and
+`refractory_std_bins=0.25`; `burst_probability=0` and `burst_size_mean=0`
+disable only the burst mechanism. Thus the Poisson equation above is the base
+emission model, but the run is not pure Poisson: a Gamma rate gain is applied
+before Poisson sampling and refractory suppression is applied afterwards.
 
 ## Subject-Specific Populations And Lag
 
@@ -295,8 +300,10 @@ recover both shared geometry and temporal asymmetry.
 - The latent state is specified by the researcher rather than inferred from
   biology.
 - The linear map `B` is deliberately interpretable but simplified.
-- Pure Poisson emission has Fano factor near one and lacks history dependence.
-- Optional refractory and burst mechanisms operate at bin resolution.
+- The base Poisson layer alone has Fano factor near one and lacks history
+  dependence; the current run adds Gamma overdispersion and refractory
+  suppression.
+- Burst mechanisms are available but disabled in the current run.
 - Results depend on rate scale, neuron tuning mixture, latent noise, bin width,
   and trial count.
 - Good recovery can demonstrate estimator behavior under known conditions; it

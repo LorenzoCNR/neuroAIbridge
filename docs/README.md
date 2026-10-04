@@ -23,8 +23,8 @@ Read the documents in this order:
    explains RSA, Procrustes alignment, lag recovery, and the limits of causal
    interpretation.
 6. [Experiments and evidence](06_EXPERIMENTS_AND_LIMITATIONS.md) documents the
-   four controlled notebooks, reference results, generated artifacts, current
-   claims, and missing experiments.
+   frozen synthetic reference, the exploratory real-monkey run, generated
+   artifacts, current claims, and missing experiments.
 
 For a cell-by-cell reproduction guide, see
 [the notebook guide](../notebooks/EXPERIMENTS.md).
@@ -56,14 +56,34 @@ The package currently includes:
 - PCA, CNN1D, MLP, LSTM, and Transformer encoders;
 - soft structured contrastive, supervised InfoNCE, and temporal-offset
   objectives;
-- held-out RSA and Procrustes recovery metrics;
+- held-out RSA and Procrustes recovery metrics on the synthetic branch;
 - subject-specific neural mappings, imposed temporal lag, and lag-aware
   alignment utilities.
 
-The four reproducible notebooks currently validate PCA and CNN1D on one
-simulated population. Other encoders and multisubject utilities are implemented
-research components, but they are not yet covered by the same complete
-held-out benchmark.
+The staged Synthetic v1 reference compares PCA, CNN1D, and Transformer across
+four objectives and keeps latent recovery, decoding, lag, robustness, and
+efficiency distinct. The local real-data branch
+`src/neurobridge/experiments/real_monkey.py` runs the same model/objective grid
+on one Area-2 reaching session and writes trial-safe held-out and descriptive
+full-sample artifacts under
+`outputs/real_monkey_area2_active_staged_2026-09-22/`. It has no biological
+latent ground truth, second subject, or cross-session generalization yet.
+
+The older notebooks remain reproducible examples of the original simulator
+workflow. They are not the sole definition of the current staged benchmark;
+the current protocol and output locations are recorded in
+`docs/06_EXPERIMENTS_AND_LIMITATIONS.md`.
+
+## Which documents are authoritative?
+
+The numbered files in this directory and the updated Obsidian notes with the
+suffix `_UPDATED_2026-09-17` are the active documentation. The following are
+historical by design and should not be overwritten: the Synthetic v1 report,
+its parameter sheet, the shared-latent chapter draft, and everything under
+`docs/archive/`. The older copies without the `UPDATED` suffix in
+`legacy_ai_for_all/Miei doc/miei_doc_neurobridge/` were removed from the active
+working set because their content is superseded by the updated notes; they are
+not a second source of truth.
 
 ## Build The Searchable Site
 

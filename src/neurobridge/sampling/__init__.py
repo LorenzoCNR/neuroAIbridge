@@ -22,6 +22,8 @@ from .batch_similarity import (
     batch_temporal_distance,
     normalize_batch_distance,
 )
+from .cebra_behavior import CEBRASupervisedWindowDataset
+from .cebra_time import CEBRATripletWindowDataset
 from .f_windows import build_windows
 from .labelled import (
     categorical_positive_mask,
@@ -41,6 +43,8 @@ __all__ = [
     "batch_structured_similarity_from_specs",
     "batch_temporal_distance",
     "build_windows",
+    "CEBRASupervisedWindowDataset",
+    "CEBRATripletWindowDataset",
     "categorical_positive_mask",
     "distance_to_positive_weights",
     "dist_to_simi",

@@ -1,0 +1,27 @@
+- d_code_rats_CL_notebook: (J:\AI_PhD_Neuro_CNR\Empirics\GIT_stuff\AI_for_all\Neuro_Bridge)
+	Con la piattaforma mia e di Davide, lavoriamo su tutti i ratti...generiamo manifold e le plottiamo tutti insieme da mettere in slide...
+	generiamo il video per Achille (che è empre quello che ci piace di più)
+	OUTPUT plot all rats manifold; video Achille
+
+
+- cebra_adapter_run_RATS_Grosmark_Buzsaki...Genrate_Manifolds: (:\AI_PhD_Neuro_CNR\Empirics\GIT_stuff\AI_for_all\Neuro_Bridge)
+	Con Cebra generiamo le manifold per tutti i ratti e le plottiamo
+	Generiamo Video per Achille
+	OUTPUT: plot all rats manifold; video Achille
+
+- CL_platform_Decoding: (J:\AI_PhD_Neuro_CNR\Empirics\GIT_stuff\AI_for_all\Neuro_Bridge)
+	loop con decoding knn su ns piattaforma per generare errore 
+	OUPTUT: risultati decoding (results_CL.csv) in loop da intregrare con i cecchi risultati che ho in cartella "decoding_Achille_new" dove ci sono i vecchi risultati e i file per caricare anche quelli dei Cebra boys (decoding_CL, decoding_mod_1)
+
+
+
+- Plot_Video_deocding_Rats: (:\AI_PhD_Neuro_CNR\Empirics\GIT_stuff\AI_for_all\Neuro_Bridge)
+	funzione per decodifica e generazione video e raster
+
+- decoding_CL: (J:\AI_PhD_Neuro_CNR\Empirics\GIT_stuff\AI_for_all\Neuro_Bridge\simil_cebra_codes_integra\Decoding_Achille_new)
+	Riprendo vecchie stime di decoding, e ci metto quelle nuove (ottenute con CL platfomr decoding)...carico anche alcune cose dei cebristi e genero decoding position plot per Achille
+
+- Cebra_monkey_plot_mio
+	Va da sè stime sulla scimmia loro per ottenere plot con traiettorie... (richiama some_functions...in cartella)
+
+- SCimmie...?????

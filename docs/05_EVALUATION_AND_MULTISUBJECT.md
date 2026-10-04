@@ -157,12 +157,12 @@ because reversing axes or arguments reverses the verbal interpretation.
 
 ## What Happens At The Boundaries
 
-Suppose each trial has 100 bins and the candidate lag is 10. The comparison
-uses 90 paired bins:
+In the current run each trial has 200 bins. For a candidate lag of 10, the
+comparison uses 190 paired bins:
 
 ```text
-reference times 0..89
-other times     10..99.
+reference times 0..189
+other times     10..199.
 ```
 
 The final 10 reference bins and first 10 other bins have no partner for that
@@ -194,3 +194,19 @@ produce broad ridges even without directional interaction.
 
 The utilities for subject-specific mappings and lag scans exist. A complete
 multisubject benchmark satisfying all controls is future work.
+
+## Real-data evaluation boundary
+
+The local monkey recording is a single active Area-2 session. Its staged
+evaluation therefore separates four questions rather than collapsing them:
+
+- direction decoding and regression of progress, position, and velocity;
+- temporal/input structure through CKA to the observed input windows;
+- post-hoc embedding-noise robustness and participation ratio;
+- computational cost recorded with the model artifacts.
+
+The real branch has no observed latent `Z`, no second subject/session, and no
+biological lag label. Any future temporal shift or lag-lag experiment must be
+described as a controlled perturbation of the observed data. The current
+`full_sample` output is descriptive; held-out trial evaluation remains the
+generalization result.

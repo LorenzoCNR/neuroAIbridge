@@ -19,6 +19,9 @@ The module currently provides four alternatives:
 - TemporalCNNEncoder:
     1D temporal convolutions followed by global average pooling.
 
+- CEBRAOffset10Encoder:
+    CEBRA-compatible ten-bin valid-convolution encoder with skip connections.
+
 - TemporalMLPEncoder:
     Simple baseline that flattens the full temporal window.
 
@@ -381,6 +384,70 @@ class TemporalCNNEncoder(nn.Module):
             embedding,
             normalize=self.normalize,
         )
+
+
+class CEBRAOffset10Encoder(nn.Module):
+    """Minimal local implementation of CEBRA's ``offset10-model``.
+
+    The encoder uses valid temporal convolutions and three residual blocks.  A
+    ten-bin context produces one temporal output, hence one embedding per
+    sampled center.  When the NeuroBridge cache contains wider windows (21 bins
+    in the current protocol), the centered ten-bin context is selected before
+    applying the CEBRA architecture.
+    """
+
+    context_size = 10
+
+    def __init__(
+        self,
+        n_features: int,
+        embedding_dim: int = 3,
+        hidden_dim: int = 32,
+        normalize: bool = True,
+    ) -> None:
+        super().__init__()
+        _validate_positive_int("n_features", n_features)
+        _validate_positive_int("embedding_dim", embedding_dim)
+        _validate_positive_int("hidden_dim", hidden_dim)
+        self.n_features = n_features
+        self.normalize = normalize
+
+        self.input_layer = nn.Sequential(
+            nn.Conv1d(n_features, hidden_dim, kernel_size=2),
+            nn.GELU(),
+        )
+        self.residual_blocks = nn.ModuleList(
+            [
+                nn.Sequential(
+                    nn.Conv1d(hidden_dim, hidden_dim, kernel_size=3),
+                    nn.GELU(),
+                )
+                for _ in range(3)
+            ]
+        )
+        self.output_layer = nn.Conv1d(hidden_dim, embedding_dim, kernel_size=3)
+
+    def forward(self, x: torch.Tensor) -> torch.Tensor:
+        _validate_temporal_input(x, n_features=self.n_features)
+        if x.size(1) < self.context_size:
+            raise ValueError(
+                f"CEBRAOffset10Encoder requires at least {self.context_size} "
+                f"time bins, got {x.size(1)}."
+            )
+
+        start = (x.size(1) - self.context_size) // 2
+        context = x[:, start:start + self.context_size].transpose(1, 2)
+        hidden = self.input_layer(context)
+        for block in self.residual_blocks:
+            hidden = hidden[..., 1:-1] + block(hidden)
+
+        embedding = self.output_layer(hidden).squeeze(-1)
+        if embedding.ndim != 2:
+            raise RuntimeError(
+                "CEBRAOffset10Encoder expected one temporal output; "
+                f"got shape {tuple(embedding.shape)}."
+            )
+        return _normalize_embedding(embedding, normalize=self.normalize)
 
 
 # ---------------------------------------------------------------------

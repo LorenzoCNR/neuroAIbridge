@@ -35,10 +35,12 @@ the same number of trials, time bins, neurons, window size, and encoder family.
 Evaluation protocol
 -------------------
 
-Every experiment contains 160 trials, 100 time bins, 100 neurons, and
-centered 10-bin windows with stride one. Models are fitted on 80% of the
-trials and evaluated on the untouched 20%. The split is performed by trial,
-so windows from a test trial never enter training.
+The current shared-latent benchmark contains 200 trials (25 per each of eight
+directions), 200 time bins, 160 neurons for subject A and 120 for subject B,
+and centered 21-bin windows with stride one. Models are fitted independently
+for each subject, encoder, and objective. The frozen reference uses 140 train,
+20 validation, and 40 test trials globally; the split is performed by trial,
+so overlapping windows from a test trial never enter training.
 
 For the linear track, each trial contains both movement phases:
 
@@ -93,9 +95,10 @@ linear tasks. Emission uses
 ``TemporalCNNEncoder``, ``DataLoader``, ``AdamW``,
 ``build_similarity_matrix``, and ``soft_contrastive_loss`` explicitly.
 
-``train_epoch`` is deliberately narrow: it performs one epoch of repeated
-PyTorch operations. It does not choose the encoder, optimizer, soft target,
-loss, or number of epochs. Those choices remain editable in the notebook.
+``train_steps`` and ``train_triplet_steps`` are deliberately narrow: they
+perform repeated PyTorch operations. They do not choose the encoder, optimizer,
+soft target, loss, or number of steps. Those choices remain editable in the
+staged code.
 
 Training batches are shuffled, but time is not removed from the samples.
 Every window retains ``trial_id``, ``time_id``, ``label``, and ``progress``.
@@ -163,3 +166,13 @@ and context.
 .. image:: ../../site/assets/circular_3d.png
    :alt: Ground truth, PCA, and CNN1D trial-averaged trajectories
    :width: 100%
+
+Real-monkey staged branch
+-------------------------
+
+The real branch is implemented in ``neurobridge.experiments.real_monkey`` and
+uses PCA, CNN1D, and Transformer models with four objective identifiers. It
+saves raw/unit embeddings and separate metric CSVs/figures under
+``outputs/real_monkey_area2_active_staged_2026-09-22/``. The ``held_out``
+branch is the generalization check; ``full_sample`` is descriptive. No latent
+recovery or biological lag claim is made for this single-session recording.

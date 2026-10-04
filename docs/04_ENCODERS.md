@@ -169,12 +169,22 @@ equivariant and does not know temporal order.
 ### Limitations
 
 - Attention cost is quadratic in window length.
-- Ten-bin windows may be too short for its flexibility to be useful.
+- The current 21-bin windows provide more context, but the quadratic attention
+  cost still grows with window length.
 - Mean pooling can hide token-specific temporal structure.
 - It has more hyperparameters and a greater overfitting risk than PCA or CNN1D.
 
-The Transformer is available in the package but is not part of the current
-four-notebook validated comparison.
+The Transformer is part of the current shared-latent comparison in
+`notebooks/experiment_05_shared_latent_staged.py`.
+
+## Real-monkey encoder configuration
+
+The first real-data run uses the same three-way comparison—PCA, CNN1D, and
+Transformer—but fits it to `(21, 65)` neural windows and produces three
+embedding coordinates. Every neural checkpoint produces both `embedding_raw`
+and its L2-normalized `embedding_unit` counterpart. The two forms are saved
+from the same checkpoint and are evaluated separately; normalization is not a
+second training run.
 
 ## Normalization And Geometry
 

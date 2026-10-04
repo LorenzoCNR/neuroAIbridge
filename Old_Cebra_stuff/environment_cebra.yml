@@ -1,0 +1,29 @@
+name: cebra
+channels:
+  - conda-forge
+  - defaults
+dependencies:
+  - python=3.11
+  - pip
+  - numpy
+  - scipy
+  - pandas
+  - scikit-learn
+  - matplotlib
+  - seaborn
+  - plotly
+  - pyyaml
+  - joblib
+  - h5py
+  - openpyxl
+  - pillow
+  - packaging
+  - tqdm
+  - ipykernel
+  - jupyter
+  - spyder
+  - pip:
+      - torch
+      - torchvision
+      - torchaudio
+      - cebra

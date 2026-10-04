@@ -36,7 +36,7 @@ def supervised_infonce_loss(z, labels, temperature=0.1):
 
     valid = positive_mask.sum(dim=1) > 0
     if not torch.any(valid):
-        return z.new_tensor(0.0)
+        return z.sum() * 0.0
 
     selected_log_prob = torch.where(positive_mask, log_prob, torch.zeros_like(log_prob))
     loss_per_sample = -selected_log_prob.sum(dim=1) / positive_mask.sum(dim=1).clamp_min(1)
@@ -66,7 +66,7 @@ def masked_infonce_loss(z, positive_mask, temperature=0.1):
 
     valid = positive_mask.sum(dim=1) > 0
     if not torch.any(valid):
-        return z.new_tensor(0.0)
+        return z.sum() * 0.0
 
     selected_log_prob = torch.where(positive_mask, log_prob, torch.zeros_like(log_prob))
     loss_per_sample = -selected_log_prob.sum(dim=1) / positive_mask.sum(dim=1).clamp_min(1)
@@ -94,6 +94,38 @@ def time_offset_infonce_loss(z, trial_id, time_id, offset=10, temperature=0.1):
     return masked_infonce_loss(z, positive_mask, temperature=temperature)
 
 
+def cebra_infonce_loss(reference, positive, negative, temperature=1.0):
+    """InfoNCE on an explicit CEBRA-style reference/positive/negative batch.
+
+    ``reference`` and ``positive`` contain one embedding per sampled pair. The
+    rows of ``negative`` are the independent negative samples for the batch;
+    every reference is contrasted with all of them. This is the objective used
+    by the CEBRA solvers after their sampler has constructed the three inputs:
+    the positive similarity is the alignment term and only the negative
+    similarities enter the ``logsumexp`` uniformity term.
+    Embeddings are L2-normalized here so the function remains correct when it is
+    used with an encoder whose final normalization is disabled for diagnostics.
+    """
+    for name, value in (("reference", reference), ("positive", positive),
+                        ("negative", negative)):
+        if not isinstance(value, torch.Tensor) or value.ndim != 2:
+            raise ValueError(f"{name} must have shape (batch, embedding_dim)")
+    if reference.shape != positive.shape or negative.shape != reference.shape:
+        raise ValueError("reference, positive and negative must have identical shapes")
+    if reference.shape[0] < 1:
+        raise ValueError("the batch must contain at least one sample")
+    if temperature <= 0:
+        raise ValueError("temperature must be positive")
+
+    reference = F.normalize(reference, dim=-1)
+    positive = F.normalize(positive, dim=-1)
+    negative = F.normalize(negative, dim=-1)
+
+    positive_logits = (reference * positive).sum(dim=-1) / temperature
+    negative_logits = (reference @ negative.T) / temperature
+    return -positive_logits.mean() + torch.logsumexp(negative_logits, dim=1).mean()
+
+
 def soft_contrastive_loss(z, similarity, temperature=0.1, eps=1e-8):
     """
     Soft structured contrastive loss.
@@ -117,7 +149,7 @@ def soft_contrastive_loss(z, similarity, temperature=0.1, eps=1e-8):
     valid = row_sum.squeeze(1) > eps
 
     if not torch.any(valid):
-        return z.new_tensor(0.0)
+        return z.sum() * 0.0
 
     targets = targets / row_sum.clamp_min(eps)
 

@@ -1,16 +1,17 @@
 # NeuroBridge
 
 NeuroBridge is a research-oriented Python package for controlled neural
-time-series simulation and representation learning.
+time-series simulation, real-data representation learning, and staged
+evaluation.
 
 The project generates a known task-level latent process, maps it into a neural
 population, and tests whether representation-learning methods can recover the
 latent geometry from sparse spike counts.
 
-The current repository is a research prototype. Its reproducible experiment
-suite compares PCA with a temporal CNN trained using a **soft structured
-contrastive loss**. The complete objective is described in
-[Learning objectives and loss](docs/03_LEARNING_OBJECTIVES.md).
+The current repository contains two connected experiment branches. Synthetic
+v1 is the controlled benchmark with known latent ground truth; the real-data
+branch applies the same staged representation/evaluation logic to the local
+Area-2 monkey-reaching recording. The reference synthetic run is immutable.
 
 ## Documentation
 
@@ -47,19 +48,25 @@ Markdown documents above are the canonical scientific explanation.
 - Centered temporal windows with trial, time, and condition metadata.
 - PCA, CNN1D, MLP, LSTM, and Transformer encoders.
 - Soft structured contrastive, supervised InfoNCE, and temporal-offset losses.
-- Procrustes and representational-similarity metrics.
+- Procrustes, RSA, linear CKA, decoding, lag, robustness, and efficiency
+  diagnostics.
+- A cacheable real-monkey branch in
+  `src/neurobridge/experiments/real_monkey.py` with PCA, CNN1D, and
+  Transformer encoders, raw/unit embeddings, and trial-safe held-out metrics.
 
-The validated experiment suite currently uses PCA and CNN1D. Other encoders
-are available as research components but are not part of the minimal verified
-run.
+The staged Synthetic v1 reference compares PCA, CNN1D, and Transformer across
+four objectives. The real-monkey branch is evaluated in the staged final-study
+outputs under `outputs/final_thesis_v1/`; generated artifacts are kept out of
+the source repository unless a compact, review-oriented result is explicitly
+selected.
 
 ## Installation
 
 Python 3.11 is recommended.
 
 ```bash
-git clone https://github.com/LorenzoCNR/AI_for_all.git
-cd AI_for_all
+git clone https://github.com/LorenzoCNR/neuroAIbridge.git
+cd neuroAIbridge
 python -m pip install -e .
 ```
 
@@ -132,9 +139,10 @@ an alignment score is computed. In a controlled simulation, the best-scoring
 candidate can therefore be compared with the known imposed lag.
 
 This makes shared-geometry and lag recovery testable because the simulator
-provides their ground truth. The four notebooks currently validate the
-single-population foundations; a complete held-out multi-subject benchmark is
-the next experimental stage.
+provides their ground truth. The local monkey recording is a single Area-2
+population: it supports task/behaviour decoding and controlled temporal
+perturbations, but it does not provide a second real population or a known
+latent process for recovery.
 
 An accompanying static project page is available at
 [site/index.html](site/index.html). It can be opened directly without a web
@@ -143,7 +151,7 @@ GitHub Pages is enabled with **GitHub Actions** as its source, the included
 workflow publishes:
 
 ```text
-https://lorenzocnr.github.io/AI_for_all/
+https://lorenzocnr.github.io/neuroAIbridge/
 ```
 
 The visual project page is served at the root URL and the searchable Sphinx
@@ -204,18 +212,32 @@ python -m unittest \
   discover -s tests -v
 ```
 
-The standard-library test run executes 37 tests: 35 pass and 2 optional
-interactive Plotly tests are skipped.
+The current pytest run executes 56 tests: 54 pass and 2 optional interactive
+tests are skipped:
+
+```powershell
+python -m pytest tests -q -p no:cacheprovider
+```
 
 ## Current Scope
 
-Each controlled experiment generates 160 trials. The split is performed on
-complete trials:
+The synthetic reference uses 200 trials and a trial-level split. The real
+monkey branch uses 193 trials, 600 bins/trial, 65 channels, and an explicit
+NeuroBridge stratified split of 134/20/39 train/validation/test trials. Its
+local data are already binned at 1 ms and spike-smoothed at 40 ms.
+
+For the synthetic reference, the split is performed on complete trials:
 
 ```text
-128 training trials -> fit PCA and CNN1D
- 32 test trials     -> compute held-out recovery metrics
+140 training trials -> fit PCA and neural encoders
+ 40 test trials     -> compute held-out recovery metrics
+ 20 validation trials -> checkpoint/decoder selection
 ```
+
+These counts describe the frozen reference artifacts. The current source
+configuration has a different nominal per-direction default (17/5/3); do not
+mix that configuration with the frozen run without creating a new output
+namespace and provenance record.
 
 Windows from a test trial never enter model fitting. The reported test metrics
 therefore measure recovery on new stochastic realizations from the same
@@ -231,7 +253,7 @@ method:
 - reproduces every statistical property of biological spike trains.
 
 Those claims require multi-seed uncertainty estimates, explicit ablations,
-additional baselines, and real-data experiments.
+additional baselines, and cross-session or cross-animal real-data tests.
 
 ## Reproducibility And Outputs
 

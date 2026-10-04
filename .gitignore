@@ -52,3 +52,12 @@ docs/spike_simulator_generative_model*.pdf
 
 # Generated Sphinx documentation
 docs/_build/
+
+# Current repository snapshot excludes the legacy archive. Tracked legacy files
+# intentionally removed from the working tree remain deletions for review.
+/legacy_ai_for_all/
+
+# Keep the global MAT exclusions above, but include the complete Hasson
+# pipeline directory (including its source MAT files) in this repository.
+!Hasson_pipeline/*.mat
+!Hasson_pipeline/**/*.mat

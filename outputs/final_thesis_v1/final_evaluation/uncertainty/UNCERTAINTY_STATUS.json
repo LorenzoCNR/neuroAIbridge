@@ -1,0 +1,24 @@
+{
+  "bootstrap_status": "PENDING",
+  "branch": "uncertainty",
+  "near_collapse_seed_values_retained": true,
+  "no_bootstrap_summary_or_seed_ci_figures_published": true,
+  "parent_hashes": {
+    "analysis_source": "e2def7ef0ba73eb4df6bac70efe269b9b267f14fcc77359868e12fcc2e8248b7",
+    "core_metrics": "f36e60938b29afef3e9a7586f4e659a744f2e65bee93f45ce69bf47d0daae49f",
+    "core_provenance": "488e8a65b20b2ec2a88ef6fea181d299d589d5720a248d38a1769232f680017b",
+    "embedding_index": "419117fde1dfacbe074c0c6c6f9b50a157e6fb7b110252e1ebb891d4dc9218cc",
+    "evaluation_support": "b655332f6475e4429f580c7e36b564e0177fd0cc6cb17d0264b756af35ced266",
+    "probe_selection": "abbadce78dc3c986a42ff5fca0a16be5561b7196f001bde1e499b09ca28de75b"
+  },
+  "requested_bootstrap_replicates": 1000,
+  "seed_interpretation": {
+    "1101": "HPO-selected checkpoint; not an independent final refit",
+    "1201": "independent final training seed",
+    "1301": "independent final training seed"
+  },
+  "status": "PARTIAL_BOOTSTRAP_PENDING",
+  "training_seed_variability_rows": 336,
+  "training_seed_variability_sha256": "748c74f3058958fc2bf140ce76c31cb02b2f6611927e8fcc338d78b5a2b23d70",
+  "training_seed_variability_status": "COMPLETE"
+}
