@@ -1,0 +1,245 @@
+dataset,architecture,objective,population,seed,trial_id,fit_status,near_collapse,representation,selected_C,condition_grid,selected_progress_alpha,behavior_alphas,selection_split,final_evaluation_split
+Synthetic,cnn1d,behavior_contrastive_blocks,A,1101,p2a-syn-cb-A-c2-s1101-b8d95dcc6e018570,ELIGIBLE,False,raw,1.0,"[0.1, 1.0, 10.0]",0.1,{},validation,test
+Synthetic,cnn1d,behavior_contrastive_blocks,A,1101,p2a-syn-cb-A-c2-s1101-b8d95dcc6e018570,ELIGIBLE,False,unit,0.1,"[0.1, 1.0, 10.0]",10.0,{},validation,test
+Synthetic,cnn1d,behavior_contrastive_blocks,B,1101,p2a-syn-cb-B-c2-s1101-5c26acb38acacc1e,ELIGIBLE,False,raw,10.0,"[0.1, 1.0, 10.0]",10.0,{},validation,test
+Synthetic,cnn1d,behavior_contrastive_blocks,B,1101,p2a-syn-cb-B-c2-s1101-5c26acb38acacc1e,ELIGIBLE,False,unit,0.1,"[0.1, 1.0, 10.0]",10.0,{},validation,test
+Synthetic,cnn1d,behavior_contrastive_blocks,A,1201,p2a-syn-fin-cb-A-c2-s1201-41c7ea859eaf76cc,ELIGIBLE,False,raw,1.0,"[0.1, 1.0, 10.0]",0.1,{},validation,test
+Synthetic,cnn1d,behavior_contrastive_blocks,A,1201,p2a-syn-fin-cb-A-c2-s1201-41c7ea859eaf76cc,ELIGIBLE,False,unit,0.1,"[0.1, 1.0, 10.0]",10.0,{},validation,test
+Synthetic,cnn1d,behavior_contrastive_blocks,B,1201,p2a-syn-fin-cb-B-c2-s1201-7ea8aa5789758fa6,ELIGIBLE,False,raw,0.1,"[0.1, 1.0, 10.0]",10.0,{},validation,test
+Synthetic,cnn1d,behavior_contrastive_blocks,B,1201,p2a-syn-fin-cb-B-c2-s1201-7ea8aa5789758fa6,ELIGIBLE,False,unit,0.1,"[0.1, 1.0, 10.0]",10.0,{},validation,test
+Synthetic,cnn1d,behavior_contrastive_blocks,A,1301,p2a-syn-fin-cb-A-c2-s1301-6d6f817d96abe426,ELIGIBLE,False,raw,0.1,"[0.1, 1.0, 10.0]",0.1,{},validation,test
+Synthetic,cnn1d,behavior_contrastive_blocks,A,1301,p2a-syn-fin-cb-A-c2-s1301-6d6f817d96abe426,ELIGIBLE,False,unit,1.0,"[0.1, 1.0, 10.0]",10.0,{},validation,test
+Synthetic,cnn1d,behavior_contrastive_blocks,B,1301,p2a-syn-fin-cb-B-c2-s1301-3ad7bb86244b4caf,ELIGIBLE,False,raw,0.1,"[0.1, 1.0, 10.0]",10.0,{},validation,test
+Synthetic,cnn1d,behavior_contrastive_blocks,B,1301,p2a-syn-fin-cb-B-c2-s1301-3ad7bb86244b4caf,ELIGIBLE,False,unit,0.1,"[0.1, 1.0, 10.0]",10.0,{},validation,test
+Synthetic,cnn1d,infonce,A,1101,phase2a_real_windows_2026-09-28-synthetic-A-cnn1d-infonce-c3-s1101-67653a8f68e9b7fd,ELIGIBLE,False,raw,1.0,"[0.1, 1.0, 10.0]",10.0,{},validation,test
+Synthetic,cnn1d,infonce,A,1101,phase2a_real_windows_2026-09-28-synthetic-A-cnn1d-infonce-c3-s1101-67653a8f68e9b7fd,ELIGIBLE,False,unit,0.1,"[0.1, 1.0, 10.0]",10.0,{},validation,test
+Synthetic,cnn1d,infonce,B,1101,phase2a_real_windows_2026-09-28-synthetic-B-cnn1d-infonce-c3-s1101-031c3d38dee54c0a,ELIGIBLE,False,raw,10.0,"[0.1, 1.0, 10.0]",10.0,{},validation,test
+Synthetic,cnn1d,infonce,B,1101,phase2a_real_windows_2026-09-28-synthetic-B-cnn1d-infonce-c3-s1101-031c3d38dee54c0a,ELIGIBLE,False,unit,10.0,"[0.1, 1.0, 10.0]",10.0,{},validation,test
+Synthetic,cnn1d,infonce,A,1201,p2a-syn-fin-ci-A-c3-s1201-586392aed90d7032,ELIGIBLE,False,raw,1.0,"[0.1, 1.0, 10.0]",10.0,{},validation,test
+Synthetic,cnn1d,infonce,A,1201,p2a-syn-fin-ci-A-c3-s1201-586392aed90d7032,ELIGIBLE,False,unit,1.0,"[0.1, 1.0, 10.0]",0.1,{},validation,test
+Synthetic,cnn1d,infonce,B,1201,p2a-syn-fin-ci-B-c3-s1201-480a4173071dd11b,ELIGIBLE,False,raw,10.0,"[0.1, 1.0, 10.0]",10.0,{},validation,test
+Synthetic,cnn1d,infonce,B,1201,p2a-syn-fin-ci-B-c3-s1201-480a4173071dd11b,ELIGIBLE,False,unit,0.1,"[0.1, 1.0, 10.0]",10.0,{},validation,test
+Synthetic,cnn1d,infonce,A,1301,p2a-syn-fin-ci-A-c3-s1301-439284db016a54b7,ELIGIBLE,False,raw,1.0,"[0.1, 1.0, 10.0]",10.0,{},validation,test
+Synthetic,cnn1d,infonce,A,1301,p2a-syn-fin-ci-A-c3-s1301-439284db016a54b7,ELIGIBLE,False,unit,1.0,"[0.1, 1.0, 10.0]",10.0,{},validation,test
+Synthetic,cnn1d,infonce,B,1301,p2a-syn-fin-ci-B-c3-s1301-943d5e43d15a3a56,ELIGIBLE,False,raw,0.1,"[0.1, 1.0, 10.0]",10.0,{},validation,test
+Synthetic,cnn1d,infonce,B,1301,p2a-syn-fin-ci-B-c3-s1301-943d5e43d15a3a56,ELIGIBLE,False,unit,0.1,"[0.1, 1.0, 10.0]",10.0,{},validation,test
+Synthetic,cnn1d,soft,A,1101,phase2a_frozen_2026-09-28-synthetic-A-cnn1d-soft-c2-s1101-9bf62ff71add1ca2,ELIGIBLE,False,raw,10.0,"[0.1, 1.0, 10.0]",10.0,{},validation,test
+Synthetic,cnn1d,soft,A,1101,phase2a_frozen_2026-09-28-synthetic-A-cnn1d-soft-c2-s1101-9bf62ff71add1ca2,ELIGIBLE,False,unit,0.1,"[0.1, 1.0, 10.0]",10.0,{},validation,test
+Synthetic,cnn1d,soft,B,1101,phase2a_frozen_2026-09-28-synthetic-B-cnn1d-soft-c2-s1101-b100fa3507318100,ELIGIBLE,False,raw,0.1,"[0.1, 1.0, 10.0]",10.0,{},validation,test
+Synthetic,cnn1d,soft,B,1101,phase2a_frozen_2026-09-28-synthetic-B-cnn1d-soft-c2-s1101-b100fa3507318100,ELIGIBLE,False,unit,0.1,"[0.1, 1.0, 10.0]",0.1,{},validation,test
+Synthetic,cnn1d,soft,A,1201,p2a-syn-fin-cs-A-c2-s1201-7438848532c657ee,ELIGIBLE,False,raw,0.1,"[0.1, 1.0, 10.0]",10.0,{},validation,test
+Synthetic,cnn1d,soft,A,1201,p2a-syn-fin-cs-A-c2-s1201-7438848532c657ee,ELIGIBLE,False,unit,0.1,"[0.1, 1.0, 10.0]",10.0,{},validation,test
+Synthetic,cnn1d,soft,B,1201,p2a-syn-fin-cs-B-c2-s1201-b1074cf0cd587e36,ELIGIBLE,False,raw,0.1,"[0.1, 1.0, 10.0]",10.0,{},validation,test
+Synthetic,cnn1d,soft,B,1201,p2a-syn-fin-cs-B-c2-s1201-b1074cf0cd587e36,ELIGIBLE,False,unit,0.1,"[0.1, 1.0, 10.0]",0.1,{},validation,test
+Synthetic,cnn1d,soft,A,1301,p2a-syn-fin-cs-A-c2-s1301-04647c668eebfc5f,ELIGIBLE,False,raw,1.0,"[0.1, 1.0, 10.0]",10.0,{},validation,test
+Synthetic,cnn1d,soft,A,1301,p2a-syn-fin-cs-A-c2-s1301-04647c668eebfc5f,ELIGIBLE,False,unit,0.1,"[0.1, 1.0, 10.0]",0.1,{},validation,test
+Synthetic,cnn1d,soft,B,1301,p2a-syn-fin-cs-B-c2-s1301-33cf39c72a95c2a7,ELIGIBLE,False,raw,10.0,"[0.1, 1.0, 10.0]",10.0,{},validation,test
+Synthetic,cnn1d,soft,B,1301,p2a-syn-fin-cs-B-c2-s1301-33cf39c72a95c2a7,ELIGIBLE,False,unit,1.0,"[0.1, 1.0, 10.0]",0.1,{},validation,test
+Synthetic,cnn1d,time_contrastive_blocks,A,1101,phase2a_real_windows_2026-09-28-synthetic-A-cnn1d-time_contrastive_blocks-c2-s1101-397786e2de6d5459,ELIGIBLE,False,raw,1.0,"[0.1, 1.0, 10.0]",10.0,{},validation,test
+Synthetic,cnn1d,time_contrastive_blocks,A,1101,phase2a_real_windows_2026-09-28-synthetic-A-cnn1d-time_contrastive_blocks-c2-s1101-397786e2de6d5459,ELIGIBLE,False,unit,1.0,"[0.1, 1.0, 10.0]",10.0,{},validation,test
+Synthetic,cnn1d,time_contrastive_blocks,B,1101,phase2a_real_windows_2026-09-28-synthetic-B-cnn1d-time_contrastive_blocks-c2-s1101-e574175aa3f8971e,ELIGIBLE,False,raw,0.1,"[0.1, 1.0, 10.0]",10.0,{},validation,test
+Synthetic,cnn1d,time_contrastive_blocks,B,1101,phase2a_real_windows_2026-09-28-synthetic-B-cnn1d-time_contrastive_blocks-c2-s1101-e574175aa3f8971e,ELIGIBLE,False,unit,0.1,"[0.1, 1.0, 10.0]",10.0,{},validation,test
+Synthetic,cnn1d,time_contrastive_blocks,A,1201,p2a-syn-fin-ct-A-c2-s1201-ec8b523768cffb7f,ELIGIBLE,False,raw,10.0,"[0.1, 1.0, 10.0]",10.0,{},validation,test
+Synthetic,cnn1d,time_contrastive_blocks,A,1201,p2a-syn-fin-ct-A-c2-s1201-ec8b523768cffb7f,ELIGIBLE,False,unit,0.1,"[0.1, 1.0, 10.0]",10.0,{},validation,test
+Synthetic,cnn1d,time_contrastive_blocks,B,1201,p2a-syn-fin-ct-B-c2-s1201-c1bd1a22c050a297,ELIGIBLE,False,raw,0.1,"[0.1, 1.0, 10.0]",10.0,{},validation,test
+Synthetic,cnn1d,time_contrastive_blocks,B,1201,p2a-syn-fin-ct-B-c2-s1201-c1bd1a22c050a297,ELIGIBLE,False,unit,1.0,"[0.1, 1.0, 10.0]",10.0,{},validation,test
+Synthetic,cnn1d,time_contrastive_blocks,A,1301,p2a-syn-fin-ct-A-c2-s1301-4742b4d445013020,ELIGIBLE,False,raw,0.1,"[0.1, 1.0, 10.0]",10.0,{},validation,test
+Synthetic,cnn1d,time_contrastive_blocks,A,1301,p2a-syn-fin-ct-A-c2-s1301-4742b4d445013020,ELIGIBLE,False,unit,10.0,"[0.1, 1.0, 10.0]",10.0,{},validation,test
+Synthetic,cnn1d,time_contrastive_blocks,B,1301,p2a-syn-fin-ct-B-c2-s1301-19306cb9a3b3e6c5,ELIGIBLE,False,raw,10.0,"[0.1, 1.0, 10.0]",10.0,{},validation,test
+Synthetic,cnn1d,time_contrastive_blocks,B,1301,p2a-syn-fin-ct-B-c2-s1301-19306cb9a3b3e6c5,ELIGIBLE,False,unit,1.0,"[0.1, 1.0, 10.0]",10.0,{},validation,test
+Synthetic,transformer,behavior_contrastive_blocks,A,1101,p2a-syn-tb-A-c2-s1101-85e3cae4bbe37626,ELIGIBLE,False,raw,10.0,"[0.1, 1.0, 10.0]",0.1,{},validation,test
+Synthetic,transformer,behavior_contrastive_blocks,A,1101,p2a-syn-tb-A-c2-s1101-85e3cae4bbe37626,ELIGIBLE,False,unit,10.0,"[0.1, 1.0, 10.0]",10.0,{},validation,test
+Synthetic,transformer,behavior_contrastive_blocks,B,1101,p2a-syn-tb-B-c2-s1101-ef3d07ca617bad56,ELIGIBLE,False,raw,0.1,"[0.1, 1.0, 10.0]",0.1,{},validation,test
+Synthetic,transformer,behavior_contrastive_blocks,B,1101,p2a-syn-tb-B-c2-s1101-ef3d07ca617bad56,ELIGIBLE,False,unit,10.0,"[0.1, 1.0, 10.0]",10.0,{},validation,test
+Synthetic,transformer,behavior_contrastive_blocks,A,1201,p2a-syn-fin-tb-A-c2-s1201-f894cb7dc813b630,ELIGIBLE,False,raw,0.1,"[0.1, 1.0, 10.0]",10.0,{},validation,test
+Synthetic,transformer,behavior_contrastive_blocks,A,1201,p2a-syn-fin-tb-A-c2-s1201-f894cb7dc813b630,ELIGIBLE,False,unit,1.0,"[0.1, 1.0, 10.0]",10.0,{},validation,test
+Synthetic,transformer,behavior_contrastive_blocks,B,1201,p2a-syn-fin-tb-B-c2-s1201-cbc48b8ee1411c3c,ELIGIBLE,False,raw,1.0,"[0.1, 1.0, 10.0]",0.1,{},validation,test
+Synthetic,transformer,behavior_contrastive_blocks,B,1201,p2a-syn-fin-tb-B-c2-s1201-cbc48b8ee1411c3c,ELIGIBLE,False,unit,0.1,"[0.1, 1.0, 10.0]",10.0,{},validation,test
+Synthetic,transformer,behavior_contrastive_blocks,A,1301,p2a-syn-fin-tb-A-c2-s1301-dff643e2c8e3f5d5,ELIGIBLE,False,raw,0.1,"[0.1, 1.0, 10.0]",0.1,{},validation,test
+Synthetic,transformer,behavior_contrastive_blocks,A,1301,p2a-syn-fin-tb-A-c2-s1301-dff643e2c8e3f5d5,ELIGIBLE,False,unit,0.1,"[0.1, 1.0, 10.0]",0.1,{},validation,test
+Synthetic,transformer,behavior_contrastive_blocks,B,1301,p2a-syn-fin-tb-B-c2-s1301-0dac112c38748a73,ELIGIBLE,False,raw,1.0,"[0.1, 1.0, 10.0]",10.0,{},validation,test
+Synthetic,transformer,behavior_contrastive_blocks,B,1301,p2a-syn-fin-tb-B-c2-s1301-0dac112c38748a73,ELIGIBLE,False,unit,0.1,"[0.1, 1.0, 10.0]",10.0,{},validation,test
+Synthetic,transformer,infonce,A,1101,phase2a_real_windows_2026-09-28-synthetic-A-transformer-infonce-c3-s1101-78c29442de24c18f,ELIGIBLE,False,raw,0.1,"[0.1, 1.0, 10.0]",0.1,{},validation,test
+Synthetic,transformer,infonce,A,1101,phase2a_real_windows_2026-09-28-synthetic-A-transformer-infonce-c3-s1101-78c29442de24c18f,ELIGIBLE,False,unit,1.0,"[0.1, 1.0, 10.0]",10.0,{},validation,test
+Synthetic,transformer,infonce,B,1101,phase2a_real_windows_2026-09-28-synthetic-B-transformer-infonce-c3-s1101-15c4455b7a8f6465,ELIGIBLE,False,raw,10.0,"[0.1, 1.0, 10.0]",10.0,{},validation,test
+Synthetic,transformer,infonce,B,1101,phase2a_real_windows_2026-09-28-synthetic-B-transformer-infonce-c3-s1101-15c4455b7a8f6465,ELIGIBLE,False,unit,1.0,"[0.1, 1.0, 10.0]",10.0,{},validation,test
+Synthetic,transformer,infonce,A,1201,p2a-syn-fin-ti-A-c3-s1201-61ed5d0f444c94af,ELIGIBLE,False,raw,1.0,"[0.1, 1.0, 10.0]",10.0,{},validation,test
+Synthetic,transformer,infonce,A,1201,p2a-syn-fin-ti-A-c3-s1201-61ed5d0f444c94af,ELIGIBLE,False,unit,0.1,"[0.1, 1.0, 10.0]",10.0,{},validation,test
+Synthetic,transformer,infonce,B,1201,p2a-syn-fin-ti-B-c3-s1201-73b6f6e7090508bd,ELIGIBLE,False,raw,0.1,"[0.1, 1.0, 10.0]",10.0,{},validation,test
+Synthetic,transformer,infonce,B,1201,p2a-syn-fin-ti-B-c3-s1201-73b6f6e7090508bd,ELIGIBLE,False,unit,1.0,"[0.1, 1.0, 10.0]",0.1,{},validation,test
+Synthetic,transformer,infonce,A,1301,p2a-syn-fin-ti-A-c3-s1301-d65744c1ecb92552,ELIGIBLE,False,raw,0.1,"[0.1, 1.0, 10.0]",10.0,{},validation,test
+Synthetic,transformer,infonce,A,1301,p2a-syn-fin-ti-A-c3-s1301-d65744c1ecb92552,ELIGIBLE,False,unit,1.0,"[0.1, 1.0, 10.0]",10.0,{},validation,test
+Synthetic,transformer,infonce,B,1301,p2a-syn-fin-ti-B-c3-s1301-75d701540445ce55,ELIGIBLE,False,raw,10.0,"[0.1, 1.0, 10.0]",10.0,{},validation,test
+Synthetic,transformer,infonce,B,1301,p2a-syn-fin-ti-B-c3-s1301-75d701540445ce55,ELIGIBLE,False,unit,10.0,"[0.1, 1.0, 10.0]",10.0,{},validation,test
+Synthetic,transformer,soft,A,1101,phase2a_real_windows_2026-09-28-synthetic-A-transformer-soft-c3-s1101-aca47e9bd712cadc,ELIGIBLE,False,raw,0.1,"[0.1, 1.0, 10.0]",10.0,{},validation,test
+Synthetic,transformer,soft,A,1101,phase2a_real_windows_2026-09-28-synthetic-A-transformer-soft-c3-s1101-aca47e9bd712cadc,ELIGIBLE,False,unit,1.0,"[0.1, 1.0, 10.0]",0.1,{},validation,test
+Synthetic,transformer,soft,B,1101,phase2a_real_windows_2026-09-28-synthetic-B-transformer-soft-c3-s1101-1aa369d85e55cf35,ELIGIBLE,False,raw,10.0,"[0.1, 1.0, 10.0]",10.0,{},validation,test
+Synthetic,transformer,soft,B,1101,phase2a_real_windows_2026-09-28-synthetic-B-transformer-soft-c3-s1101-1aa369d85e55cf35,ELIGIBLE,False,unit,0.1,"[0.1, 1.0, 10.0]",0.1,{},validation,test
+Synthetic,transformer,soft,A,1201,p2a-syn-fin-ts-A-c3-s1201-720c6294612ecf5a,ELIGIBLE,False,raw,10.0,"[0.1, 1.0, 10.0]",0.1,{},validation,test
+Synthetic,transformer,soft,A,1201,p2a-syn-fin-ts-A-c3-s1201-720c6294612ecf5a,ELIGIBLE,False,unit,0.1,"[0.1, 1.0, 10.0]",10.0,{},validation,test
+Synthetic,transformer,soft,B,1201,p2a-syn-fin-ts-B-c3-s1201-8ef7a09e02a7df4c,ELIGIBLE,False,raw,0.1,"[0.1, 1.0, 10.0]",10.0,{},validation,test
+Synthetic,transformer,soft,B,1201,p2a-syn-fin-ts-B-c3-s1201-8ef7a09e02a7df4c,ELIGIBLE,False,unit,1.0,"[0.1, 1.0, 10.0]",0.1,{},validation,test
+Synthetic,transformer,soft,A,1301,p2a-syn-fin-ts-A-c3-s1301-2a5d1635e0cf2fce,ELIGIBLE,False,raw,10.0,"[0.1, 1.0, 10.0]",10.0,{},validation,test
+Synthetic,transformer,soft,A,1301,p2a-syn-fin-ts-A-c3-s1301-2a5d1635e0cf2fce,ELIGIBLE,False,unit,10.0,"[0.1, 1.0, 10.0]",10.0,{},validation,test
+Synthetic,transformer,soft,B,1301,p2a-syn-fin-ts-B-c3-s1301-a6ba5ac0daafd1b7,ELIGIBLE,False,raw,0.1,"[0.1, 1.0, 10.0]",10.0,{},validation,test
+Synthetic,transformer,soft,B,1301,p2a-syn-fin-ts-B-c3-s1301-a6ba5ac0daafd1b7,ELIGIBLE,False,unit,0.1,"[0.1, 1.0, 10.0]",0.1,{},validation,test
+Synthetic,transformer,time_contrastive_blocks,A,1101,p2a-syn-tt-A-c2-s1101-02f3af626ded4eb6,ELIGIBLE,False,raw,0.1,"[0.1, 1.0, 10.0]",10.0,{},validation,test
+Synthetic,transformer,time_contrastive_blocks,A,1101,p2a-syn-tt-A-c2-s1101-02f3af626ded4eb6,ELIGIBLE,False,unit,1.0,"[0.1, 1.0, 10.0]",10.0,{},validation,test
+Synthetic,transformer,time_contrastive_blocks,B,1101,p2a-syn-tt-B-c2-s1101-56de55904ff08bfa,ELIGIBLE,False,raw,0.1,"[0.1, 1.0, 10.0]",10.0,{},validation,test
+Synthetic,transformer,time_contrastive_blocks,B,1101,p2a-syn-tt-B-c2-s1101-56de55904ff08bfa,ELIGIBLE,False,unit,1.0,"[0.1, 1.0, 10.0]",10.0,{},validation,test
+Synthetic,transformer,time_contrastive_blocks,A,1201,p2a-syn-fin-tt-A-c2-s1201-64c69359dcbcf407,ELIGIBLE,False,raw,0.1,"[0.1, 1.0, 10.0]",10.0,{},validation,test
+Synthetic,transformer,time_contrastive_blocks,A,1201,p2a-syn-fin-tt-A-c2-s1201-64c69359dcbcf407,ELIGIBLE,False,unit,1.0,"[0.1, 1.0, 10.0]",10.0,{},validation,test
+Synthetic,transformer,time_contrastive_blocks,B,1201,p2a-syn-fin-tt-B-c2-s1201-960ce71c43046753,ELIGIBLE,False,raw,0.1,"[0.1, 1.0, 10.0]",10.0,{},validation,test
+Synthetic,transformer,time_contrastive_blocks,B,1201,p2a-syn-fin-tt-B-c2-s1201-960ce71c43046753,ELIGIBLE,False,unit,1.0,"[0.1, 1.0, 10.0]",10.0,{},validation,test
+Synthetic,transformer,time_contrastive_blocks,A,1301,p2a-syn-fin-tt-A-c2-s1301-726a9409232f74bc,ELIGIBLE,False,raw,0.1,"[0.1, 1.0, 10.0]",10.0,{},validation,test
+Synthetic,transformer,time_contrastive_blocks,A,1301,p2a-syn-fin-tt-A-c2-s1301-726a9409232f74bc,ELIGIBLE,False,unit,1.0,"[0.1, 1.0, 10.0]",10.0,{},validation,test
+Synthetic,transformer,time_contrastive_blocks,B,1301,p2a-syn-fin-tt-B-c2-s1301-a18a8668e81ba4c3,ELIGIBLE,False,raw,1.0,"[0.1, 1.0, 10.0]",10.0,{},validation,test
+Synthetic,transformer,time_contrastive_blocks,B,1301,p2a-syn-fin-tt-B-c2-s1301-a18a8668e81ba4c3,ELIGIBLE,False,unit,1.0,"[0.1, 1.0, 10.0]",10.0,{},validation,test
+Synthetic,pca,none,A,deterministic,pca_none_A,DETERMINISTIC_REFERENCE,False,raw,1.0,"[0.1, 1.0, 10.0]",10.0,{},validation,test
+Synthetic,pca,none,A,deterministic,pca_none_A,DETERMINISTIC_REFERENCE,False,unit,1.0,"[0.1, 1.0, 10.0]",10.0,{},validation,test
+Synthetic,pca,none,B,deterministic,pca_none_B,DETERMINISTIC_REFERENCE,False,raw,0.1,"[0.1, 1.0, 10.0]",10.0,{},validation,test
+Synthetic,pca,none,B,deterministic,pca_none_B,DETERMINISTIC_REFERENCE,False,unit,10.0,"[0.1, 1.0, 10.0]",10.0,{},validation,test
+Real,cnn1d,soft,TOTAL65,1101,p2a-rs-w201-Tcs-c3-s1101-bc6ba5c17edf0cfd,ELIGIBLE,False,raw,10.0,"[0.1, 1.0, 10.0]",0.1,"{'position': 0.1, 'velocity': 0.1}",validation,test
+Real,cnn1d,soft,TOTAL65,1101,p2a-rs-w201-Tcs-c3-s1101-bc6ba5c17edf0cfd,ELIGIBLE,False,unit,10.0,"[0.1, 1.0, 10.0]",10.0,"{'position': 0.1, 'velocity': 0.1}",validation,test
+Real,cnn1d,soft,TOTAL65,1201,ft-final-w201-TOTAL65-cnn1d-soft-c3-s1201-3e05b81988a6,ELIGIBLE,False,raw,10.0,"[0.1, 1.0, 10.0]",0.1,"{'position': 0.1, 'velocity': 0.1}",validation,test
+Real,cnn1d,soft,TOTAL65,1201,ft-final-w201-TOTAL65-cnn1d-soft-c3-s1201-3e05b81988a6,ELIGIBLE,False,unit,0.1,"[0.1, 1.0, 10.0]",10.0,"{'position': 10.0, 'velocity': 10.0}",validation,test
+Real,cnn1d,soft,TOTAL65,1301,ft-final-w201-TOTAL65-cnn1d-soft-c3-s1301-9d3183facbaf,ELIGIBLE,False,raw,10.0,"[0.1, 1.0, 10.0]",0.1,"{'position': 0.1, 'velocity': 0.1}",validation,test
+Real,cnn1d,soft,TOTAL65,1301,ft-final-w201-TOTAL65-cnn1d-soft-c3-s1301-9d3183facbaf,ELIGIBLE,False,unit,10.0,"[0.1, 1.0, 10.0]",10.0,"{'position': 0.1, 'velocity': 0.1}",validation,test
+Real,cnn1d,soft,A_PROXIMAL,1101,p2a-rs-w201-Acs-c3-s1101-aef08f2dd18a0d2a,ELIGIBLE,False,raw,0.1,"[0.1, 1.0, 10.0]",10.0,"{'position': 10.0, 'velocity': 0.1}",validation,test
+Real,cnn1d,soft,A_PROXIMAL,1101,p2a-rs-w201-Acs-c3-s1101-aef08f2dd18a0d2a,ELIGIBLE,False,unit,0.1,"[0.1, 1.0, 10.0]",10.0,"{'position': 10.0, 'velocity': 10.0}",validation,test
+Real,cnn1d,soft,A_PROXIMAL,1201,ft-final-w201-A_PROXIMAL-cnn1d-soft-c3-s1201-3604b18e31ef,ELIGIBLE,False,raw,0.1,"[0.1, 1.0, 10.0]",10.0,"{'position': 10.0, 'velocity': 0.1}",validation,test
+Real,cnn1d,soft,A_PROXIMAL,1201,ft-final-w201-A_PROXIMAL-cnn1d-soft-c3-s1201-3604b18e31ef,ELIGIBLE,False,unit,0.1,"[0.1, 1.0, 10.0]",10.0,"{'position': 10.0, 'velocity': 10.0}",validation,test
+Real,cnn1d,soft,A_PROXIMAL,1301,ft-final-w201-A_PROXIMAL-cnn1d-soft-c3-s1301-2b2ff101745a,ELIGIBLE,False,raw,0.1,"[0.1, 1.0, 10.0]",10.0,"{'position': 10.0, 'velocity': 0.1}",validation,test
+Real,cnn1d,soft,A_PROXIMAL,1301,ft-final-w201-A_PROXIMAL-cnn1d-soft-c3-s1301-2b2ff101745a,ELIGIBLE,False,unit,1.0,"[0.1, 1.0, 10.0]",10.0,"{'position': 10.0, 'velocity': 10.0}",validation,test
+Real,cnn1d,soft,B_DISTAL,1101,p2a-rs-w201-Bcs-c3-s1101-602e79e53ad8798a,ELIGIBLE,False,raw,0.1,"[0.1, 1.0, 10.0]",0.1,"{'position': 10.0, 'velocity': 0.1}",validation,test
+Real,cnn1d,soft,B_DISTAL,1101,p2a-rs-w201-Bcs-c3-s1101-602e79e53ad8798a,ELIGIBLE,False,unit,0.1,"[0.1, 1.0, 10.0]",10.0,"{'position': 10.0, 'velocity': 0.1}",validation,test
+Real,cnn1d,soft,B_DISTAL,1201,ft-final-w201-B_DISTAL-cnn1d-soft-c3-s1201-2f29c83369d4,ELIGIBLE,False,raw,0.1,"[0.1, 1.0, 10.0]",0.1,"{'position': 0.1, 'velocity': 0.1}",validation,test
+Real,cnn1d,soft,B_DISTAL,1201,ft-final-w201-B_DISTAL-cnn1d-soft-c3-s1201-2f29c83369d4,ELIGIBLE,False,unit,0.1,"[0.1, 1.0, 10.0]",10.0,"{'position': 10.0, 'velocity': 10.0}",validation,test
+Real,cnn1d,soft,B_DISTAL,1301,ft-final-w201-B_DISTAL-cnn1d-soft-c3-s1301-9b2e1259621f,ELIGIBLE,False,raw,1.0,"[0.1, 1.0, 10.0]",0.1,"{'position': 10.0, 'velocity': 10.0}",validation,test
+Real,cnn1d,soft,B_DISTAL,1301,ft-final-w201-B_DISTAL-cnn1d-soft-c3-s1301-9b2e1259621f,ELIGIBLE,False,unit,0.1,"[0.1, 1.0, 10.0]",10.0,"{'position': 10.0, 'velocity': 10.0}",validation,test
+Real,cnn1d,infonce,TOTAL65,1101,p2a-rs-w201-Tci-c3-s1101-4e74601aaa0adaed,ELIGIBLE,False,raw,0.1,"[0.1, 1.0, 10.0]",0.1,"{'position': 10.0, 'velocity': 1.0}",validation,test
+Real,cnn1d,infonce,TOTAL65,1101,p2a-rs-w201-Tci-c3-s1101-4e74601aaa0adaed,ELIGIBLE,False,unit,1.0,"[0.1, 1.0, 10.0]",0.1,"{'position': 10.0, 'velocity': 1.0}",validation,test
+Real,cnn1d,infonce,TOTAL65,1201,ft-final-w201-TOTAL65-cnn1d-infonce-c3-s1201-54da6011d1e8,ELIGIBLE,False,raw,0.1,"[0.1, 1.0, 10.0]",0.1,"{'position': 10.0, 'velocity': 10.0}",validation,test
+Real,cnn1d,infonce,TOTAL65,1201,ft-final-w201-TOTAL65-cnn1d-infonce-c3-s1201-54da6011d1e8,ELIGIBLE,False,unit,1.0,"[0.1, 1.0, 10.0]",0.1,"{'position': 10.0, 'velocity': 10.0}",validation,test
+Real,cnn1d,infonce,TOTAL65,1301,ft-final-w201-TOTAL65-cnn1d-infonce-c3-s1301-9969bc510814,ELIGIBLE,False,raw,0.1,"[0.1, 1.0, 10.0]",0.1,"{'position': 1.0, 'velocity': 0.1}",validation,test
+Real,cnn1d,infonce,TOTAL65,1301,ft-final-w201-TOTAL65-cnn1d-infonce-c3-s1301-9969bc510814,ELIGIBLE,False,unit,0.1,"[0.1, 1.0, 10.0]",0.1,"{'position': 10.0, 'velocity': 10.0}",validation,test
+Real,cnn1d,infonce,A_PROXIMAL,1101,p2a-rs-w201-Aci-c3-s1101-ebd50c465de1d716,ELIGIBLE,False,raw,10.0,"[0.1, 1.0, 10.0]",0.1,"{'position': 10.0, 'velocity': 0.1}",validation,test
+Real,cnn1d,infonce,A_PROXIMAL,1101,p2a-rs-w201-Aci-c3-s1101-ebd50c465de1d716,ELIGIBLE,False,unit,10.0,"[0.1, 1.0, 10.0]",0.1,"{'position': 10.0, 'velocity': 10.0}",validation,test
+Real,cnn1d,infonce,A_PROXIMAL,1201,ft-final-w201-A_PROXIMAL-cnn1d-infonce-c3-s1201-99863ff86409,ELIGIBLE,False,raw,0.1,"[0.1, 1.0, 10.0]",0.1,"{'position': 1.0, 'velocity': 0.1}",validation,test
+Real,cnn1d,infonce,A_PROXIMAL,1201,ft-final-w201-A_PROXIMAL-cnn1d-infonce-c3-s1201-99863ff86409,ELIGIBLE,False,unit,0.1,"[0.1, 1.0, 10.0]",0.1,"{'position': 10.0, 'velocity': 10.0}",validation,test
+Real,cnn1d,infonce,A_PROXIMAL,1301,ft-final-w201-A_PROXIMAL-cnn1d-infonce-c3-s1301-f26970008a06,ELIGIBLE,False,raw,0.1,"[0.1, 1.0, 10.0]",0.1,"{'position': 10.0, 'velocity': 0.1}",validation,test
+Real,cnn1d,infonce,A_PROXIMAL,1301,ft-final-w201-A_PROXIMAL-cnn1d-infonce-c3-s1301-f26970008a06,ELIGIBLE,False,unit,0.1,"[0.1, 1.0, 10.0]",10.0,"{'position': 10.0, 'velocity': 10.0}",validation,test
+Real,cnn1d,infonce,B_DISTAL,1101,p2a-rs-w201-Bci-c3-s1101-a7caf34a9c218295,ELIGIBLE,False,raw,0.1,"[0.1, 1.0, 10.0]",0.1,"{'position': 0.1, 'velocity': 0.1}",validation,test
+Real,cnn1d,infonce,B_DISTAL,1101,p2a-rs-w201-Bci-c3-s1101-a7caf34a9c218295,ELIGIBLE,False,unit,0.1,"[0.1, 1.0, 10.0]",10.0,"{'position': 10.0, 'velocity': 0.1}",validation,test
+Real,cnn1d,infonce,B_DISTAL,1201,ft-final-w201-B_DISTAL-cnn1d-infonce-c3-s1201-eee96def2824,ELIGIBLE,False,raw,0.1,"[0.1, 1.0, 10.0]",0.1,"{'position': 10.0, 'velocity': 10.0}",validation,test
+Real,cnn1d,infonce,B_DISTAL,1201,ft-final-w201-B_DISTAL-cnn1d-infonce-c3-s1201-eee96def2824,ELIGIBLE,False,unit,0.1,"[0.1, 1.0, 10.0]",10.0,"{'position': 10.0, 'velocity': 10.0}",validation,test
+Real,cnn1d,infonce,B_DISTAL,1301,ft-final-w201-B_DISTAL-cnn1d-infonce-c3-s1301-06cf173b3949,ELIGIBLE,False,raw,1.0,"[0.1, 1.0, 10.0]",0.1,"{'position': 0.1, 'velocity': 0.1}",validation,test
+Real,cnn1d,infonce,B_DISTAL,1301,ft-final-w201-B_DISTAL-cnn1d-infonce-c3-s1301-06cf173b3949,ELIGIBLE,False,unit,0.1,"[0.1, 1.0, 10.0]",10.0,"{'position': 10.0, 'velocity': 0.1}",validation,test
+Real,cnn1d,time_contrastive_blocks,TOTAL65,1101,ft-rh-w201-Tct-c5-s1101-8f9f946c8e0d,ELIGIBLE,False,raw,10.0,"[0.1, 1.0, 10.0]",0.1,"{'position': 10.0, 'velocity': 0.1}",validation,test
+Real,cnn1d,time_contrastive_blocks,TOTAL65,1101,ft-rh-w201-Tct-c5-s1101-8f9f946c8e0d,ELIGIBLE,False,unit,10.0,"[0.1, 1.0, 10.0]",1.0,"{'position': 10.0, 'velocity': 0.1}",validation,test
+Real,cnn1d,time_contrastive_blocks,TOTAL65,1201,ft-final-w201-TOTAL65-cnn1d-time_contrastive_blocks-c5-s1201-ab297a64b9d2,ELIGIBLE,False,raw,10.0,"[0.1, 1.0, 10.0]",0.1,"{'position': 0.1, 'velocity': 0.1}",validation,test
+Real,cnn1d,time_contrastive_blocks,TOTAL65,1201,ft-final-w201-TOTAL65-cnn1d-time_contrastive_blocks-c5-s1201-ab297a64b9d2,ELIGIBLE,False,unit,10.0,"[0.1, 1.0, 10.0]",0.1,"{'position': 0.1, 'velocity': 0.1}",validation,test
+Real,cnn1d,time_contrastive_blocks,TOTAL65,1301,ft-final-w201-TOTAL65-cnn1d-time_contrastive_blocks-c5-s1301-b308bdae2ee9,ELIGIBLE,False,raw,0.1,"[0.1, 1.0, 10.0]",0.1,"{'position': 0.1, 'velocity': 0.1}",validation,test
+Real,cnn1d,time_contrastive_blocks,TOTAL65,1301,ft-final-w201-TOTAL65-cnn1d-time_contrastive_blocks-c5-s1301-b308bdae2ee9,ELIGIBLE,False,unit,10.0,"[0.1, 1.0, 10.0]",0.1,"{'position': 10.0, 'velocity': 1.0}",validation,test
+Real,cnn1d,time_contrastive_blocks,A_PROXIMAL,1101,ft-rh-w201-Act-c5-s1101-9279af5b79eb,ELIGIBLE,False,raw,0.1,"[0.1, 1.0, 10.0]",10.0,"{'position': 10.0, 'velocity': 0.1}",validation,test
+Real,cnn1d,time_contrastive_blocks,A_PROXIMAL,1101,ft-rh-w201-Act-c5-s1101-9279af5b79eb,ELIGIBLE,False,unit,0.1,"[0.1, 1.0, 10.0]",10.0,"{'position': 10.0, 'velocity': 0.1}",validation,test
+Real,cnn1d,time_contrastive_blocks,A_PROXIMAL,1201,ft-final-w201-A_PROXIMAL-cnn1d-time_contrastive_blocks-c5-s1201-4201ab8cc767,ELIGIBLE,False,raw,0.1,"[0.1, 1.0, 10.0]",10.0,"{'position': 0.1, 'velocity': 0.1}",validation,test
+Real,cnn1d,time_contrastive_blocks,A_PROXIMAL,1201,ft-final-w201-A_PROXIMAL-cnn1d-time_contrastive_blocks-c5-s1201-4201ab8cc767,ELIGIBLE,False,unit,0.1,"[0.1, 1.0, 10.0]",10.0,"{'position': 0.1, 'velocity': 0.1}",validation,test
+Real,cnn1d,time_contrastive_blocks,A_PROXIMAL,1301,ft-final-w201-A_PROXIMAL-cnn1d-time_contrastive_blocks-c5-s1301-41b1a0e73d59,ELIGIBLE,False,raw,10.0,"[0.1, 1.0, 10.0]",10.0,"{'position': 10.0, 'velocity': 10.0}",validation,test
+Real,cnn1d,time_contrastive_blocks,A_PROXIMAL,1301,ft-final-w201-A_PROXIMAL-cnn1d-time_contrastive_blocks-c5-s1301-41b1a0e73d59,ELIGIBLE,False,unit,10.0,"[0.1, 1.0, 10.0]",10.0,"{'position': 10.0, 'velocity': 10.0}",validation,test
+Real,cnn1d,time_contrastive_blocks,B_DISTAL,1101,ft-rh-w201-Bct-c5-s1101-3e3a54196d1e,ELIGIBLE,False,raw,0.1,"[0.1, 1.0, 10.0]",10.0,"{'position': 0.1, 'velocity': 0.1}",validation,test
+Real,cnn1d,time_contrastive_blocks,B_DISTAL,1101,ft-rh-w201-Bct-c5-s1101-3e3a54196d1e,ELIGIBLE,False,unit,0.1,"[0.1, 1.0, 10.0]",10.0,"{'position': 10.0, 'velocity': 10.0}",validation,test
+Real,cnn1d,time_contrastive_blocks,B_DISTAL,1201,ft-final-w201-B_DISTAL-cnn1d-time_contrastive_blocks-c5-s1201-561c42556afb,ELIGIBLE,False,raw,10.0,"[0.1, 1.0, 10.0]",0.1,"{'position': 0.1, 'velocity': 10.0}",validation,test
+Real,cnn1d,time_contrastive_blocks,B_DISTAL,1201,ft-final-w201-B_DISTAL-cnn1d-time_contrastive_blocks-c5-s1201-561c42556afb,ELIGIBLE,False,unit,0.1,"[0.1, 1.0, 10.0]",0.1,"{'position': 10.0, 'velocity': 10.0}",validation,test
+Real,cnn1d,time_contrastive_blocks,B_DISTAL,1301,ft-final-w201-B_DISTAL-cnn1d-time_contrastive_blocks-c5-s1301-857344653a47,ELIGIBLE,False,raw,1.0,"[0.1, 1.0, 10.0]",0.1,"{'position': 0.1, 'velocity': 0.1}",validation,test
+Real,cnn1d,time_contrastive_blocks,B_DISTAL,1301,ft-final-w201-B_DISTAL-cnn1d-time_contrastive_blocks-c5-s1301-857344653a47,ELIGIBLE,False,unit,1.0,"[0.1, 1.0, 10.0]",10.0,"{'position': 0.1, 'velocity': 0.1}",validation,test
+Real,cnn1d,behavior_contrastive_blocks,TOTAL65,1101,ft-rh-w201-Tcb-c5-s1101-e3b426b2f071,ELIGIBLE,False,raw,0.1,"[0.1, 1.0, 10.0]",0.1,"{'position': 0.1, 'velocity': 0.1}",validation,test
+Real,cnn1d,behavior_contrastive_blocks,TOTAL65,1101,ft-rh-w201-Tcb-c5-s1101-e3b426b2f071,ELIGIBLE,False,unit,0.1,"[0.1, 1.0, 10.0]",0.1,"{'position': 10.0, 'velocity': 10.0}",validation,test
+Real,cnn1d,behavior_contrastive_blocks,TOTAL65,1201,ft-final-w201-TOTAL65-cnn1d-behavior_contrastive_blocks-c5-s1201-a42352d02841,ELIGIBLE,False,raw,0.1,"[0.1, 1.0, 10.0]",0.1,"{'position': 0.1, 'velocity': 0.1}",validation,test
+Real,cnn1d,behavior_contrastive_blocks,TOTAL65,1201,ft-final-w201-TOTAL65-cnn1d-behavior_contrastive_blocks-c5-s1201-a42352d02841,ELIGIBLE,False,unit,10.0,"[0.1, 1.0, 10.0]",0.1,"{'position': 10.0, 'velocity': 10.0}",validation,test
+Real,cnn1d,behavior_contrastive_blocks,TOTAL65,1301,ft-final-w201-TOTAL65-cnn1d-behavior_contrastive_blocks-c5-s1301-1dc5a501e244,ELIGIBLE,False,raw,0.1,"[0.1, 1.0, 10.0]",0.1,"{'position': 0.1, 'velocity': 0.1}",validation,test
+Real,cnn1d,behavior_contrastive_blocks,TOTAL65,1301,ft-final-w201-TOTAL65-cnn1d-behavior_contrastive_blocks-c5-s1301-1dc5a501e244,ELIGIBLE,False,unit,0.1,"[0.1, 1.0, 10.0]",0.1,"{'position': 10.0, 'velocity': 10.0}",validation,test
+Real,cnn1d,behavior_contrastive_blocks,A_PROXIMAL,1101,ft-rh-w201-Acb-c5-s1101-3bfe5149c38d,ELIGIBLE,False,raw,0.1,"[0.1, 1.0, 10.0]",0.1,"{'position': 10.0, 'velocity': 0.1}",validation,test
+Real,cnn1d,behavior_contrastive_blocks,A_PROXIMAL,1101,ft-rh-w201-Acb-c5-s1101-3bfe5149c38d,ELIGIBLE,False,unit,10.0,"[0.1, 1.0, 10.0]",0.1,"{'position': 10.0, 'velocity': 10.0}",validation,test
+Real,cnn1d,behavior_contrastive_blocks,A_PROXIMAL,1201,ft-final-w201-A_PROXIMAL-cnn1d-behavior_contrastive_blocks-c5-s1201-c1511fb4114c,ELIGIBLE,False,raw,0.1,"[0.1, 1.0, 10.0]",0.1,"{'position': 10.0, 'velocity': 0.1}",validation,test
+Real,cnn1d,behavior_contrastive_blocks,A_PROXIMAL,1201,ft-final-w201-A_PROXIMAL-cnn1d-behavior_contrastive_blocks-c5-s1201-c1511fb4114c,ELIGIBLE,False,unit,0.1,"[0.1, 1.0, 10.0]",0.1,"{'position': 10.0, 'velocity': 10.0}",validation,test
+Real,cnn1d,behavior_contrastive_blocks,A_PROXIMAL,1301,ft-final-w201-A_PROXIMAL-cnn1d-behavior_contrastive_blocks-c5-s1301-8b5b31311dc1,ELIGIBLE,False,raw,0.1,"[0.1, 1.0, 10.0]",0.1,"{'position': 10.0, 'velocity': 0.1}",validation,test
+Real,cnn1d,behavior_contrastive_blocks,A_PROXIMAL,1301,ft-final-w201-A_PROXIMAL-cnn1d-behavior_contrastive_blocks-c5-s1301-8b5b31311dc1,ELIGIBLE,False,unit,0.1,"[0.1, 1.0, 10.0]",0.1,"{'position': 10.0, 'velocity': 10.0}",validation,test
+Real,cnn1d,behavior_contrastive_blocks,B_DISTAL,1101,ft-rh-w201-Bcb-c5-s1101-9c0e4cae8f10,ELIGIBLE,False,raw,0.1,"[0.1, 1.0, 10.0]",0.1,"{'position': 0.1, 'velocity': 0.1}",validation,test
+Real,cnn1d,behavior_contrastive_blocks,B_DISTAL,1101,ft-rh-w201-Bcb-c5-s1101-9c0e4cae8f10,ELIGIBLE,False,unit,0.1,"[0.1, 1.0, 10.0]",0.1,"{'position': 0.1, 'velocity': 0.1}",validation,test
+Real,cnn1d,behavior_contrastive_blocks,B_DISTAL,1201,ft-final-w201-B_DISTAL-cnn1d-behavior_contrastive_blocks-c5-s1201-f7d56102ed7b,ELIGIBLE,False,raw,0.1,"[0.1, 1.0, 10.0]",0.1,"{'position': 0.1, 'velocity': 0.1}",validation,test
+Real,cnn1d,behavior_contrastive_blocks,B_DISTAL,1201,ft-final-w201-B_DISTAL-cnn1d-behavior_contrastive_blocks-c5-s1201-f7d56102ed7b,ELIGIBLE,False,unit,10.0,"[0.1, 1.0, 10.0]",10.0,"{'position': 10.0, 'velocity': 10.0}",validation,test
+Real,cnn1d,behavior_contrastive_blocks,B_DISTAL,1301,ft-final-w201-B_DISTAL-cnn1d-behavior_contrastive_blocks-c5-s1301-9ecd13c84d85,ELIGIBLE,False,raw,10.0,"[0.1, 1.0, 10.0]",10.0,"{'position': 0.1, 'velocity': 0.1}",validation,test
+Real,cnn1d,behavior_contrastive_blocks,B_DISTAL,1301,ft-final-w201-B_DISTAL-cnn1d-behavior_contrastive_blocks-c5-s1301-9ecd13c84d85,ELIGIBLE,False,unit,0.1,"[0.1, 1.0, 10.0]",10.0,"{'position': 1.0, 'velocity': 0.1}",validation,test
+Real,transformer,soft,TOTAL65,1101,p2a-rs-w201-Tts-c3-s1101-b9f84128b19567ef,ELIGIBLE,False,raw,0.1,"[0.1, 1.0, 10.0]",10.0,"{'position': 10.0, 'velocity': 0.1}",validation,test
+Real,transformer,soft,TOTAL65,1101,p2a-rs-w201-Tts-c3-s1101-b9f84128b19567ef,ELIGIBLE,False,unit,10.0,"[0.1, 1.0, 10.0]",0.1,"{'position': 1.0, 'velocity': 0.1}",validation,test
+Real,transformer,soft,TOTAL65,1201,ft-final-w201-TOTAL65-transformer-soft-c3-s1201-9bdf50edb2dd,ELIGIBLE,False,raw,0.1,"[0.1, 1.0, 10.0]",10.0,"{'position': 0.1, 'velocity': 0.1}",validation,test
+Real,transformer,soft,TOTAL65,1201,ft-final-w201-TOTAL65-transformer-soft-c3-s1201-9bdf50edb2dd,ELIGIBLE,False,unit,0.1,"[0.1, 1.0, 10.0]",10.0,"{'position': 0.1, 'velocity': 0.1}",validation,test
+Real,transformer,soft,TOTAL65,1301,ft-final-w201-TOTAL65-transformer-soft-c3-s1301-2124b29c353f,ELIGIBLE,False,raw,0.1,"[0.1, 1.0, 10.0]",10.0,"{'position': 0.1, 'velocity': 0.1}",validation,test
+Real,transformer,soft,TOTAL65,1301,ft-final-w201-TOTAL65-transformer-soft-c3-s1301-2124b29c353f,ELIGIBLE,False,unit,10.0,"[0.1, 1.0, 10.0]",10.0,"{'position': 10.0, 'velocity': 10.0}",validation,test
+Real,transformer,soft,A_PROXIMAL,1101,p2a-rs-w201-Ats-c3-s1101-269b442c425e9757,ELIGIBLE,False,raw,10.0,"[0.1, 1.0, 10.0]",10.0,"{'position': 10.0, 'velocity': 0.1}",validation,test
+Real,transformer,soft,A_PROXIMAL,1101,p2a-rs-w201-Ats-c3-s1101-269b442c425e9757,ELIGIBLE,False,unit,0.1,"[0.1, 1.0, 10.0]",10.0,"{'position': 10.0, 'velocity': 10.0}",validation,test
+Real,transformer,soft,A_PROXIMAL,1201,ft-final-w201-A_PROXIMAL-transformer-soft-c3-s1201-1edb3f610a38,ELIGIBLE,False,raw,10.0,"[0.1, 1.0, 10.0]",10.0,"{'position': 0.1, 'velocity': 10.0}",validation,test
+Real,transformer,soft,A_PROXIMAL,1201,ft-final-w201-A_PROXIMAL-transformer-soft-c3-s1201-1edb3f610a38,ELIGIBLE,False,unit,0.1,"[0.1, 1.0, 10.0]",10.0,"{'position': 10.0, 'velocity': 10.0}",validation,test
+Real,transformer,soft,A_PROXIMAL,1301,ft-final-w201-A_PROXIMAL-transformer-soft-c3-s1301-3f0c05e1235a,ELIGIBLE,False,raw,0.1,"[0.1, 1.0, 10.0]",10.0,"{'position': 0.1, 'velocity': 0.1}",validation,test
+Real,transformer,soft,A_PROXIMAL,1301,ft-final-w201-A_PROXIMAL-transformer-soft-c3-s1301-3f0c05e1235a,ELIGIBLE,False,unit,0.1,"[0.1, 1.0, 10.0]",10.0,"{'position': 10.0, 'velocity': 10.0}",validation,test
+Real,transformer,soft,B_DISTAL,1101,p2a-rs-w201-Bts-c3-s1101-d8c68eb37330c686,ELIGIBLE,False,raw,10.0,"[0.1, 1.0, 10.0]",0.1,"{'position': 0.1, 'velocity': 0.1}",validation,test
+Real,transformer,soft,B_DISTAL,1101,p2a-rs-w201-Bts-c3-s1101-d8c68eb37330c686,ELIGIBLE,False,unit,0.1,"[0.1, 1.0, 10.0]",0.1,"{'position': 10.0, 'velocity': 10.0}",validation,test
+Real,transformer,soft,B_DISTAL,1201,ft-final-w201-B_DISTAL-transformer-soft-c3-s1201-cfeb0d9dc54c,ELIGIBLE,False,raw,10.0,"[0.1, 1.0, 10.0]",0.1,"{'position': 0.1, 'velocity': 0.1}",validation,test
+Real,transformer,soft,B_DISTAL,1201,ft-final-w201-B_DISTAL-transformer-soft-c3-s1201-cfeb0d9dc54c,ELIGIBLE,False,unit,0.1,"[0.1, 1.0, 10.0]",0.1,"{'position': 10.0, 'velocity': 10.0}",validation,test
+Real,transformer,soft,B_DISTAL,1301,ft-final-w201-B_DISTAL-transformer-soft-c3-s1301-0f5a562e62c8,ELIGIBLE,False,raw,10.0,"[0.1, 1.0, 10.0]",0.1,"{'position': 0.1, 'velocity': 0.1}",validation,test
+Real,transformer,soft,B_DISTAL,1301,ft-final-w201-B_DISTAL-transformer-soft-c3-s1301-0f5a562e62c8,ELIGIBLE,False,unit,0.1,"[0.1, 1.0, 10.0]",0.1,"{'position': 10.0, 'velocity': 10.0}",validation,test
+Real,transformer,infonce,TOTAL65,1101,p2a-rs-w201-Tti-c3-s1101-39ccb0403f2acae5,ELIGIBLE,False,raw,0.1,"[0.1, 1.0, 10.0]",10.0,"{'position': 10.0, 'velocity': 0.1}",validation,test
+Real,transformer,infonce,TOTAL65,1101,p2a-rs-w201-Tti-c3-s1101-39ccb0403f2acae5,ELIGIBLE,False,unit,0.1,"[0.1, 1.0, 10.0]",10.0,"{'position': 1.0, 'velocity': 10.0}",validation,test
+Real,transformer,infonce,TOTAL65,1201,ft-final-w201-TOTAL65-transformer-infonce-c3-s1201-0aa7bf1e6872,ELIGIBLE,False,raw,0.1,"[0.1, 1.0, 10.0]",0.1,"{'position': 10.0, 'velocity': 0.1}",validation,test
+Real,transformer,infonce,TOTAL65,1201,ft-final-w201-TOTAL65-transformer-infonce-c3-s1201-0aa7bf1e6872,ELIGIBLE,False,unit,0.1,"[0.1, 1.0, 10.0]",0.1,"{'position': 10.0, 'velocity': 10.0}",validation,test
+Real,transformer,infonce,TOTAL65,1301,ft-final-w201-TOTAL65-transformer-infonce-c3-s1301-29df35bbdb2f,ELIGIBLE,False,raw,0.1,"[0.1, 1.0, 10.0]",0.1,"{'position': 0.1, 'velocity': 0.1}",validation,test
+Real,transformer,infonce,TOTAL65,1301,ft-final-w201-TOTAL65-transformer-infonce-c3-s1301-29df35bbdb2f,ELIGIBLE,False,unit,0.1,"[0.1, 1.0, 10.0]",0.1,"{'position': 10.0, 'velocity': 0.1}",validation,test
+Real,transformer,infonce,A_PROXIMAL,1101,p2a-rs-w201-Ati-c3-s1101-217881c7edccbad8,ELIGIBLE,False,raw,0.1,"[0.1, 1.0, 10.0]",1.0,"{'position': 10.0, 'velocity': 0.1}",validation,test
+Real,transformer,infonce,A_PROXIMAL,1101,p2a-rs-w201-Ati-c3-s1101-217881c7edccbad8,ELIGIBLE,False,unit,0.1,"[0.1, 1.0, 10.0]",10.0,"{'position': 10.0, 'velocity': 10.0}",validation,test
+Real,transformer,infonce,A_PROXIMAL,1201,ft-final-w201-A_PROXIMAL-transformer-infonce-c3-s1201-fa9b59218a97,ELIGIBLE,False,raw,1.0,"[0.1, 1.0, 10.0]",10.0,"{'position': 10.0, 'velocity': 1.0}",validation,test
+Real,transformer,infonce,A_PROXIMAL,1201,ft-final-w201-A_PROXIMAL-transformer-infonce-c3-s1201-fa9b59218a97,ELIGIBLE,False,unit,1.0,"[0.1, 1.0, 10.0]",10.0,"{'position': 10.0, 'velocity': 0.1}",validation,test
+Real,transformer,infonce,A_PROXIMAL,1301,ft-final-w201-A_PROXIMAL-transformer-infonce-c3-s1301-985f9e7077bb,ELIGIBLE,False,raw,1.0,"[0.1, 1.0, 10.0]",10.0,"{'position': 10.0, 'velocity': 10.0}",validation,test
+Real,transformer,infonce,A_PROXIMAL,1301,ft-final-w201-A_PROXIMAL-transformer-infonce-c3-s1301-985f9e7077bb,ELIGIBLE,False,unit,1.0,"[0.1, 1.0, 10.0]",10.0,"{'position': 10.0, 'velocity': 10.0}",validation,test
+Real,transformer,infonce,B_DISTAL,1101,p2a-rs-w201-Bti-c3-s1101-d2ad06cf6a9cddd7,ELIGIBLE,False,raw,10.0,"[0.1, 1.0, 10.0]",0.1,"{'position': 0.1, 'velocity': 0.1}",validation,test
+Real,transformer,infonce,B_DISTAL,1101,p2a-rs-w201-Bti-c3-s1101-d2ad06cf6a9cddd7,ELIGIBLE,False,unit,0.1,"[0.1, 1.0, 10.0]",10.0,"{'position': 10.0, 'velocity': 0.1}",validation,test
+Real,transformer,infonce,B_DISTAL,1201,ft-final-w201-B_DISTAL-transformer-infonce-c3-s1201-c7192cc0e1c4,ELIGIBLE,False,raw,1.0,"[0.1, 1.0, 10.0]",0.1,"{'position': 0.1, 'velocity': 0.1}",validation,test
+Real,transformer,infonce,B_DISTAL,1201,ft-final-w201-B_DISTAL-transformer-infonce-c3-s1201-c7192cc0e1c4,ELIGIBLE,False,unit,0.1,"[0.1, 1.0, 10.0]",10.0,"{'position': 10.0, 'velocity': 10.0}",validation,test
+Real,transformer,infonce,B_DISTAL,1301,ft-final-w201-B_DISTAL-transformer-infonce-c3-s1301-68c7f25b69ec,INELIGIBLE_NEAR_COLLAPSE,True,raw,0.1,"[0.1, 1.0, 10.0]",0.1,"{'position': 0.1, 'velocity': 10.0}",validation,test
+Real,transformer,infonce,B_DISTAL,1301,ft-final-w201-B_DISTAL-transformer-infonce-c3-s1301-68c7f25b69ec,INELIGIBLE_NEAR_COLLAPSE,True,unit,10.0,"[0.1, 1.0, 10.0]",0.1,"{'position': 0.1, 'velocity': 0.1}",validation,test
+Real,transformer,time_contrastive_blocks,TOTAL65,1101,p2a-rs-w201-Ttt-c2-s1101-6d23c303903452ca,ELIGIBLE,False,raw,10.0,"[0.1, 1.0, 10.0]",0.1,"{'position': 0.1, 'velocity': 0.1}",validation,test
+Real,transformer,time_contrastive_blocks,TOTAL65,1101,p2a-rs-w201-Ttt-c2-s1101-6d23c303903452ca,ELIGIBLE,False,unit,1.0,"[0.1, 1.0, 10.0]",0.1,"{'position': 10.0, 'velocity': 0.1}",validation,test
+Real,transformer,time_contrastive_blocks,TOTAL65,1201,ft-final-w201-TOTAL65-transformer-time_contrastive_blocks-c2-s1201-40df00b2dbb4,ELIGIBLE,False,raw,0.1,"[0.1, 1.0, 10.0]",10.0,"{'position': 0.1, 'velocity': 0.1}",validation,test
+Real,transformer,time_contrastive_blocks,TOTAL65,1201,ft-final-w201-TOTAL65-transformer-time_contrastive_blocks-c2-s1201-40df00b2dbb4,ELIGIBLE,False,unit,10.0,"[0.1, 1.0, 10.0]",10.0,"{'position': 10.0, 'velocity': 0.1}",validation,test
+Real,transformer,time_contrastive_blocks,TOTAL65,1301,ft-final-w201-TOTAL65-transformer-time_contrastive_blocks-c2-s1301-c05bb78f2d5a,ELIGIBLE,False,raw,10.0,"[0.1, 1.0, 10.0]",0.1,"{'position': 10.0, 'velocity': 0.1}",validation,test
+Real,transformer,time_contrastive_blocks,TOTAL65,1301,ft-final-w201-TOTAL65-transformer-time_contrastive_blocks-c2-s1301-c05bb78f2d5a,ELIGIBLE,False,unit,10.0,"[0.1, 1.0, 10.0]",0.1,"{'position': 10.0, 'velocity': 1.0}",validation,test
+Real,transformer,time_contrastive_blocks,A_PROXIMAL,1101,p2a-rs-w201-Att-c2-s1101-21979cc3fd46a16a,ELIGIBLE,False,raw,1.0,"[0.1, 1.0, 10.0]",10.0,"{'position': 1.0, 'velocity': 0.1}",validation,test
+Real,transformer,time_contrastive_blocks,A_PROXIMAL,1101,p2a-rs-w201-Att-c2-s1101-21979cc3fd46a16a,ELIGIBLE,False,unit,10.0,"[0.1, 1.0, 10.0]",10.0,"{'position': 0.1, 'velocity': 0.1}",validation,test
+Real,transformer,time_contrastive_blocks,A_PROXIMAL,1201,ft-final-w201-A_PROXIMAL-transformer-time_contrastive_blocks-c2-s1201-44754739586a,ELIGIBLE,False,raw,10.0,"[0.1, 1.0, 10.0]",10.0,"{'position': 10.0, 'velocity': 0.1}",validation,test
+Real,transformer,time_contrastive_blocks,A_PROXIMAL,1201,ft-final-w201-A_PROXIMAL-transformer-time_contrastive_blocks-c2-s1201-44754739586a,ELIGIBLE,False,unit,0.1,"[0.1, 1.0, 10.0]",10.0,"{'position': 10.0, 'velocity': 0.1}",validation,test
+Real,transformer,time_contrastive_blocks,A_PROXIMAL,1301,ft-final-w201-A_PROXIMAL-transformer-time_contrastive_blocks-c2-s1301-a462a55f401d,ELIGIBLE,False,raw,1.0,"[0.1, 1.0, 10.0]",10.0,"{'position': 10.0, 'velocity': 10.0}",validation,test
+Real,transformer,time_contrastive_blocks,A_PROXIMAL,1301,ft-final-w201-A_PROXIMAL-transformer-time_contrastive_blocks-c2-s1301-a462a55f401d,ELIGIBLE,False,unit,1.0,"[0.1, 1.0, 10.0]",10.0,"{'position': 10.0, 'velocity': 10.0}",validation,test
+Real,transformer,time_contrastive_blocks,B_DISTAL,1101,p2a-rs-w201-Btt-c2-s1101-3b641b0589591247,ELIGIBLE,False,raw,0.1,"[0.1, 1.0, 10.0]",10.0,"{'position': 0.1, 'velocity': 0.1}",validation,test
+Real,transformer,time_contrastive_blocks,B_DISTAL,1101,p2a-rs-w201-Btt-c2-s1101-3b641b0589591247,ELIGIBLE,False,unit,0.1,"[0.1, 1.0, 10.0]",10.0,"{'position': 10.0, 'velocity': 0.1}",validation,test
+Real,transformer,time_contrastive_blocks,B_DISTAL,1201,ft-final-w201-B_DISTAL-transformer-time_contrastive_blocks-c2-s1201-dbd7b840e2bd,ELIGIBLE,False,raw,0.1,"[0.1, 1.0, 10.0]",0.1,"{'position': 10.0, 'velocity': 10.0}",validation,test
+Real,transformer,time_contrastive_blocks,B_DISTAL,1201,ft-final-w201-B_DISTAL-transformer-time_contrastive_blocks-c2-s1201-dbd7b840e2bd,ELIGIBLE,False,unit,1.0,"[0.1, 1.0, 10.0]",0.1,"{'position': 10.0, 'velocity': 10.0}",validation,test
+Real,transformer,time_contrastive_blocks,B_DISTAL,1301,ft-final-w201-B_DISTAL-transformer-time_contrastive_blocks-c2-s1301-4ae83d5c2aad,ELIGIBLE,False,raw,10.0,"[0.1, 1.0, 10.0]",0.1,"{'position': 10.0, 'velocity': 0.1}",validation,test
+Real,transformer,time_contrastive_blocks,B_DISTAL,1301,ft-final-w201-B_DISTAL-transformer-time_contrastive_blocks-c2-s1301-4ae83d5c2aad,ELIGIBLE,False,unit,0.1,"[0.1, 1.0, 10.0]",1.0,"{'position': 10.0, 'velocity': 0.1}",validation,test
+Real,transformer,behavior_contrastive_blocks,TOTAL65,1101,ft-rh-w201-Ttb-c5-s1101-921fa8674c28,ELIGIBLE,False,raw,1.0,"[0.1, 1.0, 10.0]",10.0,"{'position': 0.1, 'velocity': 0.1}",validation,test
+Real,transformer,behavior_contrastive_blocks,TOTAL65,1101,ft-rh-w201-Ttb-c5-s1101-921fa8674c28,ELIGIBLE,False,unit,0.1,"[0.1, 1.0, 10.0]",0.1,"{'position': 10.0, 'velocity': 10.0}",validation,test
+Real,transformer,behavior_contrastive_blocks,TOTAL65,1201,ft-final-w201-TOTAL65-transformer-behavior_contrastive_blocks-c5-s1201-81e9a25075b2,ELIGIBLE,False,raw,0.1,"[0.1, 1.0, 10.0]",0.1,"{'position': 1.0, 'velocity': 0.1}",validation,test
+Real,transformer,behavior_contrastive_blocks,TOTAL65,1201,ft-final-w201-TOTAL65-transformer-behavior_contrastive_blocks-c5-s1201-81e9a25075b2,ELIGIBLE,False,unit,0.1,"[0.1, 1.0, 10.0]",0.1,"{'position': 10.0, 'velocity': 10.0}",validation,test
+Real,transformer,behavior_contrastive_blocks,TOTAL65,1301,ft-final-w201-TOTAL65-transformer-behavior_contrastive_blocks-c5-s1301-4e63296e14f1,ELIGIBLE,False,raw,10.0,"[0.1, 1.0, 10.0]",10.0,"{'position': 1.0, 'velocity': 10.0}",validation,test
+Real,transformer,behavior_contrastive_blocks,TOTAL65,1301,ft-final-w201-TOTAL65-transformer-behavior_contrastive_blocks-c5-s1301-4e63296e14f1,ELIGIBLE,False,unit,1.0,"[0.1, 1.0, 10.0]",10.0,"{'position': 0.1, 'velocity': 10.0}",validation,test
+Real,transformer,behavior_contrastive_blocks,A_PROXIMAL,1101,ft-rh-w201-Atb-c5-s1101-2b77ca22087b,ELIGIBLE,False,raw,0.1,"[0.1, 1.0, 10.0]",10.0,"{'position': 0.1, 'velocity': 0.1}",validation,test
+Real,transformer,behavior_contrastive_blocks,A_PROXIMAL,1101,ft-rh-w201-Atb-c5-s1101-2b77ca22087b,ELIGIBLE,False,unit,0.1,"[0.1, 1.0, 10.0]",0.1,"{'position': 10.0, 'velocity': 10.0}",validation,test
+Real,transformer,behavior_contrastive_blocks,A_PROXIMAL,1201,ft-final-w201-A_PROXIMAL-transformer-behavior_contrastive_blocks-c5-s1201-578c170ac93b,INELIGIBLE_NEAR_COLLAPSE,True,raw,1.0,"[0.1, 1.0, 10.0]",0.1,"{'position': 10.0, 'velocity': 10.0}",validation,test
+Real,transformer,behavior_contrastive_blocks,A_PROXIMAL,1201,ft-final-w201-A_PROXIMAL-transformer-behavior_contrastive_blocks-c5-s1201-578c170ac93b,INELIGIBLE_NEAR_COLLAPSE,True,unit,1.0,"[0.1, 1.0, 10.0]",10.0,"{'position': 0.1, 'velocity': 10.0}",validation,test
+Real,transformer,behavior_contrastive_blocks,A_PROXIMAL,1301,ft-final-w201-A_PROXIMAL-transformer-behavior_contrastive_blocks-c5-s1301-b417c095130c,INELIGIBLE_NEAR_COLLAPSE,True,raw,1.0,"[0.1, 1.0, 10.0]",0.1,"{'position': 10.0, 'velocity': 0.1}",validation,test
+Real,transformer,behavior_contrastive_blocks,A_PROXIMAL,1301,ft-final-w201-A_PROXIMAL-transformer-behavior_contrastive_blocks-c5-s1301-b417c095130c,INELIGIBLE_NEAR_COLLAPSE,True,unit,10.0,"[0.1, 1.0, 10.0]",10.0,"{'position': 0.1, 'velocity': 10.0}",validation,test
+Real,transformer,behavior_contrastive_blocks,B_DISTAL,1101,ft-rh-w201-Btb-c5-s1101-4d0c839936bd,ELIGIBLE,False,raw,10.0,"[0.1, 1.0, 10.0]",1.0,"{'position': 10.0, 'velocity': 10.0}",validation,test
+Real,transformer,behavior_contrastive_blocks,B_DISTAL,1101,ft-rh-w201-Btb-c5-s1101-4d0c839936bd,ELIGIBLE,False,unit,0.1,"[0.1, 1.0, 10.0]",0.1,"{'position': 10.0, 'velocity': 10.0}",validation,test
+Real,transformer,behavior_contrastive_blocks,B_DISTAL,1201,ft-final-w201-B_DISTAL-transformer-behavior_contrastive_blocks-c5-s1201-5c3e42698adf,ELIGIBLE,False,raw,10.0,"[0.1, 1.0, 10.0]",0.1,"{'position': 10.0, 'velocity': 0.1}",validation,test
+Real,transformer,behavior_contrastive_blocks,B_DISTAL,1201,ft-final-w201-B_DISTAL-transformer-behavior_contrastive_blocks-c5-s1201-5c3e42698adf,ELIGIBLE,False,unit,1.0,"[0.1, 1.0, 10.0]",0.1,"{'position': 10.0, 'velocity': 0.1}",validation,test
+Real,transformer,behavior_contrastive_blocks,B_DISTAL,1301,ft-final-w201-B_DISTAL-transformer-behavior_contrastive_blocks-c5-s1301-a646b9953dce,ELIGIBLE,False,raw,0.1,"[0.1, 1.0, 10.0]",0.1,"{'position': 0.1, 'velocity': 0.1}",validation,test
+Real,transformer,behavior_contrastive_blocks,B_DISTAL,1301,ft-final-w201-B_DISTAL-transformer-behavior_contrastive_blocks-c5-s1301-a646b9953dce,ELIGIBLE,False,unit,10.0,"[0.1, 1.0, 10.0]",0.1,"{'position': 0.1, 'velocity': 0.1}",validation,test

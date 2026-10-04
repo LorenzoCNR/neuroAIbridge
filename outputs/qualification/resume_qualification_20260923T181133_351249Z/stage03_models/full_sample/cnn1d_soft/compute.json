@@ -1,0 +1,78 @@
+{
+  "training_seconds": 0.07329400000162423,
+  "optimizer_steps": 1,
+  "max_steps": 1,
+  "best_validation_step": null,
+  "best_validation_loss": null,
+  "meaningful_improvement_reference_step": 0,
+  "meaningful_improvement_reference_loss": null,
+  "stopping_step": 1,
+  "stopping_reason": "fixed_N_best_full_sample",
+  "validation_checks": 0,
+  "mean_seconds_per_update": 0.07329400000162423,
+  "n_parameters": 31107,
+  "n_optimizer_parameters": 31107,
+  "n_fit_queries": 111940,
+  "train_queries_available": 111940,
+  "train_queries_used_per_pass": 111616,
+  "train_tail_queries_dropped_per_pass": 324,
+  "n_fit_triplets": null,
+  "validation_summary": {
+    "available_queries": 0,
+    "evaluated_queries": 0,
+    "excluded_tail_queries": 0,
+    "validation_order_seed": 10042,
+    "full_batch_size": 1024,
+    "effective_candidates_per_anchor": 1023,
+    "validation_order_fixed_across_checks": false,
+    "triplet_validation_negatives_fixed_across_checks": false
+  },
+  "training_batch_size_histogram": {
+    "1024": 1
+  },
+  "training_effective_candidate_histogram": {
+    "1023": 1
+  },
+  "first_batch_shapes": {
+    "x": [
+      1024,
+      21,
+      32
+    ],
+    "time_id": [
+      1024
+    ],
+    "global_time_id": [
+      1024
+    ],
+    "trial_id": [
+      1024
+    ],
+    "label": [
+      1024
+    ],
+    "progress": [
+      1024
+    ],
+    "position": [
+      1024,
+      2
+    ],
+    "velocity": [
+      1024,
+      2
+    ],
+    "lag_valid": [
+      1024
+    ]
+  },
+  "first_gradient_l2_norm": 0.0031541752964789954,
+  "parameter_delta_after_first_step_l2": 0.17454931139945984,
+  "parameter_delta_after_training_l2": 0.17454931139945984,
+  "peak_cuda_memory_allocated_bytes": 79409152,
+  "peak_cuda_memory_reserved_bytes": 104857600,
+  "device": "cuda",
+  "gpu": "NVIDIA GeForce RTX 3080",
+  "candidate_count_formula": 1023,
+  "validation_estimator": "fixed seeded full batches; incomplete tail excluded; sample-weighted over queries"
+}

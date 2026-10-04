@@ -1,0 +1,36 @@
+{
+  "decision_class": "NEW_PROTOCOL_DECISION",
+  "decision_id": "real_seed1101_hpo_one_window_v1",
+  "approval": "User approved stopping Real HPO after the 384 initial and 108 paired-extension fits, selecting one canonical Real window from validation only, and proceeding to final training without finalist HPO fits.",
+  "source": {
+    "initial_study": "outputs/phase2a_hpo/studies/phase2a_real_somatotopic_v1_2026-09-28",
+    "initial_summary_sha256": "9e99bff174566e0ed8d8d65abf853414422be357dd8f586de5c6593ad469db68",
+    "extension_study": "outputs/phase2a_hpo/studies/final_thesis_real_hpo_v1/extension",
+    "extension_plan_sha256": "6e80669cf3f98d6246a50f643b1b4d91ca2e2f8bfd6cdf026f26ecc2fbcb3c88",
+    "extension_result_table_sha256": "404a8aa206e3fbbd006dbcda0acc88e46f66c301efcafffadb302100deace5a9",
+    "candidate_seal_sha256": "196d0b24251ed43f2f781af635a3cb1c37abf43e5e6e7d8ed66cd261aa616f6c",
+    "somatotopic_partition_sha256": "027ca4b9a6ba53471b72cf93a11e9514968af4399df0dc347de4c44973b98025"
+  },
+  "hpo_training_seed": 1101,
+  "candidate_selection": {
+    "cell": ["window_size", "architecture", "objective"],
+    "eligible_only_if": "All three canonical populations have status ELIGIBLE under the existing frozen near-collapse/qualification rule.",
+    "score": "Arithmetic mean of the three stored seed-1101 validation losses for TOTAL65, A_PROXIMAL and B_DISTAL.",
+    "order": "Ascending score, then ascending candidate_index on exact numerical equality.",
+    "eligible_candidates": "Candidates 0-3 in every cell; include 4-5 only for the nine already-triggered paired window/objective extensions."
+  },
+  "window_selection": {
+    "windows_bins": [21, 41, 121, 201],
+    "cells": "The eight architecture x objective combinations.",
+    "within_cell": "Rank windows 1-4 by ascending stored three-population mean validation loss of that window's eligible HPO winner. On exact numerical equality, the shorter window receives the better rank. No epsilon tolerance.",
+    "aggregate": "Choose the window with the smallest arithmetic mean of its eight ranks. Tie-break by smaller median of its eight ranks, then shorter window size. Mean-rank and median-rank ties mean exact equality of the rank-derived rational values.",
+    "cross_objective_raw_loss_comparison": false,
+    "test_or_scientific_metrics_allowed": false
+  },
+  "final_training_seed_roots": [1101, 1201, 1301],
+  "seed_1101_policy": "Reuse each selected HPO checkpoint as one held-out final model only when its config, data, split, partition, source and child hashes match the frozen spec; transform it for missing embeddings without retraining.",
+  "hyperparameter_selection_multiseed_robustness_performed": false,
+  "interpretation_limit": "The window choice is operational: frozen validation uses unequal valid within-trial temporal supports across windows (11600, 11200, 9600 and 8000 validation centers for windows 21, 41, 121 and 201). It is not evidence that the selected temporal span is intrinsically superior.",
+  "v2_artifacts_mutable": false,
+  "finalist_hpo_fits_authorized": false
+}

@@ -1,0 +1,17 @@
+feature,mutual_information_train,selected_for_reference_qda
+class0_csp_low,0.03283280178718018,False
+class0_csp_high,0.028427563733873118,False
+class1_csp_low,0.06501337979924848,True
+class1_csp_high,0.0575917859612769,True
+class2_csp_low,0.09016743945200467,True
+class2_csp_high,0.09626927370683669,True
+class3_csp_low,0.0,False
+class3_csp_high,0.0,False
+class4_csp_low,0.04755793074170089,True
+class4_csp_high,0.04434774359186333,True
+class5_csp_low,0.011955509537896702,False
+class5_csp_high,0.0005912785461221759,False
+class6_csp_low,0.0,False
+class6_csp_high,0.0,False
+class7_csp_low,0.0691524371147696,True
+class7_csp_high,0.07360790560445496,True

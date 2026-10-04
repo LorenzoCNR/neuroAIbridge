@@ -1,0 +1,2 @@
+optimizer_step,train_loss,validation_loss,stale_checks,meaningful_reference
+1,6.930153846740723,6.927570887974331,0,6.927570887974331

@@ -1,5 +1,7 @@
 # NeuroBridge — audit dello stato corrente
 
+> **Snapshot storico del 2026-09-24.** Le voci `MISSING` qui sotto descrivono solo lo stato a quella data. Per lo stato successivo usare `outputs/final_thesis_v1/final_evaluation/`: `core_metrics/` e `null_controls/` contengono risultati finali; `uncertainty/UNCERTAINTY_STATUS.json` segnala ancora il bootstrap pendente; `controlled_lag_v3_2sd_corrected/` contiene la rivalutazione lag ±2σ corretta.
+
 Audit read-only degli artefatti esistenti, aggiornato il 2026-09-24. Non sono stati avviati training, metriche scientifiche, test o rigenerazioni di risultati. L’unica nuova produzione in questa sessione, oltre a questo report, è l’aggregazione tabellare multi-seed sintetica richiesta: usa CSV Stage-5 già presenti. Il vecchio `MAIN_RESULTS_TABLE.csv` è rimasto intatto.
 
 Legenda: `VERIFIED_COMPLETE` = artefatti attesi presenti e coerenti per lo scopo dichiarato; `PARTIAL` = artefatti presenti ma copertura/interpretazione incompleta; `MISSING` = artefatto o analisi non trovati; `LEGACY_ONLY` = risultato pre-V2/non comparabile al protocollo corrente; `NOT_APPLICABLE` = la voce non si applica a quel ramo; `INCONSISTENT` = output in conflitto con l’interpretazione scientifica richiesta.

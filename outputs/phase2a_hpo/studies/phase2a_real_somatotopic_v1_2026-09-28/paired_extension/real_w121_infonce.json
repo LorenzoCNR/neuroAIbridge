@@ -1,0 +1,1 @@
+{"architecture_rankings":{"cnn1d":[[3,6.192313900700323],[1,6.2056543385541],[2,6.217070173334193],[0,6.217754628923205]],"transformer":[[3,6.137161290204084]]},"domain_window":"real_w121","extension_status":"REQUIRED_FOR_EXTENSION","objective":"infonce"}

@@ -1,0 +1,15 @@
+model,objective,representation,metric,value,trial_bootstrap_ci_low,trial_bootstrap_ci_high,bootstrap_replicates,selected_hyperparameter,selection_split,evaluation_split
+cnn1d,soft,raw,condition_balanced_accuracy,0.21845337301587303,0.22262125496031746,0.23778449900793652,2,0.1,validation,test
+cnn1d,soft,raw,normalized_epoch_time_r2,0.06788837909698486,0.037962375581264494,0.0671895757317543,2,0.1,validation,test
+cnn1d,soft,raw,normalized_epoch_time_mae,0.24128973484039307,0.23925985917448997,0.24675939455628396,2,0.1,validation,test
+cnn1d,soft,raw,position_r2,0.08112220466136932,0.04399186866357922,0.08206022409722209,2,0.1,validation,test
+cnn1d,soft,raw,position_mae,3.646076202392578,3.5281820416450502,3.7293124079704283,2,0.1,validation,test
+cnn1d,soft,raw,velocity_r2,0.06341991573572159,0.03919082991778851,0.04136114455759525,2,1.0,validation,test
+cnn1d,soft,raw,velocity_mae,13.906930923461914,14.167514276504516,14.309336233139039,2,1.0,validation,test
+cnn1d,soft,unit,condition_balanced_accuracy,0.19158234126984128,0.19202145337301588,0.2003763640873016,2,0.1,validation,test
+cnn1d,soft,unit,normalized_epoch_time_r2,0.0788608193397522,0.050542537868022916,0.07870089560747147,2,10.0,validation,test
+cnn1d,soft,unit,normalized_epoch_time_mae,0.23958852887153625,0.23755724504590034,0.2448781304061413,2,10.0,validation,test
+cnn1d,soft,unit,position_r2,0.08392918109893799,0.07083852142095566,0.08352023810148239,2,10.0,validation,test
+cnn1d,soft,unit,position_mae,3.634568452835083,3.5386635065078735,3.675083041191101,2,10.0,validation,test
+cnn1d,soft,unit,velocity_r2,0.06857684254646301,0.04779383847489953,0.05789631670340896,2,10.0,validation,test
+cnn1d,soft,unit,velocity_mae,13.80557632446289,14.058713960647584,14.078212690353393,2,10.0,validation,test

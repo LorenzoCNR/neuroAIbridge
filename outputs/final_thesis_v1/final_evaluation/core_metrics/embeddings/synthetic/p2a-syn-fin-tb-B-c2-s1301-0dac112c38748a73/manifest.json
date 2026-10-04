@@ -1,0 +1,22 @@
+{
+  "architecture": "transformer",
+  "candidate_index": 2,
+  "checkpoint_sha256": "6d4bb14ebe943513dfa94f0153e6c587bc9fad807ef405fd71af57ae2ebe7c14",
+  "config_sha256": "0dac112c38748a73a4f7a2d863d28734f251c40d185735c74ba8b4884e1d33bd",
+  "dataset": "synthetic",
+  "device": "cuda",
+  "embedding_sha256": "eaeaa78cacba2349932c9732b5198b56762d3b843deef3ebcbe9ac1b60ace76b",
+  "embedding_shape": [
+    40000,
+    3
+  ],
+  "no_fit_or_optimizer_steps": true,
+  "objective": "behavior_contrastive_blocks",
+  "population": "B",
+  "raw_unit_relation": "unit = raw / max(L2_norm, 1e-12)",
+  "seed": 1301,
+  "source_split_sha256": "9d1b9efbb1f5b2fe744013efa4a7482350e7a30800b88602e8a68c2ffe64430a",
+  "source_windows_sha256": "7a06cae084d148a42bd85e0a0a2da33ca3947901aca976045110732548abd983",
+  "support_parent_sha256": "727dfb96fef0150b1404bd104d73273b77fb51a66974f1ea82090b3d5e1363d2",
+  "trial_id": "p2a-syn-fin-tb-B-c2-s1301-0dac112c38748a73"
+}

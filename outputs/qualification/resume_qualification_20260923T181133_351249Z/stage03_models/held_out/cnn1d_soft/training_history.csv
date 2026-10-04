@@ -1,0 +1,2 @@
+iteration,train_loss,optimizer_step,train_loss_interval,validation_loss,validation_queries,effective_candidates_per_anchor,stale_validation_checks,early_stopping_eligible
+1,6.930356979370117,1,6.930356979370117,6.930025100708008,11264,1023,0,True

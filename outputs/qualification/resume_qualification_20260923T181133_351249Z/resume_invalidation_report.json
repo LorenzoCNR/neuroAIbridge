@@ -1,0 +1,49 @@
+{
+  "classification": "infrastructure qualification only",
+  "error": "FileExistsError('cached validated fit uses a different protocol: C:\\\\Users\\\\loren\\\\Desktop\\\\USB_Content\\\\New project\\\\Neuro_Bridge\\\\outputs\\\\qualification\\\\resume_qualification_20260923T181133_351249Z\\\\stage03_models\\\\full_sample\\\\cnn1d_soft')",
+  "events": [
+    {
+      "data_sha256": "8ee7bd7f7e8a201c144bd94792426326e7efe51c1c37b275a68166b083ccb802",
+      "event": "prepared_raw_split_windows",
+      "windows_sha256": "a64d832665462840015f5cfb282e2a0ed1a05fcf757b9935f9d079730f448ff7"
+    },
+    {
+      "checkpoint": "C:\\Users\\loren\\Desktop\\USB_Content\\New project\\Neuro_Bridge\\outputs\\qualification\\resume_qualification_20260923T181133_351249Z\\stage03_models\\held_out\\cnn1d_soft\\model.pt",
+      "checkpoint_sha256": "e9bfe8d132e26b9820cd06674fa54df1543a33145fc0a390ef0f75e6c9dca31f",
+      "event": "short_qualification_fit_complete"
+    },
+    {
+      "after_stage": "fit",
+      "event": "simulated_interruption"
+    },
+    {
+      "embedding": "C:\\Users\\loren\\Desktop\\USB_Content\\New project\\Neuro_Bridge\\outputs\\qualification\\resume_qualification_20260923T181133_351249Z\\stage04_embeddings\\held_out\\cnn1d_soft.npz",
+      "embedding_sha256": "0106a355f0050370ae14fab872b498e8f53976e41f8ad1cdda83fddff9dacc71",
+      "event": "embedding_created_after_fit_resume"
+    },
+    {
+      "after_stage": "embedding",
+      "event": "simulated_interruption"
+    },
+    {
+      "event": "restart_reused_checkpoint_and_embedding",
+      "passed": true
+    },
+    {
+      "dependent_fit_rejected_as_stale": true,
+      "event": "training_parameter_invalidation",
+      "parameter": "learning_rate",
+      "upstream_data_reused": true,
+      "upstream_windows_reused": true
+    },
+    {
+      "checkpoint_unchanged": true,
+      "embedding_unchanged": true,
+      "event": "plot_only_invalidation",
+      "figure_provenance": "C:\\Users\\loren\\Desktop\\USB_Content\\New project\\Neuro_Bridge\\outputs\\qualification\\resume_qualification_20260923T181133_351249Z\\stage06_figures\\held_out\\cnn1d_soft_figures.provenance.json",
+      "parameter": "dpi"
+    }
+  ],
+  "run_id": "resume_qualification_20260923T181133_351249Z",
+  "status": "FAIL"
+}

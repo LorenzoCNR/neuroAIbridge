@@ -1,0 +1,9 @@
+population,split,model,n_train_trials,n_eval_trials,n_classes,accuracy,balanced_accuracy
+A,validation,full_interval_reference,140,20,8,0.1,0.125
+A,validation,pipeline1_full_plus_NMA_interval,140,20,8,0.15,0.16666666666666666
+A,test,full_interval_reference,140,40,8,0.15,0.15000000000000002
+A,test,pipeline1_full_plus_NMA_interval,140,40,8,0.15,0.15000000000000002
+B,validation,full_interval_reference,140,20,8,0.05,0.041666666666666664
+B,validation,pipeline1_full_plus_NMA_interval,140,20,8,0.05,0.041666666666666664
+B,test,full_interval_reference,140,40,8,0.075,0.07500000000000001
+B,test,pipeline1_full_plus_NMA_interval,140,40,8,0.075,0.07500000000000001

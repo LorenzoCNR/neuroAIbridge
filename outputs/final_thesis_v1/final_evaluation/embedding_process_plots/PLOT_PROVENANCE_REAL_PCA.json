@@ -1,0 +1,47 @@
+{
+  "core_metric_tables_modified": false,
+  "created_utc": "2026-10-01T01:24:20.278990+00:00",
+  "issue": "Real PCA plots were absent from the final plot index; only Synthetic PCA references were indexed.",
+  "parent_plot_index_sha256_before_append": {
+    "all": "a13f85c689ea2cdc97ac019a1e5d2fd044e0e26dcb2ec6805399a49e3eaacaea",
+    "held_out": "604f43dc9e1156aeab35563749fc1125a058251b37e1af83191d712867057548"
+  },
+  "pca_artifact_manifest": "outputs\\final_thesis_v1\\final_evaluation\\real_pca_reference\\manifest.json",
+  "pca_artifact_manifest_sha256": "38e124c9befd4728ba42734ce92edede740174050a4f3ef5e2c9ef6226ad388a",
+  "pca_plot_files": 24,
+  "pca_plot_outputs_sha256": {
+    "real/all/Aprox/pca/none/reference/raw/embedding_raw.png": "7f5e88aed0924bdad3c74b170f255324d511209b8c9ce1a9042f417c910d68e6",
+    "real/all/Aprox/pca/none/reference/raw/trajectory_raw.html": "2f813002beeaff630e39bc47e791f69a60739b726e3f561ef0179c7b0ac29f5b",
+    "real/all/Aprox/pca/none/reference/unit_sphere/embedding.png": "1dee15e0718daa324fe84138efb40a55e425f1dcd4bc9b3a3e98caa9e704784d",
+    "real/all/Aprox/pca/none/reference/unit_sphere/trajectory_sphere.html": "17bbe44d92d06821c185617f3be4eac646bcc2ada7439427c1cdf8325b354fd4",
+    "real/all/Bdistal/pca/none/reference/raw/embedding_raw.png": "9187efbc8e559bd788edc2ba7746a00b73ef77ea49e54d1bb07ad910e3224eef",
+    "real/all/Bdistal/pca/none/reference/raw/trajectory_raw.html": "573bd2a8cf923c036406ded2b2cd3e760097496d29bfb70e579de0ee4a4c6444",
+    "real/all/Bdistal/pca/none/reference/unit_sphere/embedding.png": "ac9e2f40d76a9637e1aba971e57a271be9105b97b28c5ec56ab4bb2c9097ac68",
+    "real/all/Bdistal/pca/none/reference/unit_sphere/trajectory_sphere.html": "259aabe840031111325946dfac06a5bfba1604e1dc1841929205ee9ea8e75e55",
+    "real/all/T65/pca/none/reference/raw/embedding_raw.png": "0584466d7c9faeabdc8ebbdd2790546047362bebb3bfe6d0ee254c5207654544",
+    "real/all/T65/pca/none/reference/raw/trajectory_raw.html": "6ef2802a8b583e978970ee4f1cd5fc36852e5522a78357376b8a6c85435232e6",
+    "real/all/T65/pca/none/reference/unit_sphere/embedding.png": "d19af63e43497f26493345e49a8565e8644e9f4f9a2161b32a70ba708ae6b319",
+    "real/all/T65/pca/none/reference/unit_sphere/trajectory_sphere.html": "42401e91f5250881fd7a97370a2f048ec7da2a8968f07b8978e41f9e2ec8b5a2",
+    "real/test/Aprox/pca/none/reference/raw/embedding_raw.png": "d40f15b6cddf04750e3bf42e92bcd647675687268dda9c7c88ce2da4008564b1",
+    "real/test/Aprox/pca/none/reference/raw/trajectory_raw.html": "a875587b1839f267307e6a047cd12545f5ab92a00c46fbf5ec4a38bd82cc2c6b",
+    "real/test/Aprox/pca/none/reference/unit_sphere/embedding.png": "58e6b04fc71016e5b0cdfe6fa3f74968284bdbfb04321f3c35153c1c312a6449",
+    "real/test/Aprox/pca/none/reference/unit_sphere/trajectory_sphere.html": "9771084a602d59aa1a83f811501e5ecc735c8b1979e7f13224f8cd6fbff14017",
+    "real/test/Bdistal/pca/none/reference/raw/embedding_raw.png": "cfa84c549b8b1e9d01706a784911d9bcb3264a87779e0317b882a5d24dc4b661",
+    "real/test/Bdistal/pca/none/reference/raw/trajectory_raw.html": "443fcc6f2e9c5842b9fd3a306ff52dfb1b72a55f52a0d49469e70a983cda9df8",
+    "real/test/Bdistal/pca/none/reference/unit_sphere/embedding.png": "98be818bb955552681d22729cfa8bd48ff3f4980f593cf524c731ac58b09030f",
+    "real/test/Bdistal/pca/none/reference/unit_sphere/trajectory_sphere.html": "b98198bdbae7cc04da15d44f1eba41c0c22c74115bd4bae6133be99d4b65a484",
+    "real/test/T65/pca/none/reference/raw/embedding_raw.png": "323f69204a74ee8df8bfc2d7ae9ab9031fef491c9642a79699ee7f2cfb35e4ea",
+    "real/test/T65/pca/none/reference/raw/trajectory_raw.html": "dd340d8958c74abbf7e82958130525d52501481d41ffe94065ddd903dad9cc1c",
+    "real/test/T65/pca/none/reference/unit_sphere/embedding.png": "e7f9e0fac324f3eaa0f2bc650c3521843eb7e733e065be43e568d3bef746564c",
+    "real/test/T65/pca/none/reference/unit_sphere/trajectory_sphere.html": "dc942c8caa911ec066c00b351c68fee0efe5ee663102f3f02423c818ac40a4ec"
+  },
+  "plot_index_sha256_after_append": {
+    "all": "dd824e96f9893f6c2d71c50afd626202db2a16163141e74c8c1c2e0a7c3d6ae1",
+    "held_out": "07f25a61a3e8df9fbae961c74fecbb7ac4cf07c9683d5bde66b396a7496e7916"
+  },
+  "real_pca_plot_index": "outputs\\final_thesis_v1\\final_evaluation\\embedding_process_plots\\PLOT_INDEX_REAL_PCA.csv",
+  "real_pca_plot_index_sha256": "d8a73f7db639abe529a86407302528cec2a423dcfc7f89aa942c8468be81f5f7",
+  "scientific_resolution": "legacy Real PCA artifacts used window_size=21 and were not substituted into the frozen window_size=201 final view; a train-only W201 PCA reference was fitted instead",
+  "test_metrics_computed": false,
+  "training_scope": "PCA only; one train-trial fit per population; no neural refit"
+}

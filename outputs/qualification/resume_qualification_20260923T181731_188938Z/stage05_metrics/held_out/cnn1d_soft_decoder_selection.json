@@ -1,0 +1,94 @@
+[
+  {
+    "branch": "held_out",
+    "model": "cnn1d",
+    "loss": "soft",
+    "representation": "raw",
+    "n_classes": 8,
+    "condition_solver": "lbfgs",
+    "condition_formulation": "multinomial_softmax",
+    "preprocessing": "StandardScaler fit on TRAIN within each candidate pipeline",
+    "condition_c_grid": [
+      0.1,
+      1.0,
+      10.0
+    ],
+    "selected_condition_c": 0.1,
+    "progress_alpha_grid": [
+      0.1,
+      1.0,
+      10.0
+    ],
+    "selected_progress_alpha": 0.1,
+    "selection_split": "VALIDATION",
+    "final_evaluation_split": "TEST",
+    "behavior_decoders": {
+      "position": {
+        "alpha_grid": [
+          0.1,
+          1.0,
+          10.0
+        ],
+        "selected_alpha": 0.1,
+        "selection_split": "VALIDATION",
+        "final_evaluation_split": "TEST"
+      },
+      "velocity": {
+        "alpha_grid": [
+          0.1,
+          1.0,
+          10.0
+        ],
+        "selected_alpha": 1.0,
+        "selection_split": "VALIDATION",
+        "final_evaluation_split": "TEST"
+      }
+    }
+  },
+  {
+    "branch": "held_out",
+    "model": "cnn1d",
+    "loss": "soft",
+    "representation": "unit",
+    "n_classes": 8,
+    "condition_solver": "lbfgs",
+    "condition_formulation": "multinomial_softmax",
+    "preprocessing": "StandardScaler fit on TRAIN within each candidate pipeline",
+    "condition_c_grid": [
+      0.1,
+      1.0,
+      10.0
+    ],
+    "selected_condition_c": 0.1,
+    "progress_alpha_grid": [
+      0.1,
+      1.0,
+      10.0
+    ],
+    "selected_progress_alpha": 10.0,
+    "selection_split": "VALIDATION",
+    "final_evaluation_split": "TEST",
+    "behavior_decoders": {
+      "position": {
+        "alpha_grid": [
+          0.1,
+          1.0,
+          10.0
+        ],
+        "selected_alpha": 10.0,
+        "selection_split": "VALIDATION",
+        "final_evaluation_split": "TEST"
+      },
+      "velocity": {
+        "alpha_grid": [
+          0.1,
+          1.0,
+          10.0
+        ],
+        "selected_alpha": 10.0,
+        "selection_split": "VALIDATION",
+        "final_evaluation_split": "TEST"
+      }
+    }
+  }
+]

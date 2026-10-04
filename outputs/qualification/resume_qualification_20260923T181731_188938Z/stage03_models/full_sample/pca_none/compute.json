@@ -1,0 +1,6 @@
+{
+  "model": "pca",
+  "loss": "none",
+  "n_fit_windows": 115800,
+  "n_parameters": 2016
+}

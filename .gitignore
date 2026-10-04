@@ -14,11 +14,17 @@ dist/
 
 # Logs and local generated artifacts
 *.log
-outputs/
+# Keep scientific outputs in Git. Interactive HTML and binary arrays are
+# included only as a small, explicitly selected sample.
+/outputs/**/*.html
+/outputs/**/*.npz
+/outputs/**/*.npy
 inputs/
+!/outputs/**/inputs/
 .env
 .vscode/
 *.zip
+!/outputs/**/*.zip
 
 # Local MATLAB data/autosaves
 *.mat

@@ -1,0 +1,1 @@
+{"architecture_rankings":{"cnn1d":[[2,4.5806849002838135],[1,5.935921223958334],[0,6.108505853017171],[3,6.137625217437744]],"transformer":[[2,4.600423828760783]]},"domain_window":"real_w41","extension_status":"REQUIRED_FOR_EXTENSION","objective":"time_contrastive_blocks"}

@@ -1,0 +1,43 @@
+{
+  "reason": "user-requested thermal safety stop",
+  "campaign": "phase2a_real_somatotopic_v1_2026-09-28",
+  "planned_population_level_fits": 384,
+  "completed_result_json_count": 290,
+  "completed_status_counts": {
+    "ELIGIBLE": 235,
+    "INELIGIBLE_NEAR_COLLAPSE": 55
+  },
+  "last_completed": {
+    "ordinal": 290,
+    "trial_id": "p2a-rs-w201-Acs-c0-s1101-4c83bdd6ccbc7bc5",
+    "domain_window": "real_w201",
+    "architecture": "cnn1d",
+    "objective": "soft",
+    "candidate_index": 0,
+    "population": "A_PROXIMAL",
+    "status": "ELIGIBLE",
+    "stopping_update": 1500,
+    "validation_loss": 6.911565440041678,
+    "trial_record_sha256": "2d4bdea7e919571c52c523084dd0cd1d9dc566bc6e6d15a20168ab273e35ba73",
+    "result_json_sha256": "21c4eaacb7e89a658770a0a268791034d0c20f48e04666522a6e66db6eaf5126",
+    "best_validation_checkpoint_sha256": "d6f06330a677962f53e56cc2660078c5db3270273c398aab7489ef9467990271"
+  },
+  "next_unstarted": {
+    "ordinal": 291,
+    "trial_id": "p2a-rs-w201-Bcs-c0-s1101-e8b24e4c7a2ab7a9",
+    "domain_window": "real_w201",
+    "architecture": "cnn1d",
+    "objective": "soft",
+    "candidate_index": 0,
+    "population": "B_DISTAL"
+  },
+  "partial_trial_directory_count": 0,
+  "rolling_csv_row_count": 289,
+  "rolling_csv_note": "The runner was stopped immediately after fit 290 committed result.json and hashed artifacts; the rolling CSV was not advanced to row 290. On resume, the runner will verify/reuse all 290 completed result.json artifacts and rebuild the rolling CSV before starting fit 291.",
+  "initial_plan_sha256": "ec76e51ed24bb9fe31d3652b65de19a19eb0bf4f733cfe1e8fe88a8fe7797671",
+  "go_gate_sha256": "fdea2b29190a363feabff5c2aa9853c118e1b95d7189f9fd3721baeb2579fbc6",
+  "rolling_csv_sha256_at_pause": "ab39cd993ebe703708c8afdffd09fffecfa1dd98afd8122c2e70062b09caa124",
+  "runner_stopped": true,
+  "settings_changed": false,
+  "resume_command": "C:\\Users\\loren\\miniconda3\\envs\\cebra\\python.exe tools\\phase2a_somatotopic_campaign.py --run-initial"
+}

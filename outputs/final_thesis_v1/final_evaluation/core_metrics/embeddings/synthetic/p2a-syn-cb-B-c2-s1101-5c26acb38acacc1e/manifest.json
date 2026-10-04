@@ -1,0 +1,22 @@
+{
+  "architecture": "cnn1d",
+  "candidate_index": 2,
+  "checkpoint_sha256": "ccbbe988c3f178659ef65505f406ac40f1e2a40c2c66ace59b0d4b36e27f9408",
+  "config_sha256": "5c26acb38acacc1e28b46718175681134658216ac4f6c86b521263d10e8d18ca",
+  "dataset": "synthetic",
+  "device": "cuda",
+  "embedding_sha256": "1d136cef4d871175b8288b6b15f5bbe4daa887cce1c13c28e865d3c8763ad248",
+  "embedding_shape": [
+    40000,
+    3
+  ],
+  "no_fit_or_optimizer_steps": true,
+  "objective": "behavior_contrastive_blocks",
+  "population": "B",
+  "raw_unit_relation": "unit = raw / max(L2_norm, 1e-12)",
+  "seed": 1101,
+  "source_split_sha256": "9d1b9efbb1f5b2fe744013efa4a7482350e7a30800b88602e8a68c2ffe64430a",
+  "source_windows_sha256": "7a06cae084d148a42bd85e0a0a2da33ca3947901aca976045110732548abd983",
+  "support_parent_sha256": "ea9217dd0491aeff75f644af555cf0f4a436222de4cf48154cf09421c50d7a3b",
+  "trial_id": "p2a-syn-cb-B-c2-s1101-5c26acb38acacc1e"
+}

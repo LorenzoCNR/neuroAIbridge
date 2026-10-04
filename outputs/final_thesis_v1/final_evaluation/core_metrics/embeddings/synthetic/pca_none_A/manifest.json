@@ -1,0 +1,17 @@
+{
+  "architecture": "pca",
+  "dataset": "synthetic",
+  "embedding_sha256": "0349704f6760bc83a821b723998c446419ad4969cd908219bab0f5c71d1c8667",
+  "embedding_shape": [
+    40000,
+    3
+  ],
+  "fitted_in_this_task": false,
+  "objective": "none",
+  "pca_checkpoint_sha256": "545ccef97b7f12ea19742c2677a74c5cd9eb434454ec38294d5b7fdfd4268abb",
+  "population": "A",
+  "seed": "deterministic",
+  "source_embedding_sha256": "50ae3fe58a1506adfc1dc0a628b02ec87d6c4e693fd427e1e240a255d380b9bb",
+  "support_parent_sha256": "727dfb96fef0150b1404bd104d73273b77fb51a66974f1ea82090b3d5e1363d2",
+  "trial_id": "pca_none_A"
+}

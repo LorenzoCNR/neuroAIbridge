@@ -1,0 +1,3 @@
+population,selected_component,center_bin,center_seconds,window_start_bin_inclusive,window_stop_bin_exclusive,window_size_bins,window_duration_seconds,training_anova_f,training_anova_p_uncorrected,training_selected_pc_window_mean_eta_squared,heldout_selected_pc_window_mean_eta_squared,heldout_selected_window_minus_selected_pc_time_mean_eta_squared,candidate_pc_time_tests
+A,3,185,3.7,175,196,21,0.42,4.228989219831585,0.00030631636226019954,0.06713481085704841,0.24371602536372716,0.05843002491050561,540
+B,2,42,0.84,32,53,21,0.42,4.799168183144073,7.743440626932579e-05,0.05977251848549607,0.19382223589335804,0.01231868848433501,510

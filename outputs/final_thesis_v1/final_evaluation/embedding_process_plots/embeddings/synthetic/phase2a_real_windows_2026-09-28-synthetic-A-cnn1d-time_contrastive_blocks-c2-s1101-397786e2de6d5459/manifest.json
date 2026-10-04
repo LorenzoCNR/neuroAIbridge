@@ -1,0 +1,22 @@
+{
+  "architecture": "cnn1d",
+  "candidate_index": 2,
+  "checkpoint_sha256": "766c9029e7fe95921cba275ba4ba214939e96a2896b33247339ab37f69e3fd0a",
+  "config_sha256": "397786e2de6d545989d05a59968d51f115350ea3c25121572c9c9ccaa0c94c17",
+  "dataset": "synthetic",
+  "device": "cuda",
+  "embedding_sha256": "65427f8284ad8789cd0c4494265d565eed3a166185d39fd2256d340e24eaa590",
+  "embedding_shape": [
+    40000,
+    3
+  ],
+  "no_fit_or_optimizer_steps": true,
+  "objective": "time_contrastive_blocks",
+  "population": "A",
+  "raw_unit_relation": "unit = raw / max(L2_norm, 1e-12)",
+  "seed": 1101,
+  "source_split_sha256": "9d1b9efbb1f5b2fe744013efa4a7482350e7a30800b88602e8a68c2ffe64430a",
+  "source_windows_sha256": "26815a6e4f65ea08631b669569963d00c2a0737e52d54714018e43b46ae744a9",
+  "support_parent_sha256": "727dfb96fef0150b1404bd104d73273b77fb51a66974f1ea82090b3d5e1363d2",
+  "trial_id": "phase2a_real_windows_2026-09-28-synthetic-A-cnn1d-time_contrastive_blocks-c2-s1101-397786e2de6d5459"
+}

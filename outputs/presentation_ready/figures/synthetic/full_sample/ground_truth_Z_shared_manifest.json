@@ -1,0 +1,17 @@
+{
+  "version": 1,
+  "run_label": "clean_rebuild_2026-09-23_seed42_synthetic",
+  "branch": "full_sample",
+  "source_artifact": "stage01_data\\shared_data.npz",
+  "source_array": "Z_shared",
+  "latent_reference": "original shared latent before imposed A/B lag",
+  "is_evaluation_metric": false,
+  "support": "common valid A/B trial_id/time_id pairs",
+  "n_valid_samples": 34000,
+  "n_unique_trials": 200,
+  "n_unique_time_bins": 170,
+  "plot_files": [
+    "Ground-truth shared latent Z pre-shift, unit sphere.html",
+    "Ground-truth shared latent Z pre-shift, raw.html"
+  ]
+}

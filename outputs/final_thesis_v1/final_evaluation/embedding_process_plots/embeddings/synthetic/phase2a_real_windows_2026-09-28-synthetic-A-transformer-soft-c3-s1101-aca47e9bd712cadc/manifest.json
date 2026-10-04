@@ -1,0 +1,22 @@
+{
+  "architecture": "transformer",
+  "candidate_index": 3,
+  "checkpoint_sha256": "f03e666a2a6d60211ebfdc1ea833c258f290a25182c642be9d3e33d186cd26eb",
+  "config_sha256": "aca47e9bd712cadcff4eced3a497f7449036bb208b9ec0d6e98d7b8515f12f14",
+  "dataset": "synthetic",
+  "device": "cuda",
+  "embedding_sha256": "63cdd24035067079ca5d61bc86612fc60dd1bbb0ca380d4093be685226b71d1b",
+  "embedding_shape": [
+    40000,
+    3
+  ],
+  "no_fit_or_optimizer_steps": true,
+  "objective": "soft",
+  "population": "A",
+  "raw_unit_relation": "unit = raw / max(L2_norm, 1e-12)",
+  "seed": 1101,
+  "source_split_sha256": "9d1b9efbb1f5b2fe744013efa4a7482350e7a30800b88602e8a68c2ffe64430a",
+  "source_windows_sha256": "26815a6e4f65ea08631b669569963d00c2a0737e52d54714018e43b46ae744a9",
+  "support_parent_sha256": "727dfb96fef0150b1404bd104d73273b77fb51a66974f1ea82090b3d5e1363d2",
+  "trial_id": "phase2a_real_windows_2026-09-28-synthetic-A-transformer-soft-c3-s1101-aca47e9bd712cadc"
+}
