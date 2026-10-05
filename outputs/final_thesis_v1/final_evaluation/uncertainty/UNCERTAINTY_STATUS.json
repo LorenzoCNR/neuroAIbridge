@@ -1,8 +1,10 @@
 {
-  "bootstrap_status": "PENDING",
+  "bootstrap_status": "COMPLETE_FOR_FROZEN_PRIMARY_METRICS",
   "branch": "uncertainty",
   "near_collapse_seed_values_retained": true,
-  "no_bootstrap_summary_or_seed_ci_figures_published": true,
+  "no_bootstrap_summary_or_seed_ci_figures_published": false,
+  "original_uncertainty_branch_had_no_bootstrap_summary_or_seed_ci_figures": true,
+  "bootstrap_ci_figures_published": false,
   "parent_hashes": {
     "analysis_source": "e2def7ef0ba73eb4df6bac70efe269b9b267f14fcc77359868e12fcc2e8248b7",
     "core_metrics": "f36e60938b29afef3e9a7586f4e659a744f2e65bee93f45ce69bf47d0daae49f",
@@ -17,7 +19,28 @@
     "1201": "independent final training seed",
     "1301": "independent final training seed"
   },
-  "status": "PARTIAL_BOOTSTRAP_PENDING",
+  "status": "COMPLETE_WITH_STRATIFIED_BACC_PREFERRED_AND_UNSTRATIFIED_SENSITIVITY",
+  "updated_utc": "2026-10-05T06:47:38Z",
+  "completion_scope": "1000-replicate complete-held-out-trial bootstrap coverage for the frozen primary metric set, with training-seed variability kept separate",
+  "completed_bootstrap_branches": {
+    "existing_gap_closure_v1_primary": [
+      "final_evaluation/gap_closure_v1/trial_bootstrap/TRIAL_BOOTSTRAP_PRIMARY_METRICS.csv",
+      "final_evaluation/gap_closure_v1/trial_bootstrap_completion_v1/TRIAL_BOOTSTRAP_ADDITIONAL_METRICS.csv",
+      "final_evaluation/gap_closure_v1/trial_bootstrap_real_rsa_v1/REAL_AB_RSA_TRIAL_BOOTSTRAP.csv"
+    ],
+    "synthetic_whole_latent_z": "final_evaluation/gap_closure_v2/synthetic_z_bootstrap/SYNTHETIC_Z_TRIAL_BOOTSTRAP.csv",
+    "preferred_class_stratified_balanced_accuracy": "final_evaluation/gap_closure_v2/stratified_bacc_bootstrap/STRATIFIED_BACC_TRIAL_BOOTSTRAP.csv"
+  },
+  "verified_summary_rows": {
+    "gap_closure_v1_primary_bootstrap": 824,
+    "synthetic_z_bootstrap": 300,
+    "preferred_stratified_bacc": 244
+  },
+  "interpretation_limits": [
+    "Training seeds 1101, 1201, and 1301 are reported as variability/stability; n=3 is not treated as a precise population-level confidence interval.",
+    "Preferred Balanced Accuracy intervals resample complete trials stratified by observed test class counts and are conditional on those counts; unstratified intervals remain preserved as sensitivity results.",
+    "All bootstrap intervals condition on frozen encoders and validation-selected probes; they quantify held-out trial sampling uncertainty, not training or model-selection uncertainty."
+  ],
   "training_seed_variability_rows": 336,
   "training_seed_variability_sha256": "748c74f3058958fc2bf140ce76c31cb02b2f6611927e8fcc338d78b5a2b23d70",
   "training_seed_variability_status": "COMPLETE"

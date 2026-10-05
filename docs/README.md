@@ -25,6 +25,9 @@ Read the documents in this order:
 6. [Experiments and evidence](06_EXPERIMENTS_AND_LIMITATIONS.md) documents the
    frozen synthetic reference, the exploratory real-monkey run, generated
    artifacts, current claims, and missing experiments.
+7. [Python pipeline map](07_PYTHON_PIPELINE_MAP.md) maps executable entry
+   points to implementation modules, stage dependencies, validation rules,
+   caches, and result artifacts.
 
 For a cell-by-cell reproduction guide, see
 [the notebook guide](../notebooks/EXPERIMENTS.md).

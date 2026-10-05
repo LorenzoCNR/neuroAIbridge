@@ -1,0 +1,6 @@
+family,n_tests,raw_p_lt_0_05,holm_p_lt_0_05,minimum_attainable_p_with_1000_permutations,minimum_attainable_holm_p
+Real_label_direction_balanced_accuracy,144,144,0,0.000999000999000999,0.14385614385614387
+Real_pair_procrustes_r2,48,48,48,0.000999000999000999,0.04795204795204795
+Synthetic_label_condition_balanced_accuracy,100,100,0,0.000999000999000999,0.0999000999000999
+Synthetic_pair_procrustes_r2,48,44,44,0.000999000999000999,0.04795204795204795
+Synthetic_temporal_s_true_plus10,48,48,48,0.000999000999000999,0.04795204795204795

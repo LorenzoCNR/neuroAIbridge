@@ -1,0 +1,28 @@
+{
+  "artifacts": {
+    "outputs\\final_thesis_v1\\final_evaluation\\gap_closure_v2\\stratified_bacc_bootstrap\\BACC_BOOTSTRAP_METHOD_DECISION.md": "4f40f7bb55b2d6319790165c69ed65bc2289f8305a2078990368b4e91e8a1873",
+    "outputs\\final_thesis_v1\\final_evaluation\\gap_closure_v2\\stratified_bacc_bootstrap\\BOOTSTRAP_SEEDS.csv": "63b83e68503fc14b1e19b055146626fba78113429410cb3e63b2acef4f36dc2c",
+    "outputs\\final_thesis_v1\\final_evaluation\\gap_closure_v2\\stratified_bacc_bootstrap\\STRATIFIED_BACC_TRIAL_BOOTSTRAP.csv": "14bd038458116e769201c0ece08b06e6ad58cb964c0c848128636f9f7185eb48"
+  },
+  "created_utc": "2026-10-05T01:41:55.887077+00:00",
+  "parent_hashes": {
+    "core_metrics_sha256": "f36e60938b29afef3e9a7586f4e659a744f2e65bee93f45ce69bf47d0daae49f",
+    "core_provenance_sha256": "488e8a65b20b2ec2a88ef6fea181d299d589d5720a248d38a1769232f680017b",
+    "embedding_index_sha256": "419117fde1dfacbe074c0c6c6f9b50a157e6fb7b110252e1ebb891d4dc9218cc",
+    "evaluation_support_sha256": "b655332f6475e4429f580c7e36b564e0177fd0cc6cb17d0264b756af35ced266",
+    "probe_selection_sha256": "abbadce78dc3c986a42ff5fca0a16be5561b7196f001bde1e499b09ca28de75b"
+  },
+  "settings": {
+    "class_stratified": true,
+    "complete_trials_only": true,
+    "encoder_training": false,
+    "probe_refit_per_replicate": false,
+    "replicates": 1000,
+    "seed_start_by_dataset": {
+      "Real": 870000,
+      "Synthetic": 860000
+    },
+    "training_seed_variability_separate": true
+  },
+  "status": "COMPLETE"
+}

@@ -1,0 +1,30 @@
+{
+  "artifacts": {
+    "outputs\\final_thesis_v1\\final_evaluation\\gap_closure_v1\\temporal_null\\NULL_TEMPORAL_REPLICATES.csv": "5a411ad2314219d5cc573ca542919108a1afb60e40384904ab86dd2ac03bc72b",
+    "outputs\\final_thesis_v1\\final_evaluation\\gap_closure_v1\\temporal_null\\NULL_TEMPORAL_SEEDS.csv": "2114d9b7ef04018267cf52f3e7d36eae7101e6a2e804eb1f000ff56dff78dc09",
+    "outputs\\final_thesis_v1\\final_evaluation\\gap_closure_v1\\temporal_null\\NULL_TEMPORAL_SUMMARY.csv": "08779f94b54571520c507d9c396ae5e4e412b049efa44c2950e16b3c549aacf2",
+    "outputs\\final_thesis_v1\\final_evaluation\\gap_closure_v1\\temporal_null\\figures\\representative_temporal_null.pdf": "b3cd5858a2cb1abe1419c18005c2da09b9da1442691c5f23e6042fb581e0073e",
+    "outputs\\final_thesis_v1\\final_evaluation\\gap_closure_v1\\temporal_null\\figures\\representative_temporal_null.png": "6beb98283cbbaed7e351b75d27b72da3abccb4525a9fd97bfe497a0e34988f91"
+  },
+  "claim_freeze_sha256": "aa568b16329e94bf6fa50cecb93043ff2c03186ec04fa574bc465f1e9f21ed2f",
+  "core_provenance_sha256": "488e8a65b20b2ec2a88ef6fea181d299d589d5720a248d38a1769232f680017b",
+  "created_utc": "2026-10-04T18:31:00.426588+00:00",
+  "script_sha256": "79d5f306d4d28ca5f4193e7cf4692f86ece2bdca9db0a4ef92daa467f3db168d",
+  "settings": {
+    "block_size": 10,
+    "blocks_per_trial": 13,
+    "no_encoder_fit": true,
+    "primary_statistic": "s_true_plus10",
+    "replicates": 1000,
+    "representation": [
+      "raw",
+      "unit"
+    ],
+    "seed_start": 850000,
+    "shift": 10,
+    "split": "held_out",
+    "trial_count": 40,
+    "unit": "deranged 10-bin B blocks independently within each same-identity trial"
+  },
+  "support_sha256": "b655332f6475e4429f580c7e36b564e0177fd0cc6cb17d0264b756af35ced266"
+}

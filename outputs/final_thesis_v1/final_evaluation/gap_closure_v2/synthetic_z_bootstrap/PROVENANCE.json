@@ -1,0 +1,46 @@
+{
+  "artifacts": {
+    "outputs\\final_thesis_v1\\final_evaluation\\gap_closure_v2\\synthetic_z_bootstrap\\BOOTSTRAP_SEEDS.csv": "8124a7bf39db0e7c3725613dc6f044556bb274b953ce9799577460776c497426",
+    "outputs\\final_thesis_v1\\final_evaluation\\gap_closure_v2\\synthetic_z_bootstrap\\SYNTHETIC_Z_TRIAL_BOOTSTRAP.csv": "60aeacddd07d96c70fc0cfdfba37e8fcf86582324d2454742dccde4e24282646",
+    "outputs\\final_thesis_v1\\final_evaluation\\gap_closure_v2\\synthetic_z_bootstrap\\SYNTHETIC_Z_TRIAL_BOOTSTRAP_REPLICATES.csv": "a6a7c67c09519fa740cfb03bd4c248eb3cb0079b0f418b2a25592e16d417d721"
+  },
+  "created_utc": "2026-10-05T02:09:22.253242+00:00",
+  "parent_hashes": {
+    "canonical_config_sha256": "53fe5f508f0c23b3db0a487bf2da5332423227b0c0d56109ad61d39d4f8b1dd7",
+    "core_metrics_sha256": "f36e60938b29afef3e9a7586f4e659a744f2e65bee93f45ce69bf47d0daae49f",
+    "core_provenance_sha256": "488e8a65b20b2ec2a88ef6fea181d299d589d5720a248d38a1769232f680017b",
+    "embedding_index_sha256": "419117fde1dfacbe074c0c6c6f9b50a157e6fb7b110252e1ebb891d4dc9218cc",
+    "expected_original_shared_data_sha256": "079e283ab896c147cff12e5f089f9080e89418925eb6629da4a76af1c50baab8",
+    "generator_source_sha256": "7f98e8d63c073b82f79fcdcdb7f8dc07763596741b8464bd500907e4e0c524f8",
+    "reconstructed_config_sha256": "fdd80c6e0bf918883b58968401bb2d73faea21336d886694abdce41c5bc0ea25",
+    "reconstructed_shared_data_sha256": "079e283ab896c147cff12e5f089f9080e89418925eb6629da4a76af1c50baab8",
+    "support_sha256": "b655332f6475e4429f580c7e36b564e0177fd0cc6cb17d0264b756af35ced266"
+  },
+  "settings": {
+    "encoder_training": false,
+    "held_out_trial_count": 40,
+    "includes_pca_reference": true,
+    "metrics": [
+      "procrustes_r2",
+      "rsa_spearman",
+      "rsa_pearson"
+    ],
+    "observed_point_estimates_match_frozen_core_atol_1e_10": true,
+    "populations": [
+      "A",
+      "B"
+    ],
+    "replicates": 1000,
+    "representations": [
+      "raw",
+      "unit"
+    ],
+    "training_seed_variability_separate": true,
+    "training_seeds": [
+      1101,
+      1201,
+      1301
+    ]
+  },
+  "status": "COMPLETE"
+}

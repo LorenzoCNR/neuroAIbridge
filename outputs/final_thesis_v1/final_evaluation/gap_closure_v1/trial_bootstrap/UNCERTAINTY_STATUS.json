@@ -1,0 +1,8 @@
+{
+  "status": "PARTIAL_MISSING_SYNTHETIC_Z_PARENT",
+  "replicates": 1000,
+  "completed_rows": 340,
+  "failures": 1,
+  "training_seed_variability": "separate existing uncertainty/TRAINING_SEED_VARIABILITY.csv",
+  "existing_uncertainty_status_unchanged": true
+}

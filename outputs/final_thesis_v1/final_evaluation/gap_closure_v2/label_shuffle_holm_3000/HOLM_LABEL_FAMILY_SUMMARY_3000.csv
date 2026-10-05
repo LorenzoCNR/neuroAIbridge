@@ -1,0 +1,3 @@
+family,n_tests,raw_p_lt_0_05,holm_p_lt_0_05,total_permutations,minimum_attainable_p,minimum_attainable_holm_p
+Synthetic_label_balanced_accuracy,100,100,100,3000,0.0003332222592469177,0.03332222592469177
+Real_label_balanced_accuracy,144,144,144,3000,0.0003332222592469177,0.04798400533155615

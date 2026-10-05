@@ -1,0 +1,21 @@
+{
+  "artifacts": {
+    "outputs\\final_thesis_v1\\final_evaluation\\gap_closure_v1\\claim_inference\\HOLM_FAMILY_SUMMARY.csv": "17fe52ea6edb755a8dfc845eb6b5b729ae25f49a8aab111dbe0f9695eb1545f2",
+    "outputs\\final_thesis_v1\\final_evaluation\\gap_closure_v1\\claim_inference\\HOLM_PRIMARY_NULL_FAMILIES.csv": "b1ff128346b7467756d39d3ff40ebfe3038135164bdf45684f53de9d745839bf"
+  },
+  "claim_freeze_sha256": "aa568b16329e94bf6fa50cecb93043ff2c03186ec04fa574bc465f1e9f21ed2f",
+  "created_utc": "2026-10-04T18:40:17.374731+00:00",
+  "script_sha256": "dace73d777fb3cc1aba2a4b8c876e9845eb8b3c54e3adab7cf60fb0dba0da66c",
+  "settings": {
+    "alpha": 0.05,
+    "method": "Holm step-down within five prespecified dataset/null/primary-metric families",
+    "no_encoder_training": true,
+    "no_model_selection": true,
+    "raw_and_unit": "included together in each family"
+  },
+  "sources": {
+    "outputs\\final_thesis_v1\\final_evaluation\\gap_closure_v1\\temporal_null\\NULL_TEMPORAL_SUMMARY.csv": "08779f94b54571520c507d9c396ae5e4e412b049efa44c2950e16b3c549aacf2",
+    "outputs\\final_thesis_v1\\final_evaluation\\null_controls\\NULL_AB_TRIAL_PAIRING.csv": "451270107c8ef0eb67576bfb0a8cb09d9d8d9a64ffc53c688421b332bcf9b36b",
+    "outputs\\final_thesis_v1\\final_evaluation\\null_controls\\NULL_LABEL_SHUFFLE.csv": "0ebfbd8c78bb34239fa41ed9f9405787fff3bcf6de0281c3d91f80c8fb5970ec"
+  }
+}

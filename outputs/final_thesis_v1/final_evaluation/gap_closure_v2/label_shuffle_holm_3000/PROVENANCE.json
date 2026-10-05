@@ -1,0 +1,51 @@
+{
+  "aggregation_recovery": {
+    "issue_id": "GC2-01",
+    "merge_recovery_source_sha256": "f2d47f5ab3ea2094d334459b7e11547aeb7f50d803e252a992ebdee172aad244",
+    "original_campaign_driver_sha256": "b50d80d18b7d1dcd9554482d42bb6bcde3c3af4ad6088de795deabbd502f5f65",
+    "recomputed_permutation_slots": 0,
+    "reused_extension_checkpoints": 244,
+    "seed_key_normalization": "JSON null -> empty string to match frozen PCA seed field"
+  },
+  "artifacts": {
+    "outputs\\final_thesis_v1\\final_evaluation\\gap_closure_v2\\label_shuffle_holm_3000\\HOLM_LABEL_FAMILY_RESULTS_3000.csv": "b24ce70a180563d75b309b1a952c535b22cd5b2a1623c68eb09a018dd0987774",
+    "outputs\\final_thesis_v1\\final_evaluation\\gap_closure_v2\\label_shuffle_holm_3000\\HOLM_LABEL_FAMILY_SUMMARY_3000.csv": "1bc1f18ae457cc56ffbfa9c88b558ffb78b080450bb167cb4f62e08a719298db",
+    "outputs\\final_thesis_v1\\final_evaluation\\gap_closure_v2\\label_shuffle_holm_3000\\NULL_LABEL_SHUFFLE_EXTENSION_REPLICATES_2000.csv": "b7851209b2cf4b9771261c6ae3676f1f3c5953ea06057e68d7384cb2caaaf2da",
+    "outputs\\final_thesis_v1\\final_evaluation\\gap_closure_v2\\label_shuffle_holm_3000\\NULL_LABEL_SHUFFLE_SUMMARY_3000.csv": "ae5413d0e9550226c17a1ec492e1a75af7eba0bd600522a4f4ab26fa81004a29",
+    "outputs\\final_thesis_v1\\final_evaluation\\gap_closure_v2\\label_shuffle_holm_3000\\PERMUTATION_SEEDS.csv": "9269a0213d83d3b8df03c4b3aef99cd8f95df7c01b3a2b113faf592a7c2bcde8"
+  },
+  "created_utc": "2026-10-05T06:41:05.910272+00:00",
+  "no_encoder_training": true,
+  "no_model_selection": true,
+  "parent_hashes": {
+    "campaign_manifest_sha256": "14669e3152876323ec6267f55c0b1211f66387418342f04304a00252e9f8fc40",
+    "core_metrics_sha256": "f36e60938b29afef3e9a7586f4e659a744f2e65bee93f45ce69bf47d0daae49f",
+    "core_provenance_sha256": "488e8a65b20b2ec2a88ef6fea181d299d589d5720a248d38a1769232f680017b",
+    "downstream_eval_source_sha256": "32812481cf71b59f72fd38688cc324b8b5747435ec05229f39a7d2b59fdb14df",
+    "driver_sha256": "b50d80d18b7d1dcd9554482d42bb6bcde3c3af4ad6088de795deabbd502f5f65",
+    "embedding_index_sha256": "419117fde1dfacbe074c0c6c6f9b50a157e6fb7b110252e1ebb891d4dc9218cc",
+    "original_label_replicates_sha256": "4207879656b895c1687e4a06f9b2f69f56a63f332e8955ec6fa91ba6c255a619",
+    "original_label_summary_sha256": "0ebfbd8c78bb34239fa41ed9f9405787fff3bcf6de0281c3d91f80c8fb5970ec",
+    "support_sha256": "b655332f6475e4429f580c7e36b564e0177fd0cc6cb17d0264b756af35ced266"
+  },
+  "settings": {
+    "additional_replicates": 2000,
+    "extension_seed_range": [
+      731000,
+      732999
+    ],
+    "families": {
+      "Real_direction_balanced_accuracy": 144,
+      "Synthetic_condition_balanced_accuracy": 100
+    },
+    "original_replicates_reused": 1000,
+    "original_seed_range": [
+      730000,
+      730999
+    ],
+    "permutation_unit": "complete trial label within each frozen train/validation/test split",
+    "same permutation seeds across all candidate/model slots": true,
+    "total_replicates": 3000
+  },
+  "status": "COMPLETE"
+}

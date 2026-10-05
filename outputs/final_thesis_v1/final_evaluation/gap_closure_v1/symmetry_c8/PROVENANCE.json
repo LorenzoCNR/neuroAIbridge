@@ -1,0 +1,26 @@
+{
+  "artifacts": {
+    "outputs\\final_thesis_v1\\final_evaluation\\gap_closure_v1\\symmetry_c8\\C8_EQUIVARIANCE_HELD_OUT.csv": "a7532ff27bdd342ff367e16def0323997a53dcebcf38986a92fe805da809323e",
+    "outputs\\final_thesis_v1\\final_evaluation\\gap_closure_v1\\symmetry_c8\\C8_FAILURES.json": "37517e5f3dc66819f61f5a7bb8ace1921282415f10551d2defa5c3eb0985b570",
+    "outputs\\final_thesis_v1\\final_evaluation\\gap_closure_v1\\symmetry_c8\\C8_SEED_VARIABILITY.csv": "32c52435fcedfff56d68470c7003da17463d125a1692d999f49768c8b3fa7bbe",
+    "outputs\\final_thesis_v1\\final_evaluation\\gap_closure_v1\\symmetry_c8\\figures\\c8_held_out_seed_dots.pdf": "733be6ced8f771019fd1d9dbfc0fb587856048194169f0b0cfeaf91aee5f7c3b",
+    "outputs\\final_thesis_v1\\final_evaluation\\gap_closure_v1\\symmetry_c8\\figures\\c8_held_out_seed_dots.png": "b467d8b9e8fa34efbad0c03e5eb81382eb8a056ea6f03888ab5f479a83531402"
+  },
+  "claim_freeze_sha256": "aa568b16329e94bf6fa50cecb93043ff2c03186ec04fa574bc465f1e9f21ed2f",
+  "core_provenance_sha256": "488e8a65b20b2ec2a88ef6fea181d299d589d5720a248d38a1769232f680017b",
+  "created_utc": "2026-10-04T18:34:05.582352+00:00",
+  "definition": {
+    "action_on_labels": "(c+g) mod 8",
+    "closure_diagnostic": "Frobenius norm of generator^8 - identity",
+    "evaluation": "constrain train-derived proper-rotation axis to 45-degree generator; compose powers g=0..7; compare held-out condition centroids; no held-out fitting",
+    "generator": "proper orthogonal 3x3 Procrustes train-centroid one-step map",
+    "group": "C8",
+    "scope": "condition-centroid symmetry, not exact sample-level equivariance",
+    "score": "1 - summed squared equivariance residual / summed squared target norm",
+    "train_seed_1101": "HPO-selected checkpoint, not independent refit"
+  },
+  "embedding_index_sha256": "419117fde1dfacbe074c0c6c6f9b50a157e6fb7b110252e1ebb891d4dc9218cc",
+  "no_encoder_fit": true,
+  "script_sha256": "7bdd800ddadabc6d1860e1ffcbd0d716201f8ae6cc44ff6a65e1815f8962c9c1",
+  "split": "frozen train generator; frozen held_out evaluation"
+}

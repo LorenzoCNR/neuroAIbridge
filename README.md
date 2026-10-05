@@ -25,6 +25,7 @@ project website is not required:
 - [PCA and temporal encoders](docs/04_ENCODERS.md)
 - [Evaluation, lag, and multiple subjects](docs/05_EVALUATION_AND_MULTISUBJECT.md)
 - [Experiments, results, and limitations](docs/06_EXPERIMENTS_AND_LIMITATIONS.md)
+- [Python pipeline map](docs/07_PYTHON_PIPELINE_MAP.md)
 - [Cell-by-cell notebook guide](notebooks/EXPERIMENTS.md)
 
 The `.rst` files under `docs/source/` are reStructuredText build sources for
@@ -56,9 +57,11 @@ Markdown documents above are the canonical scientific explanation.
 
 The staged Synthetic v1 reference compares PCA, CNN1D, and Transformer across
 four objectives. The real-monkey branch is evaluated in the staged final-study
-outputs under `outputs/final_thesis_v1/`; generated artifacts are kept out of
-the source repository unless a compact, review-oriented result is explicitly
-selected.
+outputs under `outputs/final_thesis_v1/`. Compact reports, tables, provenance,
+and selected figures are versioned for review; local neural arrays, raw data,
+interactive HTML, checkpoints, and designated high-volume replicate dumps are
+excluded from Git. See `.gitignore` and the [Python pipeline map](docs/07_PYTHON_PIPELINE_MAP.md)
+for the publication boundary and artifact relationships.
 
 ## Installation
 

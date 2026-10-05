@@ -1,0 +1,28 @@
+{
+  "A": {
+    "zero_fraction": 0.96580703125,
+    "mean_count_per_bin": 0.0385040625,
+    "mean_rate_hz": 1.925203125,
+    "median_rate_hz": 1.970625,
+    "fano_mean": 1.2128611390604784,
+    "fano_median": 1.2056125117737921,
+    "q95_count": 0.0,
+    "q99_count": 1.0,
+    "q999_count": 2.0,
+    "max_count": 7,
+    "nearly_silent_neuron_fraction": 0.0
+  },
+  "B": {
+    "zero_fraction": 0.967955,
+    "mean_count_per_bin": 0.035775416666666664,
+    "mean_rate_hz": 1.7887708333333332,
+    "median_rate_hz": 1.8287499999999999,
+    "fano_mean": 1.1989232324419121,
+    "fano_median": 1.194610893182391,
+    "q95_count": 0.0,
+    "q99_count": 1.0,
+    "q999_count": 2.0,
+    "max_count": 8,
+    "nearly_silent_neuron_fraction": 0.0
+  }
+}

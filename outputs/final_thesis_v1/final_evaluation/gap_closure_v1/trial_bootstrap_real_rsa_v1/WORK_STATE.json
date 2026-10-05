@@ -1,0 +1,17 @@
+{
+  "metric": "frozen sampled-pair RSA Spearman",
+  "parent_hashes": {
+    "claim_freeze": "aa568b16329e94bf6fa50cecb93043ff2c03186ec04fa574bc465f1e9f21ed2f",
+    "core_provenance": "488e8a65b20b2ec2a88ef6fea181d299d589d5720a248d38a1769232f680017b",
+    "embedding_index": "419117fde1dfacbe074c0c6c6f9b50a157e6fb7b110252e1ebb891d4dc9218cc",
+    "script": "b962209424f22b55e6484a379a56824db9e7c96008bc76dcba7eed553b1234d2",
+    "support": "b655332f6475e4429f580c7e36b564e0177fd0cc6cb17d0264b756af35ced266"
+  },
+  "replicates": 1000,
+  "representation": [
+    "raw",
+    "unit"
+  ],
+  "seed_start": 840000,
+  "split": "held_out"
+}

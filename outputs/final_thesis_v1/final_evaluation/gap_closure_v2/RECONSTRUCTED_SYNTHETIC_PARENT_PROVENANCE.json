@@ -1,0 +1,15 @@
+{
+  "canonical_config_sha256": "53fe5f508f0c23b3db0a487bf2da5332423227b0c0d56109ad61d39d4f8b1dd7",
+  "config_path": "outputs\\final_thesis_v1\\final_evaluation\\gap_closure_v2\\reconstructed_source\\outputs\\runs\\clean_rebuild_2026-09-23_seed42_synthetic\\stage01_data\\config.json",
+  "created_utc": "2026-10-05T01:21:15.981616+00:00",
+  "expected_config_sha256": "fdd80c6e0bf918883b58968401bb2d73faea21336d886694abdce41c5bc0ea25",
+  "expected_generator_source_sha256": "7f98e8d63c073b82f79fcdcdb7f8dc07763596741b8464bd500907e4e0c524f8",
+  "expected_shared_data_sha256": "079e283ab896c147cff12e5f089f9080e89418925eb6629da4a76af1c50baab8",
+  "generator_source_sha256": "7f98e8d63c073b82f79fcdcdb7f8dc07763596741b8464bd500907e4e0c524f8",
+  "reconstructed_config_sha256": "fdd80c6e0bf918883b58968401bb2d73faea21336d886694abdce41c5bc0ea25",
+  "reconstructed_shared_data_sha256": "079e283ab896c147cff12e5f089f9080e89418925eb6629da4a76af1c50baab8",
+  "reconstruction": "frozen deterministic stage_generate; seed 42; data config recovered from versioned run builder",
+  "source_path": "outputs\\final_thesis_v1\\final_evaluation\\gap_closure_v2\\reconstructed_source\\outputs\\runs\\clean_rebuild_2026-09-23_seed42_synthetic\\stage01_data\\shared_data.npz",
+  "status": "EXACT_PARENT_RECONSTRUCTED",
+  "training_performed": false
+}

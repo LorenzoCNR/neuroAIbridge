@@ -1,0 +1,8 @@
+[
+  {
+    "expected_path": "C:\\Users\\loren\\Desktop\\USB_Content\\New project\\Neuro_Bridge\\outputs\\runs\\clean_rebuild_2026-09-23_seed42_synthetic\\stage01_data\\shared_data.npz",
+    "required_sha256": "see core provenance",
+    "stage": "synthetic_Z_geometry_bootstrap",
+    "status": "MISSING_EXACT_PARENT"
+  }
+]

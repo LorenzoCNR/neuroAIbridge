@@ -19,6 +19,13 @@ dist/
 /outputs/**/*.html
 /outputs/**/*.npz
 /outputs/**/*.npy
+# High-volume intermediate replicates/checkpoints stay local; compact summaries,
+# reports, selected figures, seeds, and provenance remain versionable.
+/outputs/final_thesis_v1/final_evaluation/gap_closure_v1/temporal_null/NULL_TEMPORAL_REPLICATES.csv
+/outputs/final_thesis_v1/final_evaluation/gap_closure_v2/label_shuffle_holm_3000/NULL_LABEL_SHUFFLE_EXTENSION_REPLICATES_2000.csv
+/outputs/final_thesis_v1/final_evaluation/gap_closure_v2/label_shuffle_holm_3000/_checkpoints/
+/outputs/final_thesis_v1/final_evaluation/gap_closure_v2/synthetic_z_bootstrap/SYNTHETIC_Z_TRIAL_BOOTSTRAP_REPLICATES.csv
+/outputs/final_thesis_v1/final_evaluation/gap_closure_v2/synthetic_z_bootstrap/_checkpoints/
 inputs/
 !/outputs/**/inputs/
 .env
