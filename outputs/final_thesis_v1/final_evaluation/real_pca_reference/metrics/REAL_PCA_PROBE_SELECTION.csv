@@ -1,0 +1,7 @@
+dataset,architecture,objective,population,seed,representation,selected_C,condition_grid,selected_progress_alpha,behavior_alphas,selection_split,fit_scope,final_evaluation_split
+Real,pca,none,A_PROXIMAL,deterministic,raw,0.1,"[0.1, 1.0, 10.0]",10.0,"{'position': 10.0, 'velocity': 0.1}",validation,PCA train trials; downstream probe train split,test
+Real,pca,none,A_PROXIMAL,deterministic,unit,10.0,"[0.1, 1.0, 10.0]",10.0,"{'position': 10.0, 'velocity': 0.1}",validation,PCA train trials; downstream probe train split,test
+Real,pca,none,B_DISTAL,deterministic,raw,10.0,"[0.1, 1.0, 10.0]",10.0,"{'position': 10.0, 'velocity': 1.0}",validation,PCA train trials; downstream probe train split,test
+Real,pca,none,B_DISTAL,deterministic,unit,1.0,"[0.1, 1.0, 10.0]",10.0,"{'position': 10.0, 'velocity': 10.0}",validation,PCA train trials; downstream probe train split,test
+Real,pca,none,TOTAL65,deterministic,raw,1.0,"[0.1, 1.0, 10.0]",10.0,"{'position': 10.0, 'velocity': 0.1}",validation,PCA train trials; downstream probe train split,test
+Real,pca,none,TOTAL65,deterministic,unit,1.0,"[0.1, 1.0, 10.0]",10.0,"{'position': 10.0, 'velocity': 0.1}",validation,PCA train trials; downstream probe train split,test

@@ -1,0 +1,82 @@
+{
+  "artifacts_sha256": {
+    "REAL_PCA_METRICS_LONG.csv": "da4697bd5b7434ca282c3514531871fe8b7f96ecbe05e420846573b9ec09956d",
+    "REAL_PCA_PRIMARY_HELD_OUT.csv": "0914a1e79a45d5d825111ef12785fda126bbc58afa800dcea32a6db9ad75bb89",
+    "REAL_PCA_PROBE_SELECTION.csv": "b6947f34f0744745c7e553cbf29c4a2001f9b6ba34b55844985396d7ed83daa5",
+    "REAL_PCA_RESULTS.md": "ba37844d4f8c707c75f3ef41163b0c4179a8622910ea5b35165f6280bceb0396"
+  },
+  "branch": "real_pca_reference/metrics",
+  "created_utc": "2026-10-07T08:29:56.293688+00:00",
+  "metric_implementation_sha256": "449aabbad074897342c8261499ec34cb1788779e9b69f0249be1bb8bb410515a",
+  "parent_hashes": {
+    "channel_partition_sha256": "027ca4b9a6ba53471b72cf93a11e9514968af4399df0dc347de4c44973b98025",
+    "core_embedding_index_sha256": "419117fde1dfacbe074c0c6c6f9b50a157e6fb7b110252e1ebb891d4dc9218cc",
+    "core_metadata_parents": {
+      "A_PROXIMAL": {
+        "embedding_sha256": "91e2a7a9eef463733ca7919e98a99d0ce8ab9c7f9fabb2a9d1561f41dde86513",
+        "manifest_sha256": "ef87c33caaa793517cdb46ca289f749ef6892384b6a45a8853eb286f316c7747",
+        "trial_id": "p2a-rs-w201-Acs-c3-s1101-aef08f2dd18a0d2a"
+      },
+      "B_DISTAL": {
+        "embedding_sha256": "b2dc794e473fdc0b9331da80b4d8dcff0b32af12e92f39331c7099299e069a74",
+        "manifest_sha256": "9f22d4572e59020b8c261a6f5097ed6d40c364f55afdbc9e56068d00cdf60e6c",
+        "trial_id": "p2a-rs-w201-Bcs-c3-s1101-602e79e53ad8798a"
+      },
+      "TOTAL65": {
+        "embedding_sha256": "1a2be4a26c6f70e4635bcdf8dd58cf999fbac111a6c5ec20c8902b69ca11a269",
+        "manifest_sha256": "fdd1a2d80321abb3ba6f66a28a9e189dce1b43ddb8e634dfc80cd2845dfb4bab",
+        "trial_id": "p2a-rs-w201-Tcs-c3-s1101-bc6ba5c17edf0cfd"
+      }
+    },
+    "core_metric_implementation_sha256": "449aabbad074897342c8261499ec34cb1788779e9b69f0249be1bb8bb410515a",
+    "evaluation_support_sha256": "b655332f6475e4429f580c7e36b564e0177fd0cc6cb17d0264b756af35ced266",
+    "final_real_spec_sha256": "e017ffbebe9ac579e4e0cc575a511d1c83110fcf0bfee22639cb3853eec8ec8b",
+    "pca_embeddings": {
+      "A_PROXIMAL": "e363f3b58dca965f9d1fa00156d226845c57ce28673c1c5ae27d27deaf8e615a",
+      "B_DISTAL": "640eef1e2721b31053056855d9e19fd5d2decce30fb74dea79c2db1476c12464",
+      "TOTAL65": "4b37d7bb2f9ec27f5a06b1c5094c7441e09f56457551f83fe06ae5c813fae6f1"
+    },
+    "pca_manifest_sha256": "38e124c9befd4728ba42734ce92edede740174050a4f3ef5e2c9ef6226ad388a"
+  },
+  "protocol": {
+    "all_valid_metrics_are_descriptive": true,
+    "all_valid_support_rows": 77200,
+    "core_metric_tables_modified": false,
+    "held_out_support_rows": 15600,
+    "neural_optimizer_steps": 0,
+    "neural_training": false,
+    "pair_sampling_seed": 2026,
+    "pairwise_metric_max_pairs": 100000,
+    "pca_refit": false,
+    "populations": [
+      "TOTAL65",
+      "A_PROXIMAL",
+      "B_DISTAL"
+    ],
+    "probe_C_grid": [
+      0.1,
+      1.0,
+      10.0
+    ],
+    "probe_evaluation_split": "test",
+    "probe_selection_split": "validation",
+    "representations": [
+      "raw",
+      "unit"
+    ],
+    "ridge_alpha_grid": [
+      0.1,
+      1.0,
+      10.0
+    ],
+    "test_used_for_model_or_hyperparameter_selection": false,
+    "window_size": 201
+  },
+  "row_counts": {
+    "long_metrics": 346,
+    "primary_held_out": 32,
+    "probe_selection": 6
+  },
+  "scientific_scope": "downstream metrics on frozen train-fit W201 PCA embeddings",
+  "source_script_sha256": "4640c507c3ee2229acbf2132a285583cbba529d63e8195e5b1732d47a116156a"
+}

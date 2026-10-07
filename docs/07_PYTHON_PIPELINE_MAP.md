@@ -1,7 +1,7 @@
 # NeuroBridge Python Pipeline Map
 
 This is a source-oriented guide to how the Python code is connected. It
-describes the repository as it exists on 2026-10-05; it is not a new
+describes the repository as it exists on 2026-10-07; it is not a new
 experimental protocol and does not replace the frozen configuration,
 provenance manifests, or scientific explanations in `docs/01`–`docs/06`.
 
@@ -187,6 +187,16 @@ generalization evidence is held-out. Full-sample decoding, if present, is
 explicitly descriptive/in-sample; it must not be presented as held-out
 generalization. The core scientific dimensions remain separate: whole-process
 geometry, task accessibility, temporal alignment, diagnostics, and compute.
+
+The Real train-fit PCA reference is a separate deterministic baseline. Its
+frozen embeddings and PCA models live under
+`outputs/final_thesis_v1/final_evaluation/real_pca_reference/`; the downstream
+evaluator `tools/evaluate_real_pca_reference.py` writes its metrics beneath
+`real_pca_reference/metrics/`. It reuses the saved PCA projections, applies the
+same train/validation/test probe discipline and existing metric definitions,
+and does not modify `core_metrics/CORE_METRICS_LONG.csv` or retrain neural
+encoders. Held-out PCA accessibility and matched A/B consistency are separate
+from all-valid descriptive diagnostics; raw and unit results remain distinct.
 
 `tools/final_thesis_downstream_eval.py` loads the frozen embedding index/support
 and runs downstream branches. Its `run_controlled_lag` and `run_null_controls`
