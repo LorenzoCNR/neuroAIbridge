@@ -169,22 +169,26 @@ equivariant and does not know temporal order.
 ### Limitations
 
 - Attention cost is quadratic in window length.
-- The current 21-bin windows provide more context, but the quadratic attention
-  cost still grows with window length.
+- The original Synthetic reference uses 21-bin windows; the frozen final Real
+  study selected a 201-bin window by its validation-only window-ranking rule.
+  In either case, quadratic attention cost grows with window length.
 - Mean pooling can hide token-specific temporal structure.
 - It has more hyperparameters and a greater overfitting risk than PCA or CNN1D.
 
-The Transformer is part of the current shared-latent comparison in
-`notebooks/experiment_05_shared_latent_staged.py`.
+The Transformer is part of the staged Synthetic reference in
+`notebooks/experiment_05_shared_latent_staged.py`; the frozen final model grid
+is recorded separately in the final experiment spec.
 
 ## Real-monkey encoder configuration
 
-The first real-data run uses the same three-way comparison—PCA, CNN1D, and
-Transformer—but fits it to `(21, 65)` neural windows and produces three
-embedding coordinates. Every neural checkpoint produces both `embedding_raw`
-and its L2-normalized `embedding_unit` counterpart. The two forms are saved
-from the same checkpoint and are evaluated separately; normalization is not a
-second training run.
+The initial exploratory Real-data run used `(21, 65)` windows. The frozen
+final study compares CNN1D and Transformer on the selected 201-bin input; PCA
+is reported separately as a deterministic train-fit reference. Every frozen
+neural checkpoint produces `embedding_raw` and its L2-normalized
+`embedding_unit` counterpart. The two forms come from the same checkpoint
+and are evaluated separately; normalization is not a second training run.
+See `06_EXPERIMENTS_AND_LIMITATIONS.md` for the result map and
+`07_PYTHON_PIPELINE_MAP.md` for the implementation chain.
 
 ## Normalization And Geometry
 

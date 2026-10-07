@@ -5,7 +5,7 @@
   <meta name="viewport" content="width=device-width, initial-scale=1">
   <meta name="description" content="NeuroBridge: controlled neural time-series simulation and representation learning.">
   <meta name="author" content="Lorenzo Ognibeni">
-  <title>NeuroBridge | Synthetic Neural Representation Learning</title>
+  <title>NeuroBridge | Neural Representation Learning</title>
   <link rel="stylesheet" href="styles.css">
 </head>
 <body>
@@ -17,7 +17,7 @@
       <a href="#method">Method</a>
       <a href="#reproduce">Reproduce</a>
       <a href="docs/">Documentation</a>
-      <a href="https://github.com/LorenzoCNR/AI_for_all" target="_blank" rel="noreferrer">GitHub</a>
+      <a href="https://github.com/LorenzoCNR/neuroAIbridge" target="_blank" rel="noreferrer">GitHub</a>
     </nav>
   </header>
 
@@ -123,10 +123,14 @@
       <div class="section-inner">
         <p class="section-label">Evaluation on unseen trials</p>
         <h2>Do learned embeddings preserve the known latent geometry?</h2>
-        <p class="section-intro">
-          Models are fitted using 128 of the 160 simulated trials. The table
-          evaluates the remaining 32 trials, which the models never see during
-          fitting. The reported number is not classification accuracy.
+          <p class="section-intro">
+          The table below is an illustrative earlier synthetic benchmark, not
+          the final thesis comparison. For the current frozen Synthetic and
+          Real evidence, protocol, output paths, and limitations, use the
+          <a href="https://github.com/LorenzoCNR/neuroAIbridge/blob/main/docs/06_EXPERIMENTS_AND_LIMITATIONS.md" target="_blank" rel="noreferrer">current results guide</a>
+          and the
+          <a href="https://github.com/LorenzoCNR/neuroAIbridge/blob/main/docs/07_PYTHON_PIPELINE_MAP.md" target="_blank" rel="noreferrer">Python pipeline map</a>.
+          The reported numbers are not classification accuracy.
         </p>
         <div class="score-explainer" aria-label="How RSA Spearman is calculated">
           <div><span>1</span><strong>True-state distances</strong><p>For every pair of test windows, measure how far apart their known latent states are.</p></div>

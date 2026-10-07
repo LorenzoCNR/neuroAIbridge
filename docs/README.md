@@ -1,101 +1,75 @@
 # NeuroBridge Documentation
 
-This directory is the canonical scientific and technical documentation for
-NeuroBridge. It is designed to be readable directly on GitHub or from a local
-clone: the project website is optional.
+This directory contains the project's scientific and technical documentation.
+The GitHub repository is `LorenzoCNR/neuroAIbridge`; NeuroBridge is the project
+name used in prose and figures.
 
-## Start Here
+## Start with the current study
 
-Read the documents in this order:
+1. [Experiments, results, and limitations](06_EXPERIMENTS_AND_LIMITATIONS.md)
+   maps the frozen evidence and states what each result does—and does not—show.
+2. [Python pipeline map](07_PYTHON_PIPELINE_MAP.md) traces the staged code,
+   validation rules, caches, and output dependencies.
+3. Exact scientific settings and ancestry are recorded in the relevant frozen
+   spec, CSV/JSON manifest, and provenance beside each output branch. Those
+   artifacts, rather than prose, are the authority for exact values.
 
-1. [Generative model](01_GENERATIVE_MODEL.md) explains the task latent, neural
-   population map, firing rates, spike-count emission, and linear-track place
-   fields.
-2. [Data and temporal windows](02_DATA_AND_WINDOWS.md) explains the tensors,
-   metadata, padding, trial boundaries, train/test split, and what one model
-   observation represents.
-3. [Learning objectives](03_LEARNING_OBJECTIVES.md) derives the soft structured
-   contrastive loss, distinguishes its two temperatures, and states what is
-   supervised, self-supervised, and computationally expensive.
-4. [Encoders](04_ENCODERS.md) explains PCA, CNN1D, MLP, LSTM, and Transformer
-   processing at both the algorithmic and tensor level.
-5. [Evaluation and multiple subjects](05_EVALUATION_AND_MULTISUBJECT.md)
-   explains RSA, Procrustes alignment, lag recovery, and the limits of causal
-   interpretation.
-6. [Experiments and evidence](06_EXPERIMENTS_AND_LIMITATIONS.md) documents the
-   frozen synthetic reference, the exploratory real-monkey run, generated
-   artifacts, current claims, and missing experiments.
-7. [Python pipeline map](07_PYTHON_PIPELINE_MAP.md) maps executable entry
-   points to implementation modules, stage dependencies, validation rules,
-   caches, and result artifacts.
+## Scientific background
 
-For a cell-by-cell reproduction guide, see
-[the notebook guide](../notebooks/EXPERIMENTS.md).
+- [Generative model](01_GENERATIVE_MODEL.md): task latent, population mapping,
+  firing rates, and spike-count generation.
+- [Data and temporal windows](02_DATA_AND_WINDOWS.md): trial structure,
+  metadata, padding, splits, and the frozen Real window choice.
+- [Learning objectives](03_LEARNING_OBJECTIVES.md): definitions and
+  supervision supplied by each objective.
+- [Encoders](04_ENCODERS.md): PCA and temporal neural encoders.
+- [Evaluation and multiple subjects](05_EVALUATION_AND_MULTISUBJECT.md):
+  geometry, decoding, temporal correspondence, and causal-interpretation
+  limits.
+- [Notebook guide](../notebooks/EXPERIMENTS.md): scope of the executable
+  simulator tutorials and historical reference runs.
 
-## Documentation Layers
+## What is implemented
 
-NeuroBridge has three documentation layers:
+The package contains controlled circular/linear simulators, temporal-window
+datasets, PCA/CNN1D/Transformer encoders, four neural objectives, and staged
+evaluation. The final study keeps whole-process latent recovery, task
+accessibility, temporal structure, held-out generalization, robustness,
+diagnostics, and compute as separate dimensions.
 
-| Location | Purpose | Intended reader |
-|---|---|---|
-| `docs/*.md` | Canonical scientific and technical explanation | GitHub visitors, collaborators, reviewers |
-| `docs/source/*.rst` | Sphinx source used to build the searchable documentation website | Documentation build system |
-| `docs/archive/` | Historical drafts retained for traceability | Maintainers only |
+The current frozen Real study is indexed under
+`outputs/final_thesis_v1/`. It uses one Area-2 reaching recording, a
+validation-selected 201-bin window, TOTAL65 and the fixed operational
+somatotopic A/B partition, plus frozen neural models and downstream evaluation.
+The recording has no observed biological latent ground truth or second
+independent animal/session; see the current-results guide for the precise
+design and caveats.
 
-Files ending in `.rst` use **reStructuredText**, the markup format consumed by
-Sphinx. They play a role similar to Markdown files, but are primarily build
-sources. A reader should not need to inspect them to understand the project:
-the complete explanation is available in the Markdown documents listed above.
+The older four notebooks and the older staged synthetic workflow are useful
+reproducible examples, but they are not the source of truth for the final HPO
+selection or Real evaluation protocol.
 
-## What Is Implemented
+## Documentation layers and history
 
-The package currently includes:
+| Location | Role |
+|---|---|
+| `docs/*.md` | Active scientific explanation and current evidence map |
+| `docs/source/*.rst` | Source for the optional searchable Sphinx site |
+| `docs/archive/` | Historical drafts retained for traceability |
+| `NEUROBRIDGE_CURRENT_STATE_AUDIT.md` | Read-only snapshot dated 2026-09-24; not current status |
 
-- circular and linear controlled motor-task latents;
-- heterogeneous neural population mappings;
-- Poisson spike-count emission plus optional overdispersion, bursting, and
-  refractory mechanisms;
-- centered temporal windows that never cross trial boundaries;
-- PCA, CNN1D, MLP, LSTM, and Transformer encoders;
-- soft structured contrastive, supervised InfoNCE, and temporal-offset
-  objectives;
-- held-out RSA and Procrustes recovery metrics on the synthetic branch;
-- subject-specific neural mappings, imposed temporal lag, and lag-aware
-  alignment utilities.
+`docs/06_EXPERIMENTS_AND_LIMITATIONS.md` and
+`docs/07_PYTHON_PIPELINE_MAP.md` are the current narrative guides. The
+2026-09-24 audit retains historically correct statuses for that date; its
+`MISSING` entries must not be read as the status of today's outputs.
 
-The staged Synthetic v1 reference compares PCA, CNN1D, and Transformer across
-four objectives and keeps latent recovery, decoding, lag, robustness, and
-efficiency distinct. The local real-data branch
-`src/neurobridge/experiments/real_monkey.py` runs the same model/objective grid
-on one Area-2 reaching session and writes trial-safe held-out and descriptive
-full-sample artifacts under
-`outputs/real_monkey_area2_active_staged_2026-09-22/`. It has no biological
-latent ground truth, second subject, or cross-session generalization yet.
+## Build the searchable documentation site
 
-The older notebooks remain reproducible examples of the original simulator
-workflow. They are not the sole definition of the current staged benchmark;
-the current protocol and output locations are recorded in
-`docs/06_EXPERIMENTS_AND_LIMITATIONS.md`.
-
-## Which documents are authoritative?
-
-The numbered files in this directory and the updated Obsidian notes with the
-suffix `_UPDATED_2026-09-17` are the active documentation. The following are
-historical by design and should not be overwritten: the Synthetic v1 report,
-its parameter sheet, the shared-latent chapter draft, and everything under
-`docs/archive/`. The older copies without the `UPDATED` suffix in
-`legacy_ai_for_all/Miei doc/miei_doc_neurobridge/` were removed from the active
-working set because their content is superseded by the updated notes; they are
-not a second source of truth.
-
-## Build The Searchable Site
-
-The documentation website is generated from `docs/source/`:
+The site is optional; all canonical explanations are available as Markdown.
 
 ```powershell
 python -m pip install -e ".[docs]"
 docs\make.bat html
 ```
 
-The local result is `docs/_build/html/index.html`. Building the website is not
-required to read any canonical document in this directory.
+The local build is `docs/_build/html/index.html`.

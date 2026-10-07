@@ -1,6 +1,6 @@
-# NeuroBridge — audit dello stato corrente
+# NeuroBridge — audit storico dello stato al 2026-09-24
 
-> **Snapshot storico del 2026-09-24.** Le voci `MISSING` qui sotto descrivono solo lo stato a quella data. Per lo stato successivo usare `outputs/final_thesis_v1/final_evaluation/`: `core_metrics/` e `null_controls/` contengono risultati finali; `uncertainty/UNCERTAINTY_STATUS.json` segnala ancora il bootstrap pendente; `controlled_lag_v3_2sd_corrected/` contiene la rivalutazione lag ±2σ corretta.
+> **Snapshot storico del 2026-09-24; non è l'audit corrente.** Le voci `MISSING` qui sotto descrivono solo lo stato a quella data. Per lo stato successivo consultare `docs/06_EXPERIMENTS_AND_LIMITATIONS.md` e `docs/07_PYTHON_PIPELINE_MAP.md`, quindi verificare le tabelle e provenance correnti sotto `outputs/final_thesis_v1/final_evaluation/`. Il bootstrap delle metriche primarie risulta ora completo secondo `uncertainty/UNCERTAINTY_STATUS.json`; la riga generica `null_controls/NULL_TEMPORAL.csv` resta `NOT_COMPUTED`, mentre esiste un null temporale distinto per Synthetic in `gap_closure_v1/temporal_null/`.
 
 Audit read-only degli artefatti esistenti, aggiornato il 2026-09-24. Non sono stati avviati training, metriche scientifiche, test o rigenerazioni di risultati. L’unica nuova produzione in questa sessione, oltre a questo report, è l’aggregazione tabellare multi-seed sintetica richiesta: usa CSV Stage-5 già presenti. Il vecchio `MAIN_RESULTS_TABLE.csv` è rimasto intatto.
 

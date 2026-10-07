@@ -8,6 +8,9 @@ The project generates a known task-level latent process, maps it into a neural
 population, and tests whether representation-learning methods can recover the
 latent geometry from sparse spike counts.
 
+The GitHub repository is **`LorenzoCNR/neuroAIbridge`**; **NeuroBridge** is
+the project name used in the documentation and scientific outputs.
+
 The current repository contains two connected experiment branches. Synthetic
 v1 is the controlled benchmark with known latent ground truth; the real-data
 branch applies the same staged representation/evaluation logic to the local
@@ -24,7 +27,7 @@ project website is not required:
 - [Learning objectives and loss](docs/03_LEARNING_OBJECTIVES.md)
 - [PCA and temporal encoders](docs/04_ENCODERS.md)
 - [Evaluation, lag, and multiple subjects](docs/05_EVALUATION_AND_MULTISUBJECT.md)
-- [Experiments, results, and limitations](docs/06_EXPERIMENTS_AND_LIMITATIONS.md)
+- [Current results and limitations](docs/06_EXPERIMENTS_AND_LIMITATIONS.md)
 - [Python pipeline map](docs/07_PYTHON_PIPELINE_MAP.md)
 - [Cell-by-cell notebook guide](notebooks/EXPERIMENTS.md)
 
@@ -63,6 +66,14 @@ interactive HTML, checkpoints, and designated high-volume replicate dumps are
 excluded from Git. See `.gitignore` and the [Python pipeline map](docs/07_PYTHON_PIPELINE_MAP.md)
 for the publication boundary and artifact relationships.
 
+For the frozen study, start with
+[`docs/06_EXPERIMENTS_AND_LIMITATIONS.md`](docs/06_EXPERIMENTS_AND_LIMITATIONS.md)
+for the evidence map and caveats, then use
+[`docs/07_PYTHON_PIPELINE_MAP.md`](docs/07_PYTHON_PIPELINE_MAP.md) to trace
+the code and artifact dependencies. The notebooks below are reproducible
+simulator tutorials/reference runs; they are not a command to retrain or
+recreate every final-thesis artifact.
+
 ## Installation
 
 Python 3.11 is recommended.
@@ -87,17 +98,19 @@ Python traceback.
 
 ## Quick Start
 
-Open one of the four executable Jupyter notebooks in VS Code or Jupyter:
+For the original controlled simulator examples, open one of these executable
+Jupyter notebooks in VS Code or Jupyter:
 
 - `notebooks/experiment_01_circular_3d.ipynb`
 - `notebooks/experiment_02_circular_5d.ipynb`
 - `notebooks/experiment_03_linear_position_direction.ipynb`
 - `notebooks/experiment_04_linear_enriched.ipynb`
 
-Each notebook explains the research question, configuration, generated
-matrices, model inputs, recovery metrics, and saved artifacts before executing
-the corresponding stage. Use **Run All** for complete reproduction or execute
-the cells individually while studying the workflow.
+Each notebook explains its research question, configuration, generated
+matrices, model inputs, recovery metrics, and saved artifacts. Use **Run All**
+to reproduce that notebook's example only. For the frozen thesis study and
+existing results, follow the documentation links above; do not use these
+tutorials to infer the final Real-data protocol.
 
 Equivalent `.py` mirrors are retained for terminal execution and automated
 checks:
@@ -215,21 +228,25 @@ python -m unittest \
   discover -s tests -v
 ```
 
-The current pytest run executes 56 tests: 54 pass and 2 optional interactive
-tests are skipped:
-
 ```powershell
 python -m pytest tests -q -p no:cacheprovider
 ```
 
-## Current Scope
+Test totals can change as tests are added; use the command output as the
+current count rather than relying on a number copied into this README.
 
-The synthetic reference uses 200 trials and a trial-level split. The real
-monkey branch uses 193 trials, 600 bins/trial, 65 channels, and an explicit
-NeuroBridge stratified split of 134/20/39 train/validation/test trials. Its
-local data are already binned at 1 ms and spike-smoothed at 40 ms.
+## Reference data and scope
 
-For the synthetic reference, the split is performed on complete trials:
+The original staged synthetic reference uses 200 trials and a trial-level
+split. The Area-2 recording contains 193 trials, 600 one-millisecond bins per
+trial, and 65 channels; the loader documentation records 40 ms spike
+smoothing. The final Real HPO explicitly compared windows 21, 41, 121, and
+201 and selected 201 using validation-only ranks. Exact split, partition,
+configuration, and source hashes are recorded in the frozen manifests under
+`outputs/final_thesis_v1/freeze/` and the adjacent provenance files.
+
+For the original synthetic reference, the split is performed on complete
+trials:
 
 ```text
 140 training trials -> fit PCA and neural encoders
@@ -246,10 +263,11 @@ Windows from a test trial never enter model fitting. The reported test metrics
 therefore measure recovery on new stochastic realizations from the same
 simulator and task distribution.
 
-This is meaningful held-out validation, but it is not yet evidence that the
-method:
+Held-out evaluation tests new trials from the same recording/simulator
+distribution. It does not establish that the method:
 
-- is stable across many random seeds;
+- is stable across a large number of random seeds (the final study has three
+  training seeds, and HPO-selection robustness across seeds was not run);
 - transfers to a different task, simulator, animal, or recording session;
 - generalizes to task conditions absent from training;
 - outperforms Poisson-aware or other neural latent-variable baselines;

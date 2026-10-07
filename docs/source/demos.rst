@@ -1,6 +1,11 @@
 Experiment notebooks
 ====================
 
+These notebooks are executable simulator examples and reference workflows.
+They are not the command path for reproducing the frozen final HPO/Real study.
+For current results and run provenance, see the `results guide <https://github.com/LorenzoCNR/neuroAIbridge/blob/main/docs/06_EXPERIMENTS_AND_LIMITATIONS.md>`_
+and the `pipeline map <https://github.com/LorenzoCNR/neuroAIbridge/blob/main/docs/07_PYTHON_PIPELINE_MAP.md>`_.
+
 The ``.ipynb`` files are the primary documented entry points. Each contains
 explanatory Markdown and runnable cells. Matching ``.py`` mirrors are retained
 for terminal execution.

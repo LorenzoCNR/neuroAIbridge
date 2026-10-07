@@ -1,6 +1,11 @@
 Experiments
 ===========
 
+This page documents the original simulator/tutorial matrix and its reference
+scores. Those examples are useful for understanding the code, but they are not
+the current Phase-2A/final Real protocol. For the frozen thesis evidence and
+current output locations, see the `results and limitations guide <https://github.com/LorenzoCNR/neuroAIbridge/blob/main/docs/06_EXPERIMENTS_AND_LIMITATIONS.md>`_.
+
 Controlled matrix
 -----------------
 
@@ -35,7 +40,7 @@ the same number of trials, time bins, neurons, window size, and encoder family.
 Evaluation protocol
 -------------------
 
-The current shared-latent benchmark contains 200 trials (25 per each of eight
+The original staged shared-latent reference contains 200 trials (25 per each of eight
 directions), 200 time bins, 160 neurons for subject A and 120 for subject B,
 and centered 21-bin windows with stride one. Models are fitted independently
 for each subject, encoder, and objective. The frozen reference uses 140 train,
@@ -167,12 +172,15 @@ and context.
    :alt: Ground truth, PCA, and CNN1D trial-averaged trajectories
    :width: 100%
 
-Real-monkey staged branch
--------------------------
+Frozen Real-data study
+----------------------
 
-The real branch is implemented in ``neurobridge.experiments.real_monkey`` and
-uses PCA, CNN1D, and Transformer models with four objective identifiers. It
-saves raw/unit embeddings and separate metric CSVs/figures under
-``outputs/real_monkey_area2_active_staged_2026-09-22/``. The ``held_out``
-branch is the generalization check; ``full_sample`` is descriptive. No latent
-recovery or biological lag claim is made for this single-session recording.
+The current frozen Real study is indexed under
+``outputs/final_thesis_v1/final_evaluation/`` and its exact model/window
+configuration is recorded in
+``outputs/final_thesis_v1/freeze/REAL_FINAL_EXPERIMENT_SPEC.json``. It uses the
+selected 201-bin window, the fixed TOTAL65/A_PROXIMAL/B_DISTAL populations, and
+held-out evidence as the primary generalization result. Real data have no
+known latent ground truth; controlled digital shifts are interventions, not
+biological or causal delay estimates. The former 2026-09 exploratory branch is
+historical and is not the current result root.

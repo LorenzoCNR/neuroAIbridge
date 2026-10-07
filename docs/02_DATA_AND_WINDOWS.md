@@ -154,13 +154,23 @@ one optimization step.
 
 ## Real-monkey input branch
 
-The real-data preparation is implemented separately in
-`src/neurobridge/experiments/real_monkey.py`. The local Area-2 recording has
-193 trials, 600 bins per trial, 65 neural channels, and eight direction
-classes. The loader documents 1 ms bins and 40 ms smoothing. NeuroBridge
-creates a stratified trial-level split of 134/20/39 train/validation/test
-trials, then constructs centered, trial-safe windows of shape `(21, 65)` with
-stride 1. No window crosses a trial boundary.
+The Area-2 recording has 193 trials, 600 bins per trial, 65 neural channels,
+and eight direction classes. The loader documents 1 ms bins and 40 ms
+smoothing. The initial exploratory `real_monkey.py` branch used centered
+21-bin windows. The later frozen final study explicitly compared windows
+`{21, 41, 121, 201}` and selected 201 by the validation-only rank rule; its
+authoritative split and input hashes are in
+`outputs/final_thesis_v1/freeze/REAL_FINAL_EXPERIMENT_SPEC.json` and the safe
+input manifests.
+
+For the final study, the channels are evaluated as `TOTAL65` and as the fixed
+operational somatotopic split `A_PROXIMAL` (32 proximal-enriched units) and
+`B_DISTAL` (33 distal-enriched units). This is a partition along the documented
+proximal-to-distal array gradient, not two discrete anatomical modules. Every
+window remains trial-safe; no window crosses a trial boundary. Use the frozen
+split metadata rather than reconstructing final inputs from nominal defaults.
 
 These observed-data windows do not carry a simulated `Z`; they support
-downstream behavioural decoding and temporal/robustness diagnostics instead.
+downstream behavioral decoding, cross-population consistency, and temporal
+and robustness analyses instead. The final protocol and current outputs are
+summarized in `06_EXPERIMENTS_AND_LIMITATIONS.md`.

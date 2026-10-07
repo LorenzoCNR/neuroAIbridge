@@ -1,5 +1,11 @@
 # Learning objectives
 
+This page explains the scientific semantics of the objectives. The numeric
+example values below describe the original staged Synthetic reference; exact
+settings for the final study are recorded in its frozen protocol and per-run
+provenance. Current output labels use `soft`, `infonce`,
+`time_contrastive_blocks`, and `behavior_contrastive_blocks`.
+
 ## Representation target
 
 For each neural window `x_i`, an encoder produces `z_i = f_theta(x_i)` in
@@ -12,8 +18,10 @@ The current benchmark compares four objectives:
 
 1. `soft`: pairwise soft contrastive objective using only time and condition;
 2. `infonce`: supervised label-based InfoNCE;
-3. `cebra_time`: sampled triplets with a same-trial positive at offset 10;
-4. `cebra_behavior`: sampled triplets with a same-condition positive.
+3. `time_contrastive_blocks`: sampled triplets with a same-trial positive at
+   the configured temporal offset;
+4. `behavior_contrastive_blocks`: sampled triplets with a same-condition
+   positive.
 
 PCA is the non-neural baseline and has no loss.
 
@@ -86,34 +94,37 @@ The sampler chooses a reference and a positive with the same discrete
 condition. It does not impose a temporal offset, so it is not expected to be
 the best objective for recovering the imposed inter-subject lag.
 
-For both sampled objectives, `cebra_infonce_loss` normalizes the three encoder
-outputs for cosine scores, uses temperature `1.0`, and contrasts each
-reference with the full negative batch.
+For both sampled objectives, the triplet objective normalizes the three
+encoder outputs for cosine scores, uses the configured temperature, and
+contrasts each reference with the negative batch.
 
 ## What is supervised?
 
 - `soft` is task-informed/weakly supervised because condition and time labels
   define the target geometry;
 - `infonce` is supervised by direction labels;
-- `cebra_time` uses trial identity and a researcher-chosen offset;
-- `cebra_behavior` uses condition labels;
+- `time_contrastive_blocks` uses trial identity and a researcher-chosen
+  temporal offset;
+- `behavior_contrastive_blocks` uses condition labels;
 - PCA has no task labels during fitting.
 
 Calling all four neural objectives unsupervised would therefore be incorrect.
 
 ## Dimensions and computation
 
-The current neural input is `(batch, 21, N)`, with `N=160` for A and `N=120`
-for B. The embedding is `(batch, 3)`. The soft and supervised objectives build
-dense `B x B` similarity matrices, so their loss computation is approximately
-`O(B^2)` in time and memory (`B=1024`). Sampled objectives use three encoder
-forwards per optimizer update and a batch of explicit triplets.
+In the original staged Synthetic reference, the neural input is
+`(batch, 21, N)`, with `N=160` for A and `N=120` for B; the embedding is
+`(batch, 3)`. The soft and supervised objectives build dense `B x B`
+similarity matrices, so their loss computation is approximately `O(B^2)` in
+time and memory. Sampled objectives use three encoder forwards per optimizer
+update and an explicit triplet batch.
 
-Training uses AdamW (`lr=1e-3`, `weight_decay=1e-4`) for exactly 2000 optimizer
-steps per subject/model/loss. The held-out fit uses trial-level training data;
-the test trials are never used for fitting. The validation trials are used for
-checkpoint selection. The full-sample branch is descriptive and has no
-independent validation estimate.
+That historical reference used AdamW with fixed settings and a 2000-update
+budget. Those numbers do **not** define the final HPO/final-fit protocol. For
+the current frozen protocol, use the Phase-2A sealed candidate table and the
+spec/provenance under `outputs/final_thesis_v1/freeze/`; do not copy the
+historical settings into a new run. In all branches, test observations are
+held out from fitting and model selection.
 
 ## Scientific interpretation
 
@@ -132,12 +143,11 @@ experiment with independent seeds.
 
 ## Real-data use of the objectives
 
-The real-monkey branch reuses the same objective identifiers and checkpoint
-logic. Its controlled time offset is `10` bins, which equals 10 ms for the
-1 ms-binned recording; this is an experimental sampling offset, not a claimed
-biological lag. In scientific prose, `cebra_time` and `cebra_behavior` are
-called **Time Contrastive Blocks** and **Behavior Contrastive Blocks**; the
-identifiers are retained only for cache and file compatibility.
+The final Real study uses the same four scientific objective labels. The
+positive training offset remains 10 bins at 1 ms sampling; this is a training
+sampling rule, not the controlled 100/160/200 ms digital interventions and not
+a claimed biological lag. Exact Real objective settings and the selected
+window are recorded in the frozen experiment spec.
 
 Because no ground-truth latent process is observed in the monkey recording,
 objective comparisons there concern task decoding, behavioural regression,

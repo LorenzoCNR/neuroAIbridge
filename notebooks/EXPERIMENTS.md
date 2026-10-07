@@ -8,13 +8,14 @@ The notebooks do not call the all-in-one experiment runner. They expose the
 generative and learning stages as separate cells so that one stage can be
 inspected, changed, and rerun without hiding the scientific choices.
 
-> [!important] Current benchmark
-> The active experiment is `experiment_05_shared_latent_staged.py`. The four
-> experiments listed below are the earlier controlled matrix and remain useful
-> as basic examples. The shared-latent benchmark is the one used for the
-> two-subject, lagged representation-learning study.
+> [!important] Scope of this guide
+> This guide documents the original staged Synthetic reference and the four
+> simulator tutorials. They remain useful for understanding/reproducing those
+> runs, but they are **not** the frozen final Real/HPO protocol. For current
+> results see `docs/06_EXPERIMENTS_AND_LIMITATIONS.md`; for implementation and
+> artifact dependencies see `docs/07_PYTHON_PIPELINE_MAP.md`.
 
-## Shared-latent staged benchmark
+## Original shared-latent staged Synthetic reference
 
 ### Entry point and execution order
 
@@ -41,7 +42,8 @@ The batch entry point is `run_staged_benchmark(...)`. It loops over:
 ```text
 branches = ("full_sample", "held_out")
 models   = ("pca", "cnn1d", "transformer")
-losses   = ("soft", "infonce", "cebra_time", "cebra_behavior")  # ignored for PCA
+objectives = ("soft", "infonce", "time_contrastive_blocks",
+              "behavior_contrastive_blocks")  # current reporting labels; ignored for PCA
 subjects = ("A", "B")
 ```
 
@@ -52,7 +54,7 @@ for the selected branch, as required by the baseline.
 
 ### Protocol and objects
 
-The current default protocol is:
+The original staged reference protocol is:
 
 | Object | Shape/value | Meaning |
 |---|---|---|
@@ -351,22 +353,30 @@ The directory contains:
 - `models/`: fitted PCA and CNN1D parameters;
 - `figures/`: latent, embedding, and task-specific diagnostics.
 
-`outputs/` is intentionally excluded from Git because every artifact can be
-regenerated from the notebooks.
+The Git repository versions selected compact output tables, reports,
+provenance, and figures. It does not necessarily version local raw arrays,
+checkpoints, caches, interactive HTML, or every high-volume replicate file;
+the precise boundary is defined by `.gitignore`. An ignored artifact remains
+available in the local workspace if it exists there.
 
 ## Real-monkey staged branch
 
-The real-data branch is implemented in
+The initial exploratory real-data branch is implemented in
 `src/neurobridge/experiments/real_monkey.py`, not in the four original
-notebooks. Its current run is
-`outputs/real_monkey_area2_active_staged_2026-09-22/` and follows:
+notebooks. Its early 21-bin configuration is historical, not the final HPO
+choice. The frozen final study lives under
+`outputs/final_thesis_v1/final_evaluation/` and is specified by
+`outputs/final_thesis_v1/freeze/REAL_FINAL_EXPERIMENT_SPEC.json`:
 
 ```text
 stage01_data -> stage02_windows -> stage03_models
              -> stage04_embeddings -> stage05_metrics -> stage06_figures
 ```
 
-It uses 193 Area-2 trials, 21-bin windows over 65 channels, PCA/CNN1D/
-Transformer, four objective identifiers, and both raw/unit embeddings. The
-held-out branch is the generalization result; `full_sample` is descriptive.
-There is no latent `Z` recovery or biological lag claim for this branch.
+It uses a validation-selected 201-bin window, 65 channels with the fixed
+TOTAL65/A_PROXIMAL/B_DISTAL evaluation populations, CNN1D/Transformer with
+four objectives, and three training seeds. Real PCA is a separate deterministic
+reference. Raw and unit embeddings remain separate; held-out results are the
+primary generalization evidence. Full-sample refits are descriptive and
+deferred. There is no known Real latent `Z`; controlled shifts are digital
+interventions, not biological or causal lag estimates.
